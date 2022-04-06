@@ -2,9 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Game;
+using UI;
+using Game.Variables;
+using UnityEngine.AI;
 public class SpawnGrid : MonoBehaviour
 {
     public static SpawnGrid Instance;
+    public IntVariable coin;
+    public Tween tween;
     public GameObject[] objects; 
 
     private GameObject pendingObject;
@@ -46,6 +52,8 @@ public class SpawnGrid : MonoBehaviour
         }
     }
     public void PlaceObject(){
+        Debug.Log (pendingObject);
+        pendingObject.GetComponent<caminhoAluno>().CreateCasa();
         pendingObject = null;
     }
     public void RotateObject(){
@@ -53,7 +61,7 @@ public class SpawnGrid : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        Debug.Log("deu certo");
+        
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         if(Physics.Raycast(ray, out hit,1000,layerMask))
         {
@@ -62,7 +70,16 @@ public class SpawnGrid : MonoBehaviour
         }
     }
     public void SelectObject(int index){
-        pendingObject = Instantiate(objects[index], pos, transform.rotation);
+        if(coin.Value >= 10){
+            pendingObject = Instantiate(objects[index], pos, transform.rotation);
+            GameManager.Instance.DiminuirMoedas(10);
+            // GameManager.Instance.AumentarEstudantes(10);
+            // GameManager.Instance.AumentarFelicidade(10);
+        }else{
+            UIVariables.Instance.screenInsufficientMoney.SetActive(true);
+            tween.ErroContrProf();
+        }
+        
     }
     public void ToggleGrid(){
         if(gridToggle.isOn){
