@@ -19,6 +19,9 @@ namespace UI{
 
 
         public GameObject professor;
+        public Button contratarProf;
+        public Color erroColorBt;
+        public Color confirmColorBt;
 
 
         void Start()
@@ -29,12 +32,12 @@ namespace UI{
         // Update is called once per frame
         void Update()
         {
-            if (sidepanelBt.transform.position.x != -755){
+            /*if (sidepanelBt.transform.position.x != -755){
                  sidepanelBt.GetComponent<Button>().interactable = false;
             }else
             {
                  sidepanelBt.GetComponent<Button>().interactable = true;
-            }
+            }*/
         }
 
 
@@ -77,7 +80,7 @@ namespace UI{
         }
         public void OpenConstructionMenu()
         {
-            LeanTween.moveLocalY(constructionBG, -210f, 1f).setEase(LeanTweenType.easeOutCubic);
+            LeanTween.moveLocalY(constructionBG, -190f, 1f).setEase(LeanTweenType.easeOutCubic);
 
             //LeanTween.alphaCanvas(aConsBox, 1, 0.5f).setDelay(.7f);
         }
@@ -114,9 +117,22 @@ namespace UI{
 
         public void ErroContrProf()
         {
+            ColorBlock cb = contratarProf.colors;
+            cb.selectedColor = erroColorBt;
+            contratarProf.colors = cb;
+            //contratarProf.GetComponent<Button>().interactable = false;
             erroContProf.SetActive(true);
             LeanTween.moveLocalY(erroContProf, 90f, 0.5f).setEase(LeanTweenType.easeInOutCubic);
         }
+
+        public void ConfContrProf()
+        {
+            ColorBlock cb = contratarProf.colors;
+            cb.pressedColor = confirmColorBt;
+            //cb.selectedColor = confirmColorBt;
+            contratarProf.colors = cb;
+        }
+
         public void CloseError()
         {
             LeanTween.moveLocalY(erroContProf, -750f, 1f).setEase(LeanTweenType.easeOutCubic).setOnComplete(DesativaError);

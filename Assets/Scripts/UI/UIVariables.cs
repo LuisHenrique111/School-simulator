@@ -88,6 +88,7 @@ namespace UI{
             if(coin.Value>=GameController.Instance.teachers[currentProf].price){
                 GameController.Instance.teachers[currentProf].contratado = true;
                 GameManager.Instance.DiminuirMoedas(GameController.Instance.teachers[currentProf].price);
+                tween.ConfContrProf();
             }else{
                 screenInsufficientMoney.SetActive(true);
                 tween.ErroContrProf();
