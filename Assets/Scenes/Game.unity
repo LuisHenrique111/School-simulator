@@ -1248,7 +1248,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 83502010}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.12, y: 0.015, z: 0.87}
+  m_LocalPosition: {x: -3.12, y: 0.015, z: 0.63}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1545565190}
@@ -1704,7 +1704,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 153040767}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3.24, y: 0.015, z: 2.27}
+  m_LocalPosition: {x: -3.12, y: 0.015, z: 2.63}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1545565190}
@@ -5485,6 +5485,9 @@ MonoBehaviour:
   - {fileID: 0}
   activeProf: 0
   professor: {fileID: 0}
+  contratarProf: {fileID: 0}
+  erroColorBt: {r: 0, g: 0, b: 0, a: 0}
+  confirmColorBt: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &693703984
 GameObject:
   m_ObjectHideFlags: 0
@@ -6824,7 +6827,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 872308434}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.63, y: 0.015, z: 2.27}
+  m_LocalPosition: {x: 2.63, y: 0.015, z: 3.25}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1545565190}
@@ -7766,7 +7769,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1083119522}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.48, y: 0.015, z: 0.69}
+  m_LocalPosition: {x: 2.79, y: 0.015, z: 0.69}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1545565190}
@@ -11357,9 +11360,9 @@ MonoBehaviour:
   coin: {fileID: 11400000, guid: 44f96d2da099fde44a94d15ad2544322, type: 2}
   tween: {fileID: 689217822}
   objects:
-  - {fileID: 6690093999872826061, guid: 20b2ef2cb2f9c1d41ba4902b5523290d, type: 3}
-  - {fileID: 8723780200422649365, guid: 7cca98ba1102f0f4497465c919de65cf, type: 3}
-  - {fileID: 7948960865615737773, guid: a95f2e907889d4c4583332b22904c3e1, type: 3}
+  - {fileID: 3034346916869400187, guid: 2962dbb1c30ea8e4088da757f45b99fe, type: 3}
+  - {fileID: 3034346916869400187, guid: 2962dbb1c30ea8e4088da757f45b99fe, type: 3}
+  - {fileID: 3034346916869400187, guid: 2962dbb1c30ea8e4088da757f45b99fe, type: 3}
   layerMask:
     serializedVersion: 2
     m_Bits: 8
