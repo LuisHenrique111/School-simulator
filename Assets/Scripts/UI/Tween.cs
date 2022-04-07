@@ -93,7 +93,6 @@ namespace UI{
         void DesativaConstMenu()
         {
             constructionBG.SetActive(false);
-            constructionInfo.SetActive(false);
         }    
         void DesativaProfMenu()
         {
