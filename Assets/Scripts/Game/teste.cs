@@ -5,10 +5,19 @@ using UnityEngine.AI;
 public class teste : MonoBehaviour
 {
     // Start is called before the first frame update
+    public static teste instance;
+
+
     public NavMeshAgent agent;
     public NavigationDestination[] destinations;
+    public Transform pontoDeOnibus;
+
     int currentDestination=0;
 
+    private void Awake()
+    {
+        instance = this;
+    }
     void Start()
     {
         // agent = GetComponent<NavMeshAgent>();
@@ -28,7 +37,7 @@ public class teste : MonoBehaviour
         */
 
         agent.SetDestination(destinations[currentDestination].destination);
-        Debug.Log(destinations[currentDestination].destination);
+        //Debug.Log(destinations[currentDestination].destination);
 
         if(agent.transform.position.x == destinations[currentDestination].destination.x && agent.transform.position.z == destinations[currentDestination].destination.z)
         {

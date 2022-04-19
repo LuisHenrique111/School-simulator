@@ -12,10 +12,11 @@ GameObject:
   - component: {fileID: 8627030845256555808}
   - component: {fileID: 3651840527569444937}
   - component: {fileID: 3698617253990029404}
+  - component: {fileID: -7132629168456469595}
   - component: {fileID: -7041013339750784167}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: aluno
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,11 +92,24 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7468000369637168259}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &-7132629168456469595
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7468000369637168259}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43af0420b3d16554b98d3a9030844689, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempoAtePonto: 1
 --- !u!195 &-7041013339750784167
 NavMeshAgent:
   m_ObjectHideFlags: 0
