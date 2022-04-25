@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 using System;
 
 namespace Game.Variables.Generic
@@ -43,6 +45,7 @@ namespace Game.Variables.Generic
         #endregion
     }
 
+    #if UNITY_EDITOR
     [CustomEditor(typeof(Variable<>), true)]
     public class VariableEditor : Editor
     {
@@ -76,5 +79,5 @@ namespace Game.Variables.Generic
             serializedObject.ApplyModifiedProperties();
         }
     }
-
+    #endif
 }

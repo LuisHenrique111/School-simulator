@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 7282864979556663486}
   - component: {fileID: 55930807295768961}
   - component: {fileID: 2015617476561923617}
+  - component: {fileID: 102076644170833697}
+  - component: {fileID: 1593132877710375913}
   m_Layer: 0
   m_Name: ParedeTetoMeio.016
   m_TagString: Untagged
@@ -81,6 +83,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &102076644170833697
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54649293930265752}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1593132877710375913
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 54649293930265752}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.000008, y: 0.42748448, z: 0.4318653}
+  m_Center: {x: -13.498884, y: 0.016249998, z: 0.024798801}
 --- !u!1 &153788563289581349
 GameObject:
   m_ObjectHideFlags: 0
@@ -92,6 +123,8 @@ GameObject:
   - component: {fileID: 6343748833978990585}
   - component: {fileID: 6986442523473824860}
   - component: {fileID: 8654791380052800217}
+  - component: {fileID: 3658582887752096311}
+  - component: {fileID: 306090515660882567}
   m_Layer: 0
   m_Name: ParedeLisaMeio.006
   m_TagString: Untagged
@@ -162,6 +195,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3658582887752096311
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153788563289581349}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &306090515660882567
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 153788563289581349}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999998, y: 4.7838545, z: 0.19699779}
+  m_Center: {x: 0, y: -0.00000023841858, z: -0.000015258789}
 --- !u!1 &547192097717425024
 GameObject:
   m_ObjectHideFlags: 0
@@ -171,9 +233,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 924316530742217018}
+  - component: {fileID: 6027989609156781280}
   - component: {fileID: 1160580607388063200}
   - component: {fileID: 1030490625643866590}
-  - component: {fileID: 6027989609156781280}
   m_Layer: 0
   m_Name: PredioUm
   m_TagString: Untagged
@@ -244,6 +306,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!114 &6027989609156781280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 547192097717425024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16e61fd620158e04ba7b603f0b817ac7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  alunos: {fileID: 7468000369637168259, guid: db39c38a1ec85714bb4a7de6272b9f6f, type: 3}
 --- !u!54 &1160580607388063200
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -273,19 +348,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &6027989609156781280
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 547192097717425024}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 16e61fd620158e04ba7b603f0b817ac7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  alunos: {fileID: 7468000369637168259, guid: db39c38a1ec85714bb4a7de6272b9f6f, type: 3}
 --- !u!1 &725409974969987248
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,6 +359,8 @@ GameObject:
   - component: {fileID: 6165127538395325376}
   - component: {fileID: 2751900511845023961}
   - component: {fileID: 3497068900858747980}
+  - component: {fileID: 7984500370115615644}
+  - component: {fileID: 2543676577911757832}
   m_Layer: 0
   m_Name: ParedeLisaRodape.010
   m_TagString: Untagged
@@ -368,6 +432,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7984500370115615644
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725409974969987248}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &2543676577911757832
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 725409974969987248}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999998, y: 4.966276, z: 0.19699779}
+  m_Center: {x: -0.0000038146973, y: -0.000000059604645, z: 0.000015258789}
 --- !u!1 &865816378084390149
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +472,8 @@ GameObject:
   - component: {fileID: 6979960838612952908}
   - component: {fileID: 3927477984169869918}
   - component: {fileID: 7337324964959926632}
+  - component: {fileID: 7396757443247517845}
+  - component: {fileID: 7952184656403131380}
   m_Layer: 0
   m_Name: ParedeLisaMeio.007
   m_TagString: Untagged
@@ -449,6 +544,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7396757443247517845
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865816378084390149}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &7952184656403131380
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865816378084390149}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999998, y: 4.7838545, z: 0.19699779}
+  m_Center: {x: 0, y: -0.00000023841858, z: 0.000015258789}
 --- !u!1 &947098054769102131
 GameObject:
   m_ObjectHideFlags: 0
@@ -460,6 +584,8 @@ GameObject:
   - component: {fileID: 7241957213023844052}
   - component: {fileID: 1124962438386692517}
   - component: {fileID: 8235988029854851636}
+  - component: {fileID: 6818149920573371598}
+  - component: {fileID: 3134523061687160954}
   m_Layer: 0
   m_Name: ParedeLisaRodape.011
   m_TagString: Untagged
@@ -531,6 +657,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6818149920573371598
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947098054769102131}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &3134523061687160954
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 947098054769102131}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999998, y: 4.966276, z: 0.19699779}
+  m_Center: {x: 0, y: -0.000000059604645, z: 0.000015258789}
 --- !u!1 &967605804310114584
 GameObject:
   m_ObjectHideFlags: 0
@@ -542,6 +697,8 @@ GameObject:
   - component: {fileID: 1374344570699710435}
   - component: {fileID: 1283098939907607007}
   - component: {fileID: 2611132176679565876}
+  - component: {fileID: 6421863225650852773}
+  - component: {fileID: 2171237757659735077}
   m_Layer: 0
   m_Name: ParedeCanto.010
   m_TagString: Untagged
@@ -614,6 +771,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6421863225650852773
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967605804310114584}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &2171237757659735077
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 967605804310114584}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5016622, y: 4.9662766, z: 0.50166243}
+  m_Center: {x: 0.05152606, y: -7.1054274e-15, z: -0.05154146}
 --- !u!1 &997421814897401288
 GameObject:
   m_ObjectHideFlags: 0
@@ -625,6 +811,8 @@ GameObject:
   - component: {fileID: 6035179606229803303}
   - component: {fileID: 2282163274472411133}
   - component: {fileID: 2216443913923692920}
+  - component: {fileID: 4168578480331342784}
+  - component: {fileID: 2492836051204170017}
   m_Layer: 0
   m_Name: ParedeTetoMeio.022
   m_TagString: Untagged
@@ -695,6 +883,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4168578480331342784
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997421814897401288}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &2492836051204170017
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 997421814897401288}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.73652965, y: 0.42748448, z: 0.7365297}
+  m_Center: {x: -0.00230433, y: 0.041906867, z: 0.004240184}
 --- !u!1 &1061464651149100304
 GameObject:
   m_ObjectHideFlags: 0
@@ -706,6 +923,8 @@ GameObject:
   - component: {fileID: 6583174636727946854}
   - component: {fileID: 4426325621848420282}
   - component: {fileID: 4089147536867751254}
+  - component: {fileID: 6030495961778384729}
+  - component: {fileID: 8845423523441492583}
   m_Layer: 0
   m_Name: ParedeTijoloMeio.017
   m_TagString: Untagged
@@ -776,6 +995,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6030495961778384729
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061464651149100304}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &8845423523441492583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1061464651149100304}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7678522, y: 3.621701, z: 0.065926366}
+  m_Center: {x: 0.020089028, y: 0.06251984, z: -0.0009988843}
 --- !u!1 &1135538126433910119
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,6 +1035,8 @@ GameObject:
   - component: {fileID: 7133181027769225951}
   - component: {fileID: 4787121111540934874}
   - component: {fileID: 2272909039548841149}
+  - component: {fileID: 6745051749314717677}
+  - component: {fileID: 6629270016058367793}
   m_Layer: 0
   m_Name: ParedeLisaRodape.012
   m_TagString: Untagged
@@ -858,6 +1108,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6745051749314717677
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135538126433910119}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &6629270016058367793
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1135538126433910119}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999998, y: 4.966276, z: 0.19699779}
+  m_Center: {x: 0, y: -0.00000011920929, z: 0}
 --- !u!1 &1248433441412608870
 GameObject:
   m_ObjectHideFlags: 0
@@ -869,6 +1148,8 @@ GameObject:
   - component: {fileID: 1597437138782591857}
   - component: {fileID: 6910121260090149619}
   - component: {fileID: 7276860048813623353}
+  - component: {fileID: 226531990673643339}
+  - component: {fileID: 4272865990548801908}
   m_Layer: 0
   m_Name: PilastraTijoloMeio.010
   m_TagString: Untagged
@@ -939,6 +1220,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &226531990673643339
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248433441412608870}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &4272865990548801908
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248433441412608870}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5174423, y: 4.790613, z: 0.5214241}
+  m_Center: {x: 0.106286, y: 2.1956978, z: -0.111661345}
 --- !u!1 &1300507249192051917
 GameObject:
   m_ObjectHideFlags: 0
@@ -950,6 +1260,8 @@ GameObject:
   - component: {fileID: 8245446237872474703}
   - component: {fileID: 5444158681154978069}
   - component: {fileID: 7022998397057030980}
+  - component: {fileID: 1828820032740920838}
+  - component: {fileID: 4292791406966308833}
   m_Layer: 0
   m_Name: RodapeParedeLisa.014
   m_TagString: Untagged
@@ -1020,6 +1332,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1828820032740920838
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300507249192051917}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &4292791406966308833
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1300507249192051917}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 29.999994, y: 0.21722452, z: 0.09054982}
+  m_Center: {x: 13.499982, y: -0.03881615, z: -0.00715512}
 --- !u!1 &1440173194909646422
 GameObject:
   m_ObjectHideFlags: 0
@@ -1031,6 +1372,8 @@ GameObject:
   - component: {fileID: 8258065577666392552}
   - component: {fileID: 88210947551065217}
   - component: {fileID: 2167202171167715945}
+  - component: {fileID: 588468254689854318}
+  - component: {fileID: 7416459049215360243}
   m_Layer: 0
   m_Name: CortinaJanela.015
   m_TagString: Untagged
@@ -1101,6 +1444,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &588468254689854318
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440173194909646422}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &7416459049215360243
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1440173194909646422}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 22.55878, y: 2.9627454, z: 0.17453359}
+  m_Center: {x: 10.490622, y: -0.00000023841858, z: 0.000015258789}
 --- !u!1 &1581587629635602841
 GameObject:
   m_ObjectHideFlags: 0
@@ -1112,6 +1484,8 @@ GameObject:
   - component: {fileID: 6400649577041202233}
   - component: {fileID: 1816703019102253637}
   - component: {fileID: 7147696973627215853}
+  - component: {fileID: 3561467108431132998}
+  - component: {fileID: 9051551234073864347}
   m_Layer: 0
   m_Name: ParedeTijoloMeio.011
   m_TagString: Untagged
@@ -1182,6 +1556,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3561467108431132998
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581587629635602841}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &9051551234073864347
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1581587629635602841}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999998, y: 4.7838545, z: 0.19699779}
+  m_Center: {x: 0.0000038146973, y: -0.00000023841858, z: -0.000015258789}
 --- !u!1 &1799051764643901317
 GameObject:
   m_ObjectHideFlags: 0
@@ -1193,6 +1596,8 @@ GameObject:
   - component: {fileID: 3713205116257281437}
   - component: {fileID: 2223548787119533962}
   - component: {fileID: 5582763666332018642}
+  - component: {fileID: 9064569481892666085}
+  - component: {fileID: 9067201265545540770}
   m_Layer: 0
   m_Name: ParedeTetoMeio.018
   m_TagString: Untagged
@@ -1263,6 +1668,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &9064569481892666085
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799051764643901317}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &9067201265545540770
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1799051764643901317}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.73652977, y: 0.42748448, z: 0.7365298}
+  m_Center: {x: -0.0022967008, y: 0.041906867, z: 0.0042554433}
 --- !u!1 &1816127812109282511
 GameObject:
   m_ObjectHideFlags: 0
@@ -1274,6 +1708,8 @@ GameObject:
   - component: {fileID: 153683449460653954}
   - component: {fileID: 7769302275759091119}
   - component: {fileID: 4111231273460467424}
+  - component: {fileID: 3308142919521862210}
+  - component: {fileID: 7229132145295229389}
   m_Layer: 0
   m_Name: RodapeJanela.006
   m_TagString: Untagged
@@ -1344,6 +1780,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3308142919521862210
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816127812109282511}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &7229132145295229389
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1816127812109282511}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 29.999998, y: 0.21722452, z: 0.09054982}
+  m_Center: {x: 0, y: -0.03881615, z: -0.0071474905}
 --- !u!1 &1840356874172106721
 GameObject:
   m_ObjectHideFlags: 0
@@ -1355,6 +1820,8 @@ GameObject:
   - component: {fileID: 2971228701248078404}
   - component: {fileID: 6109197694503082825}
   - component: {fileID: 3781846370639378972}
+  - component: {fileID: 2709706070839232379}
+  - component: {fileID: 113688461865193082}
   m_Layer: 0
   m_Name: RodapeCanto.011
   m_TagString: Untagged
@@ -1425,6 +1892,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &2709706070839232379
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840356874172106721}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &113688461865193082
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1840356874172106721}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5922126, y: 0.21722454, z: 0.5305036}
+  m_Center: {x: -0.1589605, y: -0.04528551, z: -0.13577877}
 --- !u!1 &1880461918848768699
 GameObject:
   m_ObjectHideFlags: 0
@@ -1436,6 +1932,8 @@ GameObject:
   - component: {fileID: 6829835117005575490}
   - component: {fileID: 393306275122470461}
   - component: {fileID: 210702306120449664}
+  - component: {fileID: 4690149515541568702}
+  - component: {fileID: 4424225489201222241}
   m_Layer: 0
   m_Name: RodapeCanto.010
   m_TagString: Untagged
@@ -1506,6 +2004,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4690149515541568702
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880461918848768699}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &4424225489201222241
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1880461918848768699}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5922126, y: 0.21722454, z: 0.5305036}
+  m_Center: {x: -0.15895288, y: -0.04528575, z: -0.13577114}
 --- !u!1 &1983391241628766291
 GameObject:
   m_ObjectHideFlags: 0
@@ -1517,6 +2044,8 @@ GameObject:
   - component: {fileID: 1988222376158965408}
   - component: {fileID: 1172771784452906940}
   - component: {fileID: 3018412272989531664}
+  - component: {fileID: 6969811364769371030}
+  - component: {fileID: 6319008258083984825}
   m_Layer: 0
   m_Name: ParedeTijoloMeio.008
   m_TagString: Untagged
@@ -1587,6 +2116,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6969811364769371030
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983391241628766291}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &6319008258083984825
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1983391241628766291}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999998, y: 4.7838545, z: 0.19699779}
+  m_Center: {x: -0.0000038146973, y: -0.00000023841858, z: 0.000015258789}
 --- !u!1 &2026450570410339600
 GameObject:
   m_ObjectHideFlags: 0
@@ -1598,6 +2156,8 @@ GameObject:
   - component: {fileID: 9089650911162230626}
   - component: {fileID: 7982182300204109232}
   - component: {fileID: 7909596105051596686}
+  - component: {fileID: 6839703947670361809}
+  - component: {fileID: 3268602141483453822}
   m_Layer: 0
   m_Name: ParedeTijoloRodape.009
   m_TagString: Untagged
@@ -1668,6 +2228,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6839703947670361809
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026450570410339600}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &3268602141483453822
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2026450570410339600}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7678522, y: 3.621701, z: 0.065926366}
+  m_Center: {x: 0.020085214, y: 0.062520556, z: -0.0009836255}
 --- !u!1 &2284726474017594616
 GameObject:
   m_ObjectHideFlags: 0
@@ -1679,6 +2268,8 @@ GameObject:
   - component: {fileID: 8286964536592756635}
   - component: {fileID: 6674387977876757393}
   - component: {fileID: 426710450420706088}
+  - component: {fileID: 7797296458058694199}
+  - component: {fileID: 2859168086860710074}
   m_Layer: 0
   m_Name: RodapeCanto.009
   m_TagString: Untagged
@@ -1749,6 +2340,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7797296458058694199
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284726474017594616}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &2859168086860710074
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2284726474017594616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5922126, y: 0.21722454, z: 0.592212}
+  m_Center: {x: -0.15894522, y: -0.04528575, z: -0.15637116}
 --- !u!1 &2400653499249334672
 GameObject:
   m_ObjectHideFlags: 0
@@ -1760,6 +2380,8 @@ GameObject:
   - component: {fileID: 7075946144865302698}
   - component: {fileID: 7048545644099866799}
   - component: {fileID: 5716954883119334142}
+  - component: {fileID: 1699017692820158836}
+  - component: {fileID: 6068068731474275724}
   m_Layer: 0
   m_Name: CortinaJanela.016
   m_TagString: Untagged
@@ -1830,6 +2452,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1699017692820158836
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2400653499249334672}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &6068068731474275724
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2400653499249334672}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 22.55878, y: 2.9627454, z: 0.17453359}
+  m_Center: {x: -10.490622, y: 0, z: -0.000015258789}
 --- !u!1 &2420166771873929726
 GameObject:
   m_ObjectHideFlags: 0
@@ -1841,6 +2492,8 @@ GameObject:
   - component: {fileID: 2002444043564652083}
   - component: {fileID: 953735274513343850}
   - component: {fileID: 7681964022883319904}
+  - component: {fileID: 8188432979618063629}
+  - component: {fileID: 3300132075086979262}
   m_Layer: 0
   m_Name: ParedeJanelaRodape.014
   m_TagString: Untagged
@@ -1911,6 +2564,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &8188432979618063629
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2420166771873929726}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &3300132075086979262
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2420166771873929726}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 24, y: 4.783854, z: 0.2587394}
+  m_Center: {x: 10.496807, y: 0.19332896, z: -0.006903458}
 --- !u!1 &2777512499072023469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1922,6 +2604,8 @@ GameObject:
   - component: {fileID: 8134404949521011656}
   - component: {fileID: 1083907494033107890}
   - component: {fileID: 9039383882419422353}
+  - component: {fileID: 2485807967532405533}
+  - component: {fileID: 5314406621676541629}
   m_Layer: 0
   m_Name: ParedeLisaRodape.014
   m_TagString: Untagged
@@ -1993,6 +2677,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &2485807967532405533
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2777512499072023469}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &5314406621676541629
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2777512499072023469}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 29.999998, y: 4.966276, z: 0.19699779}
+  m_Center: {x: 13.499999, y: -0.00000011920929, z: 0}
 --- !u!1 &3075761508968059135
 GameObject:
   m_ObjectHideFlags: 0
@@ -2004,6 +2717,8 @@ GameObject:
   - component: {fileID: 256082726235222543}
   - component: {fileID: 8618995994921710309}
   - component: {fileID: 7758388128320367424}
+  - component: {fileID: 1624112235099571766}
+  - component: {fileID: 5238915952245329018}
   m_Layer: 0
   m_Name: ParedeTijoloMeio.018
   m_TagString: Untagged
@@ -2074,6 +2789,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1624112235099571766
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3075761508968059135}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &5238915952245329018
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3075761508968059135}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7678522, y: 3.621701, z: 0.065926366}
+  m_Center: {x: 0.020085214, y: 0.06251984, z: -0.0009988843}
 --- !u!1 &3496253652612772521
 GameObject:
   m_ObjectHideFlags: 0
@@ -2085,6 +2829,8 @@ GameObject:
   - component: {fileID: 7367361541820290329}
   - component: {fileID: 1239353378271839719}
   - component: {fileID: 3250267862600809638}
+  - component: {fileID: 6654410789013266046}
+  - component: {fileID: 1893801452744419342}
   m_Layer: 0
   m_Name: CortinaJanela.014
   m_TagString: Untagged
@@ -2155,6 +2901,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6654410789013266046
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3496253652612772521}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1893801452744419342
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3496253652612772521}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 22.558786, y: 2.9627454, z: 0.17453359}
+  m_Center: {x: 10.490624, y: 0, z: 0.000015258789}
 --- !u!1 &3524845412628948061
 GameObject:
   m_ObjectHideFlags: 0
@@ -2166,6 +2941,8 @@ GameObject:
   - component: {fileID: 7107952338547529407}
   - component: {fileID: 2716781503608406005}
   - component: {fileID: 8892386248957103704}
+  - component: {fileID: 5794330874971715854}
+  - component: {fileID: 8404989319680884803}
   m_Layer: 0
   m_Name: ParedeTetoMeio.017
   m_TagString: Untagged
@@ -2236,6 +3013,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &5794330874971715854
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3524845412628948061}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &8404989319680884803
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3524845412628948061}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.73652977, y: 0.42748448, z: 0.7365298}
+  m_Center: {x: -0.0023119596, y: 0.041906867, z: 0.0042554433}
 --- !u!1 &3658785578708275059
 GameObject:
   m_ObjectHideFlags: 0
@@ -2247,6 +3053,8 @@ GameObject:
   - component: {fileID: 4614347418555731090}
   - component: {fileID: 8097156523363528598}
   - component: {fileID: 7544769190613448184}
+  - component: {fileID: 6195069930271307634}
+  - component: {fileID: 4304541702906627740}
   m_Layer: 0
   m_Name: ParedeCantoMeio.009
   m_TagString: Untagged
@@ -2318,6 +3126,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6195069930271307634
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658785578708275059}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &4304541702906627740
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3658785578708275059}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5016622, y: 4.783855, z: 0.5016634}
+  m_Center: {x: 0.05155657, y: -0.00000011920929, z: -0.051541682}
 --- !u!1 &4003892132980326295
 GameObject:
   m_ObjectHideFlags: 0
@@ -2329,6 +3166,8 @@ GameObject:
   - component: {fileID: 762982462776515304}
   - component: {fileID: 1376824527136115860}
   - component: {fileID: 5071666731421046639}
+  - component: {fileID: 7875084798241529316}
+  - component: {fileID: 3051029644556377613}
   m_Layer: 0
   m_Name: ParedeJanelaRodape.012
   m_TagString: Untagged
@@ -2400,6 +3239,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7875084798241529316
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003892132980326295}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &3051029644556377613
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4003892132980326295}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 29.999998, y: 4.9662814, z: 0.6643789}
+  m_Center: {x: -0.0032725332, y: 0.33631298, z: 0.18268986}
 --- !u!1 &4044478765405884405
 GameObject:
   m_ObjectHideFlags: 0
@@ -2411,6 +3279,8 @@ GameObject:
   - component: {fileID: 2160130861143254077}
   - component: {fileID: 4739297909140502743}
   - component: {fileID: 5157061465551427500}
+  - component: {fileID: 6951735818921029395}
+  - component: {fileID: 6696937768060998142}
   m_Layer: 0
   m_Name: RodapeParedeLisa.012
   m_TagString: Untagged
@@ -2481,6 +3351,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6951735818921029395
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4044478765405884405}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &6696937768060998142
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4044478765405884405}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999993, y: 0.21722452, z: 0.09054982}
+  m_Center: {x: 0, y: -0.03881615, z: -0.0071474905}
 --- !u!1 &4411075568876189131
 GameObject:
   m_ObjectHideFlags: 0
@@ -2492,6 +3391,8 @@ GameObject:
   - component: {fileID: 2885176393119093001}
   - component: {fileID: 5383454270901477581}
   - component: {fileID: 7518623405328403417}
+  - component: {fileID: 2090479316570806655}
+  - component: {fileID: 4339691292448927975}
   m_Layer: 0
   m_Name: RodapeCanto.008
   m_TagString: Untagged
@@ -2562,6 +3463,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &2090479316570806655
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411075568876189131}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &4339691292448927975
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4411075568876189131}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5922126, y: 0.21722454, z: 0.592212}
+  m_Center: {x: -0.15892999, y: -0.04528551, z: -0.1563559}
 --- !u!1 &4467023975848138508
 GameObject:
   m_ObjectHideFlags: 0
@@ -2573,6 +3503,8 @@ GameObject:
   - component: {fileID: 2340166254999247378}
   - component: {fileID: 7784135834663695797}
   - component: {fileID: 2706521312850628327}
+  - component: {fileID: 5706706965846718919}
+  - component: {fileID: 281100528112596854}
   m_Layer: 0
   m_Name: ParedeJanelaRodape.016
   m_TagString: Untagged
@@ -2643,6 +3575,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &5706706965846718919
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467023975848138508}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &281100528112596854
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4467023975848138508}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 23.999996, y: 4.783854, z: 0.2587394}
+  m_Center: {x: -10.503183, y: 0.19332896, z: -0.0069339755}
 --- !u!1 &4470612972493212929
 GameObject:
   m_ObjectHideFlags: 0
@@ -2654,6 +3615,8 @@ GameObject:
   - component: {fileID: 1896143669334665982}
   - component: {fileID: 5634132167058738649}
   - component: {fileID: 5566183976152806829}
+  - component: {fileID: 7637138834449757781}
+  - component: {fileID: 5266392912947111694}
   m_Layer: 0
   m_Name: RodapeParedeLisa.013
   m_TagString: Untagged
@@ -2724,6 +3687,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7637138834449757781
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4470612972493212929}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &5266392912947111694
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4470612972493212929}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999993, y: 0.21722452, z: 0.09054982}
+  m_Center: {x: 0.0000038146973, y: -0.03881615, z: -0.0071474905}
 --- !u!1 &4542483780250018184
 GameObject:
   m_ObjectHideFlags: 0
@@ -2735,6 +3727,8 @@ GameObject:
   - component: {fileID: 8128547138578438585}
   - component: {fileID: 1758762879398286885}
   - component: {fileID: 5304862115411738123}
+  - component: {fileID: 2626808751926710432}
+  - component: {fileID: 1947358731803553059}
   m_Layer: 0
   m_Name: ParedeTetoMeio.021
   m_TagString: Untagged
@@ -2805,6 +3799,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &2626808751926710432
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4542483780250018184}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1947358731803553059
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4542483780250018184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 33.000004, y: 0.42748448, z: 0.4318653}
+  m_Center: {x: -14.998899, y: 0.016249998, z: 0.024783542}
 --- !u!1 &4759132171977295395
 GameObject:
   m_ObjectHideFlags: 0
@@ -2816,6 +3839,8 @@ GameObject:
   - component: {fileID: 27519530511187707}
   - component: {fileID: 3851333602638425371}
   - component: {fileID: 668477134151835128}
+  - component: {fileID: 4565604658346621366}
+  - component: {fileID: 2943319830407700727}
   m_Layer: 0
   m_Name: ParedeLisaRodape.013
   m_TagString: Untagged
@@ -2887,6 +3912,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4565604658346621366
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4759132171977295395}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &2943319830407700727
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4759132171977295395}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999998, y: 4.966276, z: 0.19699779}
+  m_Center: {x: 0.0000038146973, y: -0.00000011920929, z: 0}
 --- !u!1 &4897832996364943791
 GameObject:
   m_ObjectHideFlags: 0
@@ -2898,6 +3952,8 @@ GameObject:
   - component: {fileID: 1807891863001652403}
   - component: {fileID: 485198298100437232}
   - component: {fileID: 5488171988051077004}
+  - component: {fileID: 4158804278178612254}
+  - component: {fileID: 8495514767517060055}
   m_Layer: 0
   m_Name: ParedeTijoloRodape.008
   m_TagString: Untagged
@@ -2968,6 +4024,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4158804278178612254
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4897832996364943791}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &8495514767517060055
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4897832996364943791}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7678522, y: 3.621701, z: 0.065926366}
+  m_Center: {x: 0.020089028, y: 0.062520556, z: -0.0010141431}
 --- !u!1 &4915942150250602879
 GameObject:
   m_ObjectHideFlags: 0
@@ -2979,6 +4064,8 @@ GameObject:
   - component: {fileID: 7589276423876854418}
   - component: {fileID: 863958457796009903}
   - component: {fileID: 7905732301237085511}
+  - component: {fileID: 3654928418645482004}
+  - component: {fileID: 5429761080997536045}
   m_Layer: 0
   m_Name: CortinaJanela.012
   m_TagString: Untagged
@@ -3049,6 +4136,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3654928418645482004
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4915942150250602879}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &5429761080997536045
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4915942150250602879}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 28.553427, y: 3.5657852, z: 0.34424683}
+  m_Center: {x: 0.0029783247, y: -0.2680178, z: 0.06599959}
 --- !u!1 &4968210256662536640
 GameObject:
   m_ObjectHideFlags: 0
@@ -3060,6 +4176,8 @@ GameObject:
   - component: {fileID: 1055103717863726044}
   - component: {fileID: 3176373222688330173}
   - component: {fileID: 1145045310523476935}
+  - component: {fileID: 8945962116342797631}
+  - component: {fileID: 5662507889550722257}
   m_Layer: 0
   m_Name: PilastraTijoloRodape.009
   m_TagString: Untagged
@@ -3130,6 +4248,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &8945962116342797631
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968210256662536640}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &5662507889550722257
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4968210256662536640}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5174423, y: 4.790613, z: 0.5214241}
+  m_Center: {x: 0.106316514, y: 2.1956975, z: -0.111661345}
 --- !u!1 &5204159910856683999
 GameObject:
   m_ObjectHideFlags: 0
@@ -3141,6 +4288,8 @@ GameObject:
   - component: {fileID: 5938626153649085915}
   - component: {fileID: 2167615605307606859}
   - component: {fileID: 4323500544020526993}
+  - component: {fileID: 7458966933867895710}
+  - component: {fileID: 100486968247463872}
   m_Layer: 0
   m_Name: RodapeJanela.008
   m_TagString: Untagged
@@ -3211,6 +4360,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7458966933867895710
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5204159910856683999}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &100486968247463872
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5204159910856683999}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 23.999998, y: 0.21722452, z: 0.09054982}
+  m_Center: {x: -10.499999, y: -0.03881615, z: -0.0071627493}
 --- !u!1 &5523760431300201136
 GameObject:
   m_ObjectHideFlags: 0
@@ -3222,6 +4400,8 @@ GameObject:
   - component: {fileID: 1377412712246652001}
   - component: {fileID: 1469769722356957654}
   - component: {fileID: 754762764519393036}
+  - component: {fileID: 4414158430928134337}
+  - component: {fileID: 3138895615453128149}
   m_Layer: 0
   m_Name: CortinaJanela.013
   m_TagString: Untagged
@@ -3292,6 +4472,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4414158430928134337
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5523760431300201136}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &3138895615453128149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5523760431300201136}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 28.553427, y: 2.9627454, z: 0.17453359}
+  m_Center: {x: -13.487929, y: 0, z: 0}
 --- !u!1 &5540206175954138184
 GameObject:
   m_ObjectHideFlags: 0
@@ -3303,6 +4512,8 @@ GameObject:
   - component: {fileID: 4319835292216219070}
   - component: {fileID: 1835784598191905555}
   - component: {fileID: 6913882593581837191}
+  - component: {fileID: 5868011888842786139}
+  - component: {fileID: 7605978751983832}
   m_Layer: 0
   m_Name: telhado.004
   m_TagString: Untagged
@@ -3373,6 +4584,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &5868011888842786139
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5540206175954138184}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &7605978751983832
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5540206175954138184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 17.99116, y: 0.20902203, z: 17.656713}
+  m_Center: {x: -0.07204484, y: -0.033647, z: 2.2769368}
 --- !u!1 &5558198620691496417
 GameObject:
   m_ObjectHideFlags: 0
@@ -3384,6 +4624,8 @@ GameObject:
   - component: {fileID: 2961157790578895811}
   - component: {fileID: 7925703606318600784}
   - component: {fileID: 4574000080089787558}
+  - component: {fileID: 5052710823589849732}
+  - component: {fileID: 4975040500595955781}
   m_Layer: 0
   m_Name: ParedeTijoloRodape.004
   m_TagString: Untagged
@@ -3455,6 +4697,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &5052710823589849732
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558198620691496417}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &4975040500595955781
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5558198620691496417}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999998, y: 4.966276, z: 0.19699779}
+  m_Center: {x: 0, y: -0.000000059604645, z: 0}
 --- !u!1 &5628404770540630239
 GameObject:
   m_ObjectHideFlags: 0
@@ -3466,6 +4737,8 @@ GameObject:
   - component: {fileID: 8622922484554309593}
   - component: {fileID: 4909434713157988974}
   - component: {fileID: 6256352959457737667}
+  - component: {fileID: 6097278381120005376}
+  - component: {fileID: 6479543004806219534}
   m_Layer: 0
   m_Name: PilastraTijoloRodape.008
   m_TagString: Untagged
@@ -3536,6 +4809,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6097278381120005376
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5628404770540630239}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &6479543004806219534
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5628404770540630239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5174423, y: 4.790613, z: 0.5214241}
+  m_Center: {x: 0.10630507, y: 2.1956975, z: -0.111646086}
 --- !u!1 &5878604272768415810
 GameObject:
   m_ObjectHideFlags: 0
@@ -3547,6 +4849,8 @@ GameObject:
   - component: {fileID: 1575717235656851653}
   - component: {fileID: 4014160183736261459}
   - component: {fileID: 774009815841233317}
+  - component: {fileID: 5345783939939167017}
+  - component: {fileID: 6492383632942018394}
   m_Layer: 0
   m_Name: PilastraTijoloMeio.011
   m_TagString: Untagged
@@ -3617,6 +4921,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &5345783939939167017
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5878604272768415810}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &6492383632942018394
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5878604272768415810}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5174423, y: 4.790613, z: 0.5214241}
+  m_Center: {x: 0.106308885, y: 2.1956978, z: -0.111661345}
 --- !u!1 &5984048842619376739
 GameObject:
   m_ObjectHideFlags: 0
@@ -3628,6 +4961,8 @@ GameObject:
   - component: {fileID: 8145304861224991388}
   - component: {fileID: 907254644252072774}
   - component: {fileID: 4111192691028563413}
+  - component: {fileID: 7164302746193142309}
+  - component: {fileID: 8309472030213705979}
   m_Layer: 0
   m_Name: ParedeJanelaRodape.017
   m_TagString: Untagged
@@ -3699,6 +5034,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7164302746193142309
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5984048842619376739}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &8309472030213705979
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5984048842619376739}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 23.999996, y: 4.966276, z: 0.2587394}
+  m_Center: {x: -10.503183, y: 0.28315374, z: -0.0069339755}
 --- !u!1 &5993563038309457215
 GameObject:
   m_ObjectHideFlags: 0
@@ -3710,6 +5074,8 @@ GameObject:
   - component: {fileID: 613144812996038001}
   - component: {fileID: 7845380288910039508}
   - component: {fileID: 7886484477905592697}
+  - component: {fileID: 441188042234483884}
+  - component: {fileID: 2276700009071492877}
   m_Layer: 0
   m_Name: RodapeParedeTijolo.004
   m_TagString: Untagged
@@ -3780,6 +5146,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &441188042234483884
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993563038309457215}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &2276700009071492877
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5993563038309457215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999993, y: 0.21722452, z: 0.09054982}
+  m_Center: {x: 0, y: -0.03881615, z: -0.0071322317}
 --- !u!1 &6100205193182570685
 GameObject:
   m_ObjectHideFlags: 0
@@ -3791,6 +5186,8 @@ GameObject:
   - component: {fileID: 3994665701190603139}
   - component: {fileID: 6530055188406489546}
   - component: {fileID: 984541107707086612}
+  - component: {fileID: 656248264751595267}
+  - component: {fileID: 7866850241152959762}
   m_Layer: 0
   m_Name: PilastraTijoloRodape.010
   m_TagString: Untagged
@@ -3861,6 +5258,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &656248264751595267
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6100205193182570685}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &7866850241152959762
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6100205193182570685}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5174423, y: 4.790613, z: 0.5214241}
+  m_Center: {x: 0.106286, y: 2.1956975, z: -0.111661345}
 --- !u!1 &6113795479051220245
 GameObject:
   m_ObjectHideFlags: 0
@@ -3872,6 +5298,8 @@ GameObject:
   - component: {fileID: 8784599768939776111}
   - component: {fileID: 5704288847877213038}
   - component: {fileID: 6725381981829365478}
+  - component: {fileID: 4274403109655937736}
+  - component: {fileID: 888513243138778203}
   m_Layer: 0
   m_Name: PilastraTijoloMeio.009
   m_TagString: Untagged
@@ -3942,6 +5370,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4274403109655937736
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113795479051220245}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &888513243138778203
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6113795479051220245}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5174423, y: 4.790613, z: 0.5214241}
+  m_Center: {x: 0.106316514, y: 2.1956978, z: -0.111661345}
 --- !u!1 &6368712731477481594
 GameObject:
   m_ObjectHideFlags: 0
@@ -3953,6 +5410,8 @@ GameObject:
   - component: {fileID: 2096754357059018354}
   - component: {fileID: 314624013432991258}
   - component: {fileID: 2494623792774127228}
+  - component: {fileID: 7497052028964141718}
+  - component: {fileID: 1651323815152155370}
   m_Layer: 0
   m_Name: ParedeTijoloRodape.005
   m_TagString: Untagged
@@ -4024,6 +5483,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7497052028964141718
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6368712731477481594}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1651323815152155370
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6368712731477481594}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999998, y: 4.966276, z: 0.19699779}
+  m_Center: {x: 0, y: -0.00000011920929, z: 0}
 --- !u!1 &6400204919595817439
 GameObject:
   m_ObjectHideFlags: 0
@@ -4035,6 +5523,8 @@ GameObject:
   - component: {fileID: 2163226948015378300}
   - component: {fileID: 6724044428933042814}
   - component: {fileID: 8398406299814353282}
+  - component: {fileID: 3305058078557791078}
+  - component: {fileID: 643680784295926117}
   m_Layer: 0
   m_Name: PilastraTijoloRodape.011
   m_TagString: Untagged
@@ -4105,6 +5595,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3305058078557791078
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6400204919595817439}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &643680784295926117
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6400204919595817439}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5174423, y: 4.790613, z: 0.5214241}
+  m_Center: {x: 0.106308885, y: 2.1956978, z: -0.111661345}
 --- !u!1 &6528341009319036058
 GameObject:
   m_ObjectHideFlags: 0
@@ -4116,6 +5635,8 @@ GameObject:
   - component: {fileID: 1554656635055599044}
   - component: {fileID: 5553516810001208307}
   - component: {fileID: 8771622433404462041}
+  - component: {fileID: 514304826494998922}
+  - component: {fileID: 2805684481468208119}
   m_Layer: 0
   m_Name: ParedeCanto.008
   m_TagString: Untagged
@@ -4188,6 +5709,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &514304826494998922
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528341009319036058}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &2805684481468208119
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6528341009319036058}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5016622, y: 4.9662766, z: 0.50166243}
+  m_Center: {x: 0.051541317, y: 0.000000059604638, z: -0.0515262}
 --- !u!1 &6724328372718638179
 GameObject:
   m_ObjectHideFlags: 0
@@ -4199,6 +5749,8 @@ GameObject:
   - component: {fileID: 6492393941465424695}
   - component: {fileID: 2145243732550279540}
   - component: {fileID: 5258124809384638060}
+  - component: {fileID: 6430827686966413479}
+  - component: {fileID: 8829362334311749238}
   m_Layer: 0
   m_Name: ParedeTijoloMeio.010
   m_TagString: Untagged
@@ -4269,6 +5821,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6430827686966413479
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6724328372718638179}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &8829362334311749238
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6724328372718638179}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999998, y: 4.783854, z: 0.2570361}
+  m_Center: {x: 0.028356193, y: -0.2397841, z: -0.08933627}
 --- !u!1 &6822692533357841174
 GameObject:
   m_ObjectHideFlags: 0
@@ -4280,6 +5861,8 @@ GameObject:
   - component: {fileID: 1468657376039560307}
   - component: {fileID: 5135806626283011647}
   - component: {fileID: 1513289635213872893}
+  - component: {fileID: 1491865252668252549}
+  - component: {fileID: 2286131708698624384}
   m_Layer: 0
   m_Name: RodapeParedeTijolo.005
   m_TagString: Untagged
@@ -4350,6 +5933,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1491865252668252549
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6822692533357841174}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &2286131708698624384
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6822692533357841174}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999993, y: 0.21722452, z: 0.09054982}
+  m_Center: {x: 0, y: -0.03881615, z: -0.0071627493}
 --- !u!1 &6826033878931527358
 GameObject:
   m_ObjectHideFlags: 0
@@ -4361,6 +5973,8 @@ GameObject:
   - component: {fileID: 352766571090812835}
   - component: {fileID: 6376091164011600371}
   - component: {fileID: 1599601183651132845}
+  - component: {fileID: 3813326534940803562}
+  - component: {fileID: 8872749610181894768}
   m_Layer: 0
   m_Name: ParedeTetoMeio.023
   m_TagString: Untagged
@@ -4431,6 +6045,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &3813326534940803562
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826033878931527358}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &8872749610181894768
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6826033878931527358}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 30.000008, y: 0.42748448, z: 0.4318653}
+  m_Center: {x: -13.498915, y: 0.016249998, z: 0.024791172}
 --- !u!1 &6897280775456163718
 GameObject:
   m_ObjectHideFlags: 0
@@ -4442,6 +6085,8 @@ GameObject:
   - component: {fileID: 5898377320350402527}
   - component: {fileID: 2346949076646312060}
   - component: {fileID: 901639622445194923}
+  - component: {fileID: 1359589553760249381}
+  - component: {fileID: 54864427013619985}
   m_Layer: 0
   m_Name: RodapeJanela.007
   m_TagString: Untagged
@@ -4512,6 +6157,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1359589553760249381
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897280775456163718}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &54864427013619985
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6897280775456163718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 23.999998, y: 0.21722452, z: 0.09054982}
+  m_Center: {x: 10.499995, y: -0.03881615, z: -0.0071474905}
 --- !u!1 &7151076261461471435
 GameObject:
   m_ObjectHideFlags: 0
@@ -4523,6 +6197,8 @@ GameObject:
   - component: {fileID: 4160431556737049032}
   - component: {fileID: 4337166197392329466}
   - component: {fileID: 788180532981480507}
+  - component: {fileID: 6120034426386911434}
+  - component: {fileID: 4475367333331008375}
   m_Layer: 0
   m_Name: ParedeCantoMeio.008
   m_TagString: Untagged
@@ -4594,6 +6270,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6120034426386911434
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151076261461471435}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &4475367333331008375
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7151076261461471435}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5016622, y: 4.783855, z: 0.5016634}
+  m_Center: {x: 0.05154131, y: -0.00000011920929, z: -0.051526424}
 --- !u!1 &7220891112861929666
 GameObject:
   m_ObjectHideFlags: 0
@@ -4605,6 +6310,8 @@ GameObject:
   - component: {fileID: 8755091179251463532}
   - component: {fileID: 9109763087571924966}
   - component: {fileID: 127199627914762978}
+  - component: {fileID: 8553433962703617295}
+  - component: {fileID: 1985645519765045054}
   m_Layer: 0
   m_Name: ParedeTetoMeio.019
   m_TagString: Untagged
@@ -4675,6 +6382,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &8553433962703617295
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7220891112861929666}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1985645519765045054
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7220891112861929666}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 33.00001, y: 0.42748448, z: 0.4318653}
+  m_Center: {x: 15.00111, y: 0.016249998, z: 0.024798801}
 --- !u!1 &7495786184038861272
 GameObject:
   m_ObjectHideFlags: 0
@@ -4686,6 +6422,8 @@ GameObject:
   - component: {fileID: 6737119820187387484}
   - component: {fileID: 2134106872423674472}
   - component: {fileID: 1859563734978231418}
+  - component: {fileID: 4869118102248225707}
+  - component: {fileID: 3913570647894845345}
   m_Layer: 0
   m_Name: RodapeParedeLisa.010
   m_TagString: Untagged
@@ -4756,6 +6494,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &4869118102248225707
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7495786184038861272}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &3913570647894845345
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7495786184038861272}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999993, y: 0.21722452, z: 0.09054982}
+  m_Center: {x: -0.0000038146973, y: -0.03881615, z: -0.0071322317}
 --- !u!1 &7667686482947363590
 GameObject:
   m_ObjectHideFlags: 0
@@ -4767,6 +6534,8 @@ GameObject:
   - component: {fileID: 7559414946429084012}
   - component: {fileID: 906999484245838693}
   - component: {fileID: 3698713409986436808}
+  - component: {fileID: 7090855444107926048}
+  - component: {fileID: 7174821226721339373}
   m_Layer: 0
   m_Name: ParedeJanelaRodape.013
   m_TagString: Untagged
@@ -4837,6 +6606,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7090855444107926048
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667686482947363590}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &7174821226721339373
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7667686482947363590}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 29.999996, y: 4.783854, z: 0.2587394}
+  m_Center: {x: -13.503187, y: 0.19332896, z: -0.0069187167}
 --- !u!1 &7744418196499355813
 GameObject:
   m_ObjectHideFlags: 0
@@ -4848,6 +6646,8 @@ GameObject:
   - component: {fileID: 2438957966080202298}
   - component: {fileID: 7843184104465543268}
   - component: {fileID: 936695385965337406}
+  - component: {fileID: 6802593142804693635}
+  - component: {fileID: 5810142868728440983}
   m_Layer: 0
   m_Name: PilastraTijoloMeio.008
   m_TagString: Untagged
@@ -4918,6 +6718,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6802593142804693635
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744418196499355813}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &5810142868728440983
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7744418196499355813}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5174423, y: 4.790613, z: 0.5214241}
+  m_Center: {x: 0.10630507, y: 2.1956978, z: -0.111646086}
 --- !u!1 &7931691149992344286
 GameObject:
   m_ObjectHideFlags: 0
@@ -4929,6 +6758,8 @@ GameObject:
   - component: {fileID: 8377769662851638547}
   - component: {fileID: 2640275585213948677}
   - component: {fileID: 6979267320033151029}
+  - component: {fileID: 6904625100349822687}
+  - component: {fileID: 4300164040863274714}
   m_Layer: 0
   m_Name: ParedeTetoMeio.020
   m_TagString: Untagged
@@ -4999,6 +6830,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6904625100349822687
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7931691149992344286}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &4300164040863274714
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7931691149992344286}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.73652977, y: 0.42748448, z: 0.7365298}
+  m_Center: {x: -0.0023119596, y: 0.041906867, z: 0.0042554433}
 --- !u!1 &7996218405467341394
 GameObject:
   m_ObjectHideFlags: 0
@@ -5010,6 +6870,8 @@ GameObject:
   - component: {fileID: 7666717545098781392}
   - component: {fileID: 207488107160690339}
   - component: {fileID: 453125029971942725}
+  - component: {fileID: 8447155520918692909}
+  - component: {fileID: 6674525425078972148}
   m_Layer: 0
   m_Name: ParedeJanelaRodape.015
   m_TagString: Untagged
@@ -5081,6 +6943,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &8447155520918692909
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996218405467341394}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &6674525425078972148
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7996218405467341394}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 23.999998, y: 4.966276, z: 0.2587394}
+  m_Center: {x: 10.496806, y: 0.28315374, z: -0.006903458}
 --- !u!1 &8174432413444092803
 GameObject:
   m_ObjectHideFlags: 0
@@ -5092,6 +6983,8 @@ GameObject:
   - component: {fileID: 8363603867591800102}
   - component: {fileID: 1389836729079254934}
   - component: {fileID: 4975479648393605393}
+  - component: {fileID: 8908264261900090256}
+  - component: {fileID: 1843393121621863327}
   m_Layer: 0
   m_Name: ParedeCantoMeio.011
   m_TagString: Untagged
@@ -5163,6 +7056,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &8908264261900090256
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174432413444092803}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1843393121621863327
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8174432413444092803}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5016622, y: 4.783855, z: 0.5016634}
+  m_Center: {x: 0.05154894, y: -0.00000011920929, z: -0.051541682}
 --- !u!1 &8221422405509800568
 GameObject:
   m_ObjectHideFlags: 0
@@ -5174,6 +7096,8 @@ GameObject:
   - component: {fileID: 3553543519125172364}
   - component: {fileID: 7405927114801357213}
   - component: {fileID: 5353075248045917552}
+  - component: {fileID: 6828300101565562766}
+  - component: {fileID: 1624544652443062442}
   m_Layer: 0
   m_Name: ParedeCantoMeio.010
   m_TagString: Untagged
@@ -5245,6 +7169,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6828300101565562766
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8221422405509800568}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1624544652443062442
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8221422405509800568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5016622, y: 4.783855, z: 0.5016634}
+  m_Center: {x: 0.05152605, y: -0.00000011920929, z: -0.051541682}
 --- !u!1 &8245247347013407895
 GameObject:
   m_ObjectHideFlags: 0
@@ -5256,6 +7209,8 @@ GameObject:
   - component: {fileID: 8584201576467375491}
   - component: {fileID: 5661837743995874023}
   - component: {fileID: 7601495425239963541}
+  - component: {fileID: 2492728075142098101}
+  - component: {fileID: 9129430870445259712}
   m_Layer: 0
   m_Name: CortinaJanela.017
   m_TagString: Untagged
@@ -5326,6 +7281,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &2492728075142098101
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8245247347013407895}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &9129430870445259712
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8245247347013407895}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 22.55878, y: 2.9627454, z: 0.17453359}
+  m_Center: {x: -10.490622, y: -0.00000023841858, z: -0.000015258789}
 --- !u!1 &8312783207672457144
 GameObject:
   m_ObjectHideFlags: 0
@@ -5337,6 +7321,8 @@ GameObject:
   - component: {fileID: 4153336190405370027}
   - component: {fileID: 170491784149778226}
   - component: {fileID: 2138481144797755611}
+  - component: {fileID: 6795758709530552907}
+  - component: {fileID: 5259054625382992640}
   m_Layer: 0
   m_Name: RodapeParedeLisa.011
   m_TagString: Untagged
@@ -5407,6 +7393,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6795758709530552907
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312783207672457144}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &5259054625382992640
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8312783207672457144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999993, y: 0.21722452, z: 0.09054982}
+  m_Center: {x: 0, y: -0.03881615, z: -0.0071322317}
 --- !u!1 &8415480767556291312
 GameObject:
   m_ObjectHideFlags: 0
@@ -5418,6 +7433,8 @@ GameObject:
   - component: {fileID: 5341335875463296091}
   - component: {fileID: 8303496206946366251}
   - component: {fileID: 970162592811821367}
+  - component: {fileID: 6568528898738172538}
+  - component: {fileID: 6512595372866046583}
   m_Layer: 0
   m_Name: ParedeCanto.011
   m_TagString: Untagged
@@ -5490,6 +7507,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6568528898738172538
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8415480767556291312}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &6512595372866046583
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8415480767556291312}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5016622, y: 4.9662766, z: 0.50166243}
+  m_Center: {x: 0.051548947, y: -7.1054274e-15, z: -0.05154146}
 --- !u!1 &8520455191459315512
 GameObject:
   m_ObjectHideFlags: 0
@@ -5501,6 +7547,8 @@ GameObject:
   - component: {fileID: 2364354075977131396}
   - component: {fileID: 8179760908792962663}
   - component: {fileID: 386158911905643282}
+  - component: {fileID: 7580824533097102396}
+  - component: {fileID: 7429744702421484907}
   m_Layer: 0
   m_Name: ParedeCanto.009
   m_TagString: Untagged
@@ -5573,6 +7621,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7580824533097102396
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520455191459315512}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &7429744702421484907
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8520455191459315512}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5016622, y: 4.9662766, z: 0.50166243}
+  m_Center: {x: 0.051556576, y: -7.1054274e-15, z: -0.05154146}
 --- !u!1 &8896502093351039997
 GameObject:
   m_ObjectHideFlags: 0
@@ -5584,6 +7661,8 @@ GameObject:
   - component: {fileID: 3332893596571947222}
   - component: {fileID: 2414922569344934384}
   - component: {fileID: 498029145162059764}
+  - component: {fileID: 603422120987474649}
+  - component: {fileID: 3971138900772772557}
   m_Layer: 0
   m_Name: telhado.002
   m_TagString: Untagged
@@ -5654,6 +7733,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &603422120987474649
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8896502093351039997}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &3971138900772772557
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8896502093351039997}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 31.519747, y: 3.5857618, z: 34.32044}
+  m_Center: {x: 0.57785743, y: -0.3494567, z: 2.1371849}
 --- !u!1 &8928801889776752410
 GameObject:
   m_ObjectHideFlags: 0
@@ -5665,6 +7773,8 @@ GameObject:
   - component: {fileID: 466929448714405336}
   - component: {fileID: 8250968839725355275}
   - component: {fileID: 590171288949611235}
+  - component: {fileID: 6723642042512969218}
+  - component: {fileID: 1307970537500646224}
   m_Layer: 0
   m_Name: ParedeTijoloMeio.009
   m_TagString: Untagged
@@ -5735,6 +7845,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &6723642042512969218
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8928801889776752410}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1307970537500646224
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8928801889776752410}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.9999998, y: 4.7838545, z: 0.19699779}
+  m_Center: {x: 0, y: -0.00000023841858, z: 0.000015258789}
 --- !u!1 &8945066297059399373
 GameObject:
   m_ObjectHideFlags: 0
@@ -5746,6 +7885,8 @@ GameObject:
   - component: {fileID: 7467886249768356219}
   - component: {fileID: 7896685689210813713}
   - component: {fileID: 770813513813554528}
+  - component: {fileID: 1966691021994606766}
+  - component: {fileID: 6780596216398010310}
   m_Layer: 0
   m_Name: ParedeTijoloMeio.016
   m_TagString: Untagged
@@ -5816,6 +7957,35 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &1966691021994606766
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8945066297059399373}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &6780596216398010310
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8945066297059399373}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7678522, y: 3.621701, z: 0.065926366}
+  m_Center: {x: 0.020089028, y: 0.06251984, z: -0.0010141431}
 --- !u!1 &9172470808815441218
 GameObject:
   m_ObjectHideFlags: 0
@@ -5827,6 +7997,8 @@ GameObject:
   - component: {fileID: 6002423836809586190}
   - component: {fileID: 8198454204880090839}
   - component: {fileID: 3327563600039433382}
+  - component: {fileID: 7712608422399006667}
+  - component: {fileID: 9143752599169226410}
   m_Layer: 0
   m_Name: ParedeLisaMeio.008
   m_TagString: Untagged
@@ -5897,3 +8069,32 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!54 &7712608422399006667
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172470808815441218}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &9143752599169226410
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9172470808815441218}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 29.999998, y: 4.7838545, z: 0.19699779}
+  m_Center: {x: 13.499999, y: -0.00000023841858, z: 0}
