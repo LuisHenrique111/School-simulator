@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using Game.Variables;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 namespace UI{
     public class UIVariables : MonoBehaviour
@@ -98,5 +99,15 @@ namespace UI{
         public void HideScreenInsMoney(){
             screenInsufficientMoney.SetActive(false);
         }
+
+         public void SalaDiretor(){
+        SceneManager.LoadScene("Sala_Diretor");
+    }
+    public void Game(){
+        SceneManager.LoadScene("Game");
+    }
+    public void Menu(){
+        SceneManager.LoadScene("Menu");
+    }
     }
 }
