@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7905befeb0ef14be4b535441f8c12609, type: 3}
+  m_Name: Building_History_level1
+  m_EditorClassIdentifier: 
+  nameBuilding: 
+  UISpriteBuilding: {fileID: 0}
+  nivel: 0
+  asset: {fileID: 710785732290830430, guid: a85f896278854e34daf673054e152083, type: 3}
+  typeMatter: 2
+  spawned: 0

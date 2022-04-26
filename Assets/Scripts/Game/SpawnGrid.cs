@@ -81,7 +81,6 @@ public class SpawnGrid : MonoBehaviour
             UIVariables.Instance.screenInsufficientMoney.SetActive(true);
             tween.ErroContrProf();
         }
-        
     }
     public void ToggleGrid(){
         if(gridToggle.isOn){
