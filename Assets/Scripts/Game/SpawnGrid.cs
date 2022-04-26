@@ -5,13 +5,14 @@ using UnityEngine.UI;
 using Game;
 using UI;
 using Game.Variables;
+using Game.Data;
 using UnityEngine.AI;
 public class SpawnGrid : MonoBehaviour
 {
     public static SpawnGrid Instance;
     public IntVariable coin;
     public Tween tween;
-    public GameObject[] objects; 
+    public BuildingData[] objects; 
 
     private GameObject pendingObject;
 
@@ -71,8 +72,9 @@ public class SpawnGrid : MonoBehaviour
     }
     public void SelectObject(int index){
         if(coin.Value >= 10){
-            pendingObject = Instantiate(objects[index], pos, transform.rotation);
+            pendingObject = Instantiate(objects[index].asset, pos, transform.rotation);
             GameManager.Instance.DiminuirMoedas(10);
+            objects[index].spawned = true;
             // GameManager.Instance.AumentarEstudantes(10);
             // GameManager.Instance.AumentarFelicidade(10);
         }else{

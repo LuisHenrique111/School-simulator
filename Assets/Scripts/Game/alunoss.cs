@@ -13,7 +13,6 @@ public class alunoss : MonoBehaviour
    private void OnTriggerEnter(Collider other)
    {
        if(other.CompareTag("casa")){
-          
            StartCoroutine(espera());
        }
    }

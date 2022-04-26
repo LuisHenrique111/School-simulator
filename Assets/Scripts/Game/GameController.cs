@@ -11,6 +11,9 @@ public class GameController : MonoBehaviour
     [Header("Vetor dos professores")]
     public TeacherData[] teachers;
 
+    [Header("Vetor dos predios")]
+    public BuildingData[] building;
+
     [Header("Variaveis globais")] 
     #region variaveis globais 
     public FloatVariable seconds;
@@ -24,8 +27,6 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Instance = this;
-        seconds.Value = 1.0f;
-        hours = 0;
     }
 
     // Update is called once per frame
@@ -40,13 +41,25 @@ public class GameController : MonoBehaviour
             hours = hours + 1;
             profit();
         }
+
+        TrocaDia();
     }
 
     public void profit(){
-        for(int i = 0; i< teachers.Length; i++){
+        for(int i = 0; i < teachers.Length; i++){
             if(teachers[i].contratado == true && ((hours % teachers[i].horaRentavel) == 0)){
                 coin.Value = coin.Value + teachers[i].rendaHora;
             }
         }
     }
+
+    public void TrocaDia(){
+        if(hours == 10){
+            seconds.Value = 0;
+            minutes.Value = 0;
+            hours = 0;
+        }
+    }
+
+
 }
