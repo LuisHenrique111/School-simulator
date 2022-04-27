@@ -25,6 +25,7 @@ public class SpawnGrid : MonoBehaviour
     public float gridSize;
     public float rotateAmount;
     bool gridOn =true;
+    public int raioGrid;
     [SerializeField] private Toggle gridToggle;
 
     void Start(){
@@ -64,7 +65,7 @@ public class SpawnGrid : MonoBehaviour
     {
         
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        if(Physics.Raycast(ray, out hit,1000,layerMask))
+        if(Physics.Raycast(ray, out hit,raioGrid,layerMask))
         {
             
             pos = hit.point;

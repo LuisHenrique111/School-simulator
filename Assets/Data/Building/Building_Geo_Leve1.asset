@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7905befeb0ef14be4b535441f8c12609, type: 3}
+  m_Name: Building_Geo_Leve1
+  m_EditorClassIdentifier: 
+  nameBuilding: 
+  UISpriteBuilding: {fileID: 0}
+  nivel: 0
+  asset: {fileID: 547192097717425024, guid: 8a12f60f1ad58f24d826846a2b53e11a, type: 3}
+  typeMatter: 3
+  spawned: 1
