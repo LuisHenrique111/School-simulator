@@ -45,8 +45,8 @@ public class teste : MonoBehaviour
             if(currentDestination>= destinations.Length)
             {
                 currentDestination = 0;
+                GameManager.Instance.PerdaFelicidade(5);
             }
-        }
-
+        }  
     }
 }
