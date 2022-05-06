@@ -56,7 +56,7 @@ namespace UI{
             textHappiness.text = happiness.Value.ToString();
             textStudents.text = students.Value.ToString();
             textMinutes.text = minutes.Value.ToString();
-            textHours.text = GameController.Instance.hours.ToString();
+            //textHours.text = GameController.Instance.hours.ToString();
         }
 
         public void NextProf(){

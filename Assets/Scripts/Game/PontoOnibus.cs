@@ -9,7 +9,8 @@ public class PontoOnibus : MonoBehaviour
     {
         if(other.CompareTag("aluno"))
         {
-            other.transform.parent = transform;
+            if(other.GetComponent<alunoss>().goingToBusStop)
+                other.transform.parent = transform;
         }
         else if(other.CompareTag("onibus"))
         {

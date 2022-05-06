@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657826, g: 0.49641263, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -20573,7 +20573,7 @@ NavMeshAgent:
   m_GameObject: {fileID: 1853862165}
   m_Enabled: 1
   m_AgentTypeID: 0
-  m_Radius: 0.5
+  m_Radius: 0.1
   m_Speed: 10000
   m_Acceleration: 8
   avoidancePriority: 50
@@ -20613,7 +20613,7 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1853862165}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.89
   m_Height: 2
@@ -24477,7 +24477,7 @@ Transform:
   m_GameObject: {fileID: 2102077135}
   m_LocalRotation: {x: -0, y: 0.99997085, z: -0, w: 0.007639181}
   m_LocalPosition: {x: -38.145, y: 26.3, z: -14.568}
-  m_LocalScale: {x: 11.182104, y: 52.452003, z: 19.409}
+  m_LocalScale: {x: 11, y: 52, z: 19}
   m_Children:
   - {fileID: 1897424750}
   m_Father: {fileID: 0}
