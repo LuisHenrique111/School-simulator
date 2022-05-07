@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13796,6 +13796,7 @@ MonoBehaviour:
   hours: 0
   minutes: {fileID: 11400000, guid: c11c004658b2c50488088343da5f357d, type: 2}
   coin: {fileID: 11400000, guid: 44f96d2da099fde44a94d15ad2544322, type: 2}
+  telaGameOver: {fileID: 0}
 --- !u!4 &1177632261
 Transform:
   m_ObjectHideFlags: 0
@@ -22341,7 +22342,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1928611011}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.83, y: -33.9, z: 2.45}
+  m_LocalPosition: {x: -0.769, y: 0.015, z: -1.054}
   m_LocalScale: {x: 0.01, y: 0.01, z: 0.01}
   m_Children: []
   m_Father: {fileID: 1545565190}
@@ -23286,6 +23287,7 @@ MonoBehaviour:
   happiness: {fileID: 11400000, guid: e4a16f2b39af097468fdbc2177107368, type: 2}
   coinManager: {fileID: 11400000, guid: 44f96d2da099fde44a94d15ad2544322, type: 2}
   studentsManager: {fileID: 11400000, guid: d590dce03fc9c7b4498d8bca714925b0, type: 2}
+  porcentagemGanho: {fileID: 11400000, guid: 713025262feb04031aea015d7e66c45b, type: 2}
 --- !u!4 &2003998323
 Transform:
   m_ObjectHideFlags: 0
@@ -24463,7 +24465,7 @@ GameObject:
   - component: {fileID: 2102077138}
   m_Layer: 0
   m_Name: PontoOnibus
-  m_TagString: Untagged
+  m_TagString: PontoOnibus
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

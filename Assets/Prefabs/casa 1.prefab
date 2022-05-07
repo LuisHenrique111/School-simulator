@@ -127,7 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 16e61fd620158e04ba7b603f0b817ac7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  alunos: {fileID: 7468000369637168259, guid: db39c38a1ec85714bb4a7de6272b9f6f, type: 3}
+  alunos: {fileID: 4060211839215157732, guid: b7818edd33c0e47209873067e736c8f0, type: 3}
   destinationPoint: {fileID: 3552345875833207170}
 --- !u!54 &-8233587899919318125
 Rigidbody:

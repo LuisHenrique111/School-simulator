@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour
     public IntVariable happiness;
     public IntVariable coinManager;
     public IntVariable studentsManager;
+    public IntVariable porcentagemGanho;
     // Start is called before the first frame update
     void Start()
     {
@@ -44,5 +45,17 @@ public class GameManager : MonoBehaviour
 
     public void DiminuirEstudades(int valueStudents){
         studentsManager.Value = studentsManager.Value - valueStudents;
+    }
+
+    public void SetEstudades(int valor){
+        studentsManager.Value = valor;
+    }
+
+    public void SetMoedas(int valor){
+        coinManager.Value = valor;
+    }
+
+    public void SetFelicidade(int valor){
+        happiness.Value = valor;
     }
 }

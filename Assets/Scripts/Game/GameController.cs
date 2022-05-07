@@ -21,6 +21,8 @@ public class GameController : MonoBehaviour
     public IntVariable minutes;
     public IntVariable coin;
     #endregion
+
+    public GameObject telaGameOver;
     
 
     // Start is called before the first frame update
@@ -43,6 +45,9 @@ public class GameController : MonoBehaviour
         }
 
         TrocaDia();
+        ControllerAlunos();
+        ControllerPorcetagem();
+        GameOver();
     }
 
     public void profit(){
@@ -59,6 +64,30 @@ public class GameController : MonoBehaviour
             minutes.Value = 0;
             hours = 0;
         }
+    }
+
+    public void ControllerAlunos(){
+        if(GameManager.Instance.happiness.Value <= 30){
+            GameManager.Instance.DiminuirEstudades(7);
+        }
+    }
+
+    public void ControllerPorcetagem(){
+        if(GameManager.Instance.happiness.Value <= 30){
+            GameManager.Instance.porcentagemGanho.Value = 75;
+        }else{
+            GameManager.Instance.porcentagemGanho.Value = 25;
+        }
+    }
+    
+    public void GameOver(){
+        if(GameManager.Instance.studentsManager.Value <=0){
+            GameManager.Instance.SetEstudades(0);
+            GameManager.Instance.SetFelicidade(50);
+            GameManager.Instance.SetMoedas(500);
+            telaGameOver.SetActive(true);
+        }
+        
     }
 
 
