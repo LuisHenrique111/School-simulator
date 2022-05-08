@@ -12,9 +12,11 @@ namespace Game.Data{
         public Sprite UISpriteBuilding;
         public int nivel;
         public GameObject asset;
-        public GameObject asset2;
+        public Mesh[] evolutionAsset;
         public BuildingType typeMatter;
         public bool spawned;
+        public int price;
+        public int[] priceEvolution;
     }
 
     [Serializable]

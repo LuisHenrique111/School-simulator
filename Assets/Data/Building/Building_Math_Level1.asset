@@ -12,8 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7905befeb0ef14be4b535441f8c12609, type: 3}
   m_Name: Building_Math_Level1
   m_EditorClassIdentifier: 
-  nameBuilding: 
+  nameBuilding: Predio 1
   UISpriteBuilding: {fileID: 0}
-  nivel: 1
+  nivel: 15
   asset: {fileID: 3034346916869400187, guid: 2962dbb1c30ea8e4088da757f45b99fe, type: 3}
+  evolutionAsset:
+  - {fileID: -3382216993566515596, guid: 876c5af6ecb34be4ca6936ac92a25542, type: 3}
   typeMatter: 0
+  spawned: 1
+  price: 20
+  priceEvolution: 64000000

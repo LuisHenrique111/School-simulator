@@ -23,6 +23,6 @@ public class caminhoAluno : MonoBehaviour
         quantidadeAlunos++;
         GameManager.Instance.IncrementarEstudantes(7);
     }
-    
 
+    
 }

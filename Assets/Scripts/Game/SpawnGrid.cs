@@ -12,12 +12,8 @@ public class SpawnGrid : MonoBehaviour
     public static SpawnGrid Instance;
     public IntVariable coin;
     public Tween tween;
-    public BuildingData[] objects; 
-
     private GameObject pendingObject;
-
-    private Vector3 pos;
-    
+    private Vector3 pos;  
     private RaycastHit hit;
     [SerializeField] private LayerMask layerMask;
     public bool canPlace =true;
@@ -73,11 +69,11 @@ public class SpawnGrid : MonoBehaviour
     }
     public void SelectObject(int index){
         if(coin.Value >= 10){
-            pendingObject = Instantiate(objects[index].asset, pos, transform.rotation);
-            GameManager.Instance.DiminuirMoedas(10);
-            objects[index].spawned = true;
-            // GameManager.Instance.AumentarEstudantes(10);
-            // GameManager.Instance.AumentarFelicidade(10);
+            pendingObject = Instantiate(GameController.Instance.building[index].asset, pos, transform.rotation);
+            GameManager.Instance.DiminuirMoedas(GameController.Instance.building[index].price);
+            GameController.Instance.building[index].spawned = true;
+            
+            
         }else{
             UIVariables.Instance.screenInsufficientMoney.SetActive(true);
             tween.ErroContrProf();
