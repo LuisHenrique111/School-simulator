@@ -74,9 +74,9 @@ public class GameController : MonoBehaviour
 
     public void ControllerPorcetagem(){
         if(GameManager.Instance.happiness.Value <= 30){
-            GameManager.Instance.porcentagemGanho.Value = 75;
-        }else{
             GameManager.Instance.porcentagemGanho.Value = 25;
+        }else{
+            GameManager.Instance.porcentagemGanho.Value = 75;
         }
     }
     
@@ -87,6 +87,5 @@ public class GameController : MonoBehaviour
             GameManager.Instance.SetMoedas(500);
             telaGameOver.SetActive(true);
         }
-        
     }
 }
