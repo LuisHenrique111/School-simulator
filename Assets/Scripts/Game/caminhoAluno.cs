@@ -21,7 +21,7 @@ public class caminhoAluno : MonoBehaviour
         GameObject aluno=Instantiate(alunos,SpawnPosition, Quaternion.identity);
         aluno.GetComponent<alunoss>().alunosAndar(destinationPoint.position);
         quantidadeAlunos++;
-        GameManager.Instance.IncrementarEstudantes(7);
+        GameManager.Instance.IncrementarEstudantes(8);
     }
 
     

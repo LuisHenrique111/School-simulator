@@ -68,7 +68,7 @@ public class GameController : MonoBehaviour
 
     public void ControllerAlunos(){
         if(GameManager.Instance.happiness.Value <= 30){
-            GameManager.Instance.DiminuirEstudades(7);
+            GameManager.Instance.DiminuirEstudades(8);
         }
     }
 
@@ -81,7 +81,7 @@ public class GameController : MonoBehaviour
     }
     
     public void GameOver(){
-        if(GameManager.Instance.studentsManager.Value <=0){
+        if(GameManager.Instance.studentsManager.Value <= 0){
             GameManager.Instance.SetEstudades(0);
             GameManager.Instance.SetFelicidade(50);
             GameManager.Instance.SetMoedas(500);
@@ -89,8 +89,4 @@ public class GameController : MonoBehaviour
         }
         
     }
-
-   
-
-
 }
