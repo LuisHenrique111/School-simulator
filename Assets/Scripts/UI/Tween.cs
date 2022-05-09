@@ -112,7 +112,7 @@ namespace UI{
         }    
         public void CloseProfMenu()
         {
-            LeanTween.moveLocalY(profMenu, -350f, 1f).setEase(LeanTweenType.easeOutCubic).setOnComplete(DesativaProfMenu);
+            LeanTween.moveLocalY(profMenu, -900f, 1f).setEase(LeanTweenType.easeOutCubic).setOnComplete(DesativaProfMenu);
         }
 
         public void ErroContrProf()
