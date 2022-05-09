@@ -15,10 +15,10 @@ public class GameManager : MonoBehaviour
     void Start()
     {
         Instance = this;
-        SetEstudades(0);
+        /*SetEstudades(0);
         SetFelicidade(50);
         SetMoedas(100);
-        porcentagemGanho.Value = 50;
+        porcentagemGanho.Value = 50;*/
     }
 
     // Update is called once per frame

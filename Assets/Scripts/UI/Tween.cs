@@ -8,7 +8,7 @@ namespace UI{
     {
         [SerializeField]
         GameObject constructionBG, constructionInfo, profMenu, sidePanel, sidepanelBt, menuPanel, erroContProf,
-            const1, const2, const3;
+            const1, const2, const3, stamp, GameOverBtMenu, GameOverBtNovo, GameOverBtSair;
         
         [SerializeField]
         CanvasGroup aConsBox, amenuPanel;
@@ -23,10 +23,15 @@ namespace UI{
         public Color erroColorBt;
         public Color confirmColorBt;
 
+        public AnimationCurve stampCurve;
+
 
         void Start()
         {
-            
+            LeanTween.scale(stamp, (stamp.transform.localScale) / 150, 1f).setEase(LeanTweenType.easeInQuint);
+            LeanTween.moveLocalY(GameOverBtMenu, -190, 1f).setDelay(0.8f).setEase(LeanTweenType.easeInOutCubic);
+            LeanTween.moveLocalY(GameOverBtNovo, -310, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutCubic);
+            LeanTween.moveLocalY(GameOverBtSair, -428, 1f).setDelay(1.2f).setEase(LeanTweenType.easeInOutCubic);
         }
 
         // Update is called once per frame
@@ -80,13 +85,13 @@ namespace UI{
         }
         public void OpenConstructionMenu()
         {
-            LeanTween.moveLocalY(constructionBG, -190f, 1f).setEase(LeanTweenType.easeOutCubic);
+            LeanTween.moveLocalY(constructionBG, -220f, 1f).setEase(LeanTweenType.easeOutCubic);
 
             //LeanTween.alphaCanvas(aConsBox, 1, 0.5f).setDelay(.7f);
         }
         public void CloseConstructionMenu()
         {
-            LeanTween.moveLocalY(constructionBG, -608f, 1f).setEase(LeanTweenType.easeOutCubic).setOnComplete(DesativaConstMenu);
+            LeanTween.moveLocalY(constructionBG, -920f, 1f).setEase(LeanTweenType.easeOutCubic).setOnComplete(DesativaConstMenu);
 
             //LeanTween.alphaCanvas(aConsBox, 1, 0.5f).setDelay(.7f);
         }
@@ -140,6 +145,11 @@ namespace UI{
         void DesativaError()
         {
             erroContProf.SetActive(false);
+        }
+
+        public void StampOn()
+        {
+            LeanTween.scale(stamp, (stamp.transform.localScale)/150, 1f).setEase(LeanTweenType.easeInQuint);
         }
 
 
