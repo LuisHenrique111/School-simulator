@@ -25,13 +25,18 @@ namespace UI{
 
         public AnimationCurve stampCurve;
 
+        public static Tween Instance;
+
+
+
 
         void Start()
         {
+            Instance = this;
             LeanTween.scale(stamp, (stamp.transform.localScale) / 150, 1f).setEase(LeanTweenType.easeInQuint);
             LeanTween.moveLocalY(GameOverBtMenu, -190, 1f).setDelay(0.8f).setEase(LeanTweenType.easeInOutCubic);
             LeanTween.moveLocalY(GameOverBtNovo, -310, 1f).setDelay(1f).setEase(LeanTweenType.easeInOutCubic);
-            LeanTween.moveLocalY(GameOverBtSair, -428, 1f).setDelay(1.2f).setEase(LeanTweenType.easeInOutCubic);
+            LeanTween.moveLocalY(GameOverBtSair, -310, 1f).setDelay(1.2f).setEase(LeanTweenType.easeInOutCubic);
         }
 
         // Update is called once per frame
@@ -107,6 +112,7 @@ namespace UI{
 
         public void OpenProfMenu()
         {
+            profMenu.SetActive(true);
             LeanTween.moveLocalY(profMenu, 0f, 1f).setEase(LeanTweenType.easeOutCubic);
             UIVariables.Instance.sliderCarisma.value = GameController.Instance.teachers[UIVariables.Instance.currentProf].carisma;
             UIVariables.Instance.sliderDidatica.value = GameController.Instance.teachers[UIVariables.Instance.currentProf].didatica;

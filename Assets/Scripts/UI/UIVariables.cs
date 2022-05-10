@@ -42,6 +42,7 @@ namespace UI{
 
         [Header("telas")]
         public GameObject screenInsufficientMoney;
+        public bool isGame;
 
         // Start is called before the first frame update
         void Start()
@@ -52,11 +53,14 @@ namespace UI{
         // Update is called once per frame
         void Update()
         {
-            textCoin.text = coin.Value.ToString();
-            textHappiness.text = happiness.Value.ToString();
-            textStudents.text = students.Value.ToString();
-            textMinutes.text = minutes.Value.ToString();
-            //textHours.text = GameController.Instance.hours.ToString();
+            if(isGame){
+                textCoin.text = coin.Value.ToString();
+                textHappiness.text = happiness.Value.ToString();
+                textStudents.text = students.Value.ToString();
+                textMinutes.text = minutes.Value.ToString();
+                textHours.text = GameController.Instance.hours.ToString();
+            }
+            
         }
 
         public void NextProf(){
@@ -103,11 +107,11 @@ namespace UI{
          public void SalaDiretor(){
         SceneManager.LoadScene("Sala_Diretor");
     }
-    public void Game(){
-        SceneManager.LoadScene("Game");
-    }
-    public void Menu(){
-        SceneManager.LoadScene("Menu");
-    }
+        public void Game(){
+            SceneManager.LoadScene("Game");
+        }
+        public void Menu(){
+            SceneManager.LoadScene("Menu");
+        }
     }
 }

@@ -19,5 +19,5 @@ MonoBehaviour:
   didatica: 2
   diciplina: 7
   rendaHora: 10
-  horaRentavel: 5
-  contratado: 0
+  horaRentavel: 1
+  contratado: 1

@@ -4,6 +4,7 @@ using UnityEngine;
 using Game.Data;
 using Game.Variables;
 using Game.Variables.Generic;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -24,6 +25,7 @@ public class GameController : MonoBehaviour
 
     public GameObject telaGameOver;
     
+    
 
     // Start is called before the first frame update
     void Start()
@@ -34,6 +36,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         seconds.Value = seconds.Value + Time.deltaTime;
         minutes.Value = (int)seconds.Value;
         
@@ -81,11 +84,12 @@ public class GameController : MonoBehaviour
     }
     
     public void GameOver(){
-        if(GameManager.Instance.studentsManager.Value < 0){
+        if(GameManager.Instance.studentsManager.Value <= 0){
             GameManager.Instance.SetEstudades(0);
             GameManager.Instance.SetFelicidade(50);
             GameManager.Instance.SetMoedas(500);
-            //telaGameOver.SetActive(true);
+            SceneManager.LoadScene("GameOver");
         }
     }
+
 }

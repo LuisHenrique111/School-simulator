@@ -18,6 +18,6 @@ MonoBehaviour:
   asset: {fileID: 547192097717425024, guid: 8a12f60f1ad58f24d826846a2b53e11a, type: 3}
   evolutionAsset: []
   typeMatter: 3
-  spawned: 0
-  price: 0
+  spawned: 1
+  price: 50
   priceEvolution: 
