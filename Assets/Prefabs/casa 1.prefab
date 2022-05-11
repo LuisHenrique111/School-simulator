@@ -45,6 +45,7 @@ GameObject:
   - component: {fileID: -8233587899919318125}
   - component: {fileID: 6841144913281511443}
   - component: {fileID: 6850520353591577366}
+  - component: {fileID: 7080495882477924236}
   m_Layer: 0
   m_Name: casa 1
   m_TagString: casa
@@ -172,3 +173,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: daf35090afcd52f49bb8e3ef94f02667, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!208 &7080495882477924236
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3034346916869400187}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 5.5410004, y: 4.4690003, z: 4.26}
+  m_MoveThreshold: 0.1
+  m_Carve: 0
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.029000001, y: 3.0180001, z: -1.1580001}
+  m_TimeToStationary: 0.5

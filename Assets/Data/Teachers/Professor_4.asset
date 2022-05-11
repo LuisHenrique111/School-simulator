@@ -12,12 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4869808e35809e4c96a08f655b0a67a, type: 3}
   m_Name: Professor_4
   m_EditorClassIdentifier: 
-  nameTeacher: 
-  UISprite: {fileID: 0}
-  price: 0
-  carisma: 0
-  didatica: 0
-  diciplina: 0
-  rendaHora: 0
-  horaRentavel: 0
-  contratado: 0
+  nameTeacher: Professor_4
+  UISprite: {fileID: 21300000, guid: ffd68bbb5a6fdb44c8b43f7de4f6536e, type: 3}
+  price: 90
+  carisma: 10
+  didatica: 7
+  diciplina: 7
+  rendaHora: 30
+  horaRentavel: 2
+  contratado: 1

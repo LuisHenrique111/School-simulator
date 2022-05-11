@@ -12,7 +12,7 @@ namespace Game.Data{
         public Sprite UISpriteBuilding;
         public int nivel;
         public GameObject asset;
-        public Mesh[] evolutionAsset;
+        public GameObject[] evolutionAsset;
         public BuildingType typeMatter;
         public bool spawned;
         public int price;

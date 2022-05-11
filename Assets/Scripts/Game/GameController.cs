@@ -92,4 +92,13 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void Win(){
+        if(GameManager.Instance.studentsManager.Value >= 100 && GameManager.Instance.happiness.Value >= 80){
+            GameManager.Instance.SetEstudades(0);
+            GameManager.Instance.SetFelicidade(50);
+            GameManager.Instance.SetMoedas(500);
+            SceneManager.LoadScene("GameOver");
+        }
+    }
+
 }
