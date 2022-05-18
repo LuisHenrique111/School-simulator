@@ -48,7 +48,7 @@ public class GameController : MonoBehaviour
         }
 
         TrocaDia();
-        ControllerAlunos();
+
         GameOver();
     }
 
