@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameBuilding: Predio 1
   UISpriteBuilding: {fileID: 0}
-  nivel: 3
+  nivel: 1
   asset: {fileID: 3034346916869400187, guid: 2962dbb1c30ea8e4088da757f45b99fe, type: 3}
   evolutionAsset:
   - {fileID: 3034346916869400187, guid: d2b070c56a2654ef58050c7c82d8e5b9, type: 3}

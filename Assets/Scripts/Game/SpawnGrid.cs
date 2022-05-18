@@ -72,8 +72,6 @@ public class SpawnGrid : MonoBehaviour
             pendingObject = Instantiate(GameController.Instance.building[index].asset, pos, transform.rotation);
             GameManager.Instance.DiminuirMoedas(GameController.Instance.building[index].price);
             GameController.Instance.building[index].spawned = true;
-            
-            
         }else{
             UIVariables.Instance.screenInsufficientMoney.SetActive(true);
             tween.ErroContrProf();

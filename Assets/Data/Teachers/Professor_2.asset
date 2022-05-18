@@ -16,8 +16,8 @@ MonoBehaviour:
   UISprite: {fileID: 21300000, guid: 61d1e95a6e45a6a4d9ad2b16de573a8d, type: 3}
   price: 20
   carisma: 10
-  didatica: 4
-  diciplina: 5
+  didatica: 2
+  diciplina: 6
   rendaHora: 10
   horaRentavel: 1
   contratado: 0

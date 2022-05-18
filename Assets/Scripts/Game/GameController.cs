@@ -49,7 +49,6 @@ public class GameController : MonoBehaviour
 
         TrocaDia();
         ControllerAlunos();
-        ControllerPorcetagem();
         GameOver();
     }
 
@@ -74,18 +73,10 @@ public class GameController : MonoBehaviour
             GameManager.Instance.DiminuirEstudades(8);
         }
     }
-
-    public void ControllerPorcetagem(){
-        if(GameManager.Instance.happiness.Value <= 30){
-            GameManager.Instance.porcentagemGanho.Value = 25;
-        }else{
-            GameManager.Instance.porcentagemGanho.Value = 75;
-        }
-    }
     
     public void GameOver(){
         if(GameManager.Instance.studentsManager.Value <= 0){
-            GameManager.Instance.SetEstudades(0);
+            GameManager.Instance.SetEstudades(7);
             GameManager.Instance.SetFelicidade(50);
             GameManager.Instance.SetMoedas(500);
             SceneManager.LoadScene("GameOver");
@@ -94,7 +85,7 @@ public class GameController : MonoBehaviour
 
     public void Win(){
         if(GameManager.Instance.studentsManager.Value >= 100 && GameManager.Instance.happiness.Value >= 80){
-            GameManager.Instance.SetEstudades(0);
+            GameManager.Instance.SetEstudades(7);
             GameManager.Instance.SetFelicidade(50);
             GameManager.Instance.SetMoedas(500);
             SceneManager.LoadScene("GameOver");

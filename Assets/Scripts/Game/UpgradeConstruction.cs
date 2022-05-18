@@ -23,10 +23,6 @@ public class UpgradeConstruction : MonoBehaviour
         original = GameObject.Find("casa 1(Clone)");
     }
 
-    public void SetNivel(){
-         
-    }
-
     public void Upgrade(int index){
         GameController.Instance.building[index].nivel = GameController.Instance.building[index].nivel + 1;
         if(GameController.Instance.building[index].nivel == 2 && GameManager.Instance.coinManager.Value >= GameController.Instance.building[index].priceEvolution[index]){
@@ -35,15 +31,9 @@ public class UpgradeConstruction : MonoBehaviour
             Destroy(original);
         }
         else if(GameController.Instance.building[index].nivel == 3 && GameManager.Instance.coinManager.Value >= GameController.Instance.building[index].priceEvolution[index]){
-            
             GameManager.Instance.DiminuirMoedas(GameController.Instance.building[index].priceEvolution[index]);
             upgrade2 = Instantiate(GameController.Instance.building[index].evolutionAsset[1], upgrade1.transform.position, upgrade1.transform.rotation);
             Destroy(upgrade1);
         }
-        
-        
-
-    }
-
-    
+    }    
 }

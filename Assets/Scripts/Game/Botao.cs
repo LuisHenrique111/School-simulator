@@ -16,7 +16,7 @@ public class Botao : MonoBehaviour
     void Update()
     {
         if(mouseDentroDoObjeto == true){
-            if(Input.GetMouseButtonDown(0)){
+            if(Input.GetMouseButtonDown(1)){
                 Tween.Instance.OpenProfMenu();
             }
         }
