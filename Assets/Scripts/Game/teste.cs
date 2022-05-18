@@ -13,7 +13,10 @@ public class teste : MonoBehaviour
     public Transform pontoDeOnibus;
 
     int currentDestination=0;
+    bool canChangeDestination = true;
 
+    public int salvaAlunos;
+    public List<alunoss> quantAlunos = new List<alunoss>();
     private void Awake()
     {
         instance = this;
@@ -35,12 +38,20 @@ public class teste : MonoBehaviour
             }
         }
         */
-
-        agent.SetDestination(destinations[currentDestination].destination);
-        //Debug.Log(destinations[currentDestination].destination);
-
-        if(agent.transform.position.x == destinations[currentDestination].destination.x && agent.transform.position.z == destinations[currentDestination].destination.z)
+        if(canChangeDestination)
         {
+            canChangeDestination = false;
+            agent.SetDestination(new Vector3(destinations[currentDestination].destination.x,transform.position.y,destinations[currentDestination].destination.z));
+            StartCoroutine(canWalkAgain());
+            
+        }
+
+        //Debug.Log("X: "+ Mathf.Abs(transform.position.x - destinations[currentDestination].destination.x) + "Z: "+ Mathf.Abs(transform.position.z - destinations[currentDestination].destination.z));
+
+        if(Mathf.Abs( transform.position.x - destinations[currentDestination].destination.x)<= 15 &&Mathf.Abs( transform.position.z -  destinations[currentDestination].destination.z)<= 15)
+        {
+            agent.isStopped = true;
+            canChangeDestination = true;
             currentDestination++;
             if(currentDestination>= destinations.Length)
             {
@@ -48,5 +59,12 @@ public class teste : MonoBehaviour
                 
             }
         }  
+    }
+
+    IEnumerator canWalkAgain()
+    {
+        yield return new WaitForSeconds(0.5f);
+        agent.isStopped = false;
+
     }
 }

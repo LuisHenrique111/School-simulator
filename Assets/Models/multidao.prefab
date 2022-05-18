@@ -6363,6 +6363,8 @@ MonoBehaviour:
   tempoAtePonto: 1
   alunoSpeed: 1000
   goingToBusStop: 0
+  isOnibus: 0
+  currentDestination: {x: 0, y: 0, z: 0}
 --- !u!195 &6553997600903397626
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -6373,11 +6375,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.1
-  m_Speed: 1000
-  m_Acceleration: 8
+  m_Speed: 100
+  m_Acceleration: 1500
   avoidancePriority: 50
-  m_AngularSpeed: 1000
-  m_StoppingDistance: 3
+  m_AngularSpeed: 200
+  m_StoppingDistance: 10
   m_AutoTraverseOffMeshLink: 0
   m_AutoBraking: 1
   m_AutoRepath: 0

@@ -7,16 +7,20 @@ using UI;
 using Game.Variables;
 using Game.Data;
 using UnityEngine.AI;
+using TMPro;
 public class SpawnGrid : MonoBehaviour
 {
+    public GameObject selectedObject;
+    public TextMeshProUGUI objNameText;
     public static SpawnGrid Instance;
     public IntVariable coin;
     public Tween tween;
-    private GameObject pendingObject;
+    private GameObject objectCasa;
     private Vector3 pos;  
     private RaycastHit hit;
     [SerializeField] private LayerMask layerMask;
     public bool canPlace =true;
+   
 
     public float gridSize;
     public float rotateAmount;
@@ -30,16 +34,16 @@ public class SpawnGrid : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(pendingObject != null)
+        if(objectCasa != null)
         {
             if(gridOn){
-                pendingObject.transform.position = new Vector3(
+                objectCasa.transform.position = new Vector3(
                     RoundToNearestGrid(pos.x),
                     RoundToNearestGrid(pos.y),
                     RoundToNearestGrid(pos.z)
                 );
             }
-            else{pendingObject.transform.position = pos;}
+            else{objectCasa.transform.position = pos;}
             
             if(Input.GetMouseButton(0) && canPlace){
                 PlaceObject();
@@ -47,15 +51,18 @@ public class SpawnGrid : MonoBehaviour
             if(Input.GetKeyDown(KeyCode.R)){
                 RotateObject();
             }
+            if(Input.GetKeyDown(KeyCode.X)){
+                Delete();
+            }
         }
     }
     public void PlaceObject(){
-        Debug.Log (pendingObject);
-        pendingObject.GetComponent<caminhoAluno>().CreateCasa();
-        pendingObject = null;
+        Debug.Log (objectCasa);
+        objectCasa.GetComponent<caminhoAluno>().CreateCasa();
+        objectCasa = null;
     }
     public void RotateObject(){
-        pendingObject.transform.Rotate(Vector3.up,rotateAmount);
+        objectCasa.transform.Rotate(Vector3.up,rotateAmount);
     }
     private void FixedUpdate()
     {
@@ -69,7 +76,7 @@ public class SpawnGrid : MonoBehaviour
     }
     public void SelectObject(int index){
         if(coin.Value >= 10){
-            pendingObject = Instantiate(GameController.Instance.building[index].asset, pos, transform.rotation);
+            objectCasa = Instantiate(GameController.Instance.building[index].asset, pos, transform.rotation);
             GameManager.Instance.DiminuirMoedas(GameController.Instance.building[index].price);
             GameController.Instance.building[index].spawned = true;
         }else{
@@ -89,5 +96,14 @@ public class SpawnGrid : MonoBehaviour
             pos +=gridSize;
         }
         return pos ;
+    }
+    private void Deselect (){
+        selectedObject.GetComponent<Outline>().enabled = false;
+        selectedObject = null;
+    }
+    public void Delete(){
+        GameObject objectCasa = selectedObject;
+        Deselect();
+        Destroy(objectCasa);
     }
 }

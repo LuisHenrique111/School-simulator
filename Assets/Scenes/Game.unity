@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028352, g: 0.22571376, b: 0.30692244, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -17738,6 +17738,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cb02832663eafae4d91f3b4c927105ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  selectedObject: {fileID: 0}
+  objNameText: {fileID: 0}
   coin: {fileID: 11400000, guid: 44f96d2da099fde44a94d15ad2544322, type: 2}
   tween: {fileID: 689217822}
   layerMask:
@@ -19395,6 +19397,7 @@ MonoBehaviour:
   - {fileID: 1928611012}
   - {fileID: 1928611012}
   pontoDeOnibus: {fileID: 2102077136}
+  salvaAlunos: 0
 --- !u!136 &1853862168
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -23251,6 +23254,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   intervaloRecolhimento: 0.3
+  aluno: {fileID: 7468000369637168259, guid: db39c38a1ec85714bb4a7de6272b9f6f, type: 3}
 --- !u!54 &2102077138
 Rigidbody:
   m_ObjectHideFlags: 0
