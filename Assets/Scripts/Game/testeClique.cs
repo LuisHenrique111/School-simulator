@@ -18,6 +18,6 @@ public class testeClique : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log(gameObject.name);
+        
     }
 }

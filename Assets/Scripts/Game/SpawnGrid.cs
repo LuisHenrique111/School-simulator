@@ -45,7 +45,7 @@ public class SpawnGrid : MonoBehaviour
             }
             else{objectCasa.transform.position = pos;}
             
-            if(Input.GetMouseButton(0) && canPlace){
+            if(Input.GetKeyDown(KeyCode.Return) && canPlace){
                 PlaceObject();
             }
             if(Input.GetKeyDown(KeyCode.R)){

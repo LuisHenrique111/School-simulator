@@ -46,12 +46,15 @@ public class alunoss : MonoBehaviour
        }
        if(isOnibus){
            if(other.CompareTag("PontoOnibus")){
-                int random = Random.Range(0,100);
-                if(random>=GameManager.Instance.porcentagemGanho.Value){
-                    GameManager.Instance.GanhoFelicidade(10);
-                }else{
-                    GameManager.Instance.PerdaFelicidade(10);
-                }
+               for(int i = 0; i<GameController.Instance.teachers.Length; i++){
+                   if(GameController.Instance.teachers[i].carisma > 7 && GameController.Instance.teachers[i].didatica < 3 && GameController.Instance.teachers[i].diciplina > 5){
+                        GameManager.Instance.GanhoFelicidade(10);
+                    }else{
+                        GameManager.Instance.PerdaFelicidade(10);
+                    }
+               }
+               GameController.Instance.ControllerAlunos();
+                
             }
        }
        

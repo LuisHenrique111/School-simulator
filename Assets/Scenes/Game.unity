@@ -13493,7 +13493,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3832a5982af0a440b86c7aee3b5912cf, type: 2}
   building:
   - {fileID: 11400000, guid: cd8882720dcb04753b59b5e55c002e8d, type: 2}
-  - {fileID: 11400000, guid: b8ebd63241af7594d98fb1e4fe28cba2, type: 2}
   - {fileID: 11400000, guid: 4a8b1189f17e005498e6b462f9171b0c, type: 2}
   seconds: {fileID: 11400000, guid: 108d89f32388d3947a44a8edbc499f48, type: 2}
   hours: 0
@@ -13529,6 +13528,7 @@ MonoBehaviour:
   original: {fileID: 0}
   upgrade1: {fileID: 0}
   upgrade2: {fileID: 0}
+  currentCasa: 0
 --- !u!1001 &1179733861
 PrefabInstance:
   m_ObjectHideFlags: 0
