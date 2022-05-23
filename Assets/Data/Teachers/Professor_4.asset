@@ -17,7 +17,7 @@ MonoBehaviour:
   price: 90
   carisma: 3
   didatica: 7
-  diciplina: 4
+  diciplina: 6
   rendaHora: 30
   horaRentavel: 2
-  contratado: 1
+  contratado: 0
