@@ -98,7 +98,7 @@ GameObject:
   - component: {fileID: 5683266833560240567}
   m_Layer: 0
   m_Name: MatematicaLevel1
-  m_TagString: Untagged
+  m_TagString: casa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -194,7 +194,6 @@ MonoBehaviour:
   original3: {fileID: 0}
   upgrade1: {fileID: 0}
   upgrade2: {fileID: 0}
-  currentCasa: 0
 --- !u!1 &7621869139007604672
 GameObject:
   m_ObjectHideFlags: 0

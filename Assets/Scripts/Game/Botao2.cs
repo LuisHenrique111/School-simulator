@@ -16,10 +16,10 @@ public class Botao2 : MonoBehaviour
     void Update()
     {
         if(mouseDentroDoObjeto == true){
-            if(Input.GetMouseButtonDown(1)){
+            if(Input.GetMouseButtonDown(0)){
                 Tween.Instance.OpenProfMenu();
             }
-            if(Input.GetMouseButtonDown(0)){
+            if(Input.GetMouseButtonDown(1)){
                 Tween.Instance.OpenUpgrade(2);           
             }
         }

@@ -18,7 +18,7 @@ GameObject:
   - component: {fileID: 9086903606370783914}
   m_Layer: 0
   m_Name: GeografiaLevel3
-  m_TagString: Untagged
+  m_TagString: casa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -142,7 +142,6 @@ MonoBehaviour:
   original3: {fileID: 0}
   upgrade1: {fileID: 0}
   upgrade2: {fileID: 0}
-  current: 0
 --- !u!114 &1016475002899088839
 MonoBehaviour:
   m_ObjectHideFlags: 0

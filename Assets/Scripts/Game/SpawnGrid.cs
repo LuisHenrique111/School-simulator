@@ -46,7 +46,7 @@ public class SpawnGrid : MonoBehaviour
             }
             else{objectCasa.transform.position = pos;}
             
-            if(Input.GetKeyDown(KeyCode.Return) && canPlace){
+            if(Input.GetMouseButtonDown(0) && canPlace){
                 PlaceObject();
                 if(currentPredio == 0){
                     GameManager.Instance.DiminuirMoedas(GameController.Instance.building[0].price);

@@ -3450,7 +3450,7 @@ GameObject:
   - component: {fileID: -7491245462618663551}
   m_Layer: 0
   m_Name: HistoriaLevel1
-  m_TagString: Untagged
+  m_TagString: casa
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
