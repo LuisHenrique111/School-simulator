@@ -15,11 +15,11 @@ MonoBehaviour:
   nameBuilding: 
   UISpriteBuilding: {fileID: 0}
   nivel: 1
-  asset: {fileID: 5634299898547007381, guid: 215adb98c96e20941914513f30709721, type: 3}
+  asset: {fileID: 8788374237380839671, guid: c1cd57ac7f2afc74abcfbcfcf47918c6, type: 3}
   evolutionAsset:
-  - {fileID: 7120714135949579606, guid: f8668e47cf9028f47acaa0b61e5fb03a, type: 3}
-  - {fileID: 1303501546609691009, guid: 3ff40a19f3b54bd4687e9a404a54c569, type: 3}
+  - {fileID: 6447494746438054559, guid: b16625a50cb99cb4c94431155f0fc36b, type: 3}
+  - {fileID: 205572874949392536, guid: 0d30aed0c8a200a48bb34450cb88006f, type: 3}
   typeMatter: 3
-  spawned: 0
+  spawned: 1
   price: 50
-  priceEvolution: 
+  priceEvolution: 0100000001000000

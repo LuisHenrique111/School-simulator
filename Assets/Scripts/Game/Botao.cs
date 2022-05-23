@@ -19,7 +19,6 @@ public class Botao : MonoBehaviour
             if(Input.GetMouseButtonDown(1)){
                 Tween.Instance.OpenProfMenu();
             }
-            
         }
     }
 

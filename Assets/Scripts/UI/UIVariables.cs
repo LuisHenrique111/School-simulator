@@ -37,6 +37,7 @@ namespace UI{
         public TMP_Text salario;
         public Image imagemProfessor;
         public TMP_Text nameTeacher;
+        public Button btnContratado;
         public int currentProf=0;
         #endregion
 
@@ -59,6 +60,11 @@ namespace UI{
                 textStudents.text = students.Value.ToString();
                 textMinutes.text = minutes.Value.ToString();
                 textHours.text = GameController.Instance.hours.ToString();
+    	        if(GameController.Instance.teachers[currentProf].contratado == false){
+                    btnContratado.interactable = true;
+                }else{
+                    btnContratado.interactable = false;
+                }
             }
             
         }
@@ -91,13 +97,15 @@ namespace UI{
         public void BtnContratacao(){
             
             if(coin.Value>=GameController.Instance.teachers[currentProf].price){
-                GameController.Instance.teachers[currentProf].contratado = true;
-                GameManager.Instance.DiminuirMoedas(GameController.Instance.teachers[currentProf].price);
-                tween.ConfContrProf();
+            GameController.Instance.teachers[currentProf].contratado = true;
+            GameManager.Instance.DiminuirMoedas(GameController.Instance.teachers[currentProf].price);
+            tween.ConfContrProf();
             }else{
                 screenInsufficientMoney.SetActive(true);
                 tween.ErroContrProf();
             }
+            
+            
         }
 
         public void HideScreenInsMoney(){
