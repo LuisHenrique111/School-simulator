@@ -101,7 +101,7 @@ public class GameController : MonoBehaviour
             GameManager.Instance.SetEstudades(0);
             GameManager.Instance.SetFelicidade(50);
             GameManager.Instance.SetMoedas(900);
-            SceneManager.LoadScene("GameOver");
+            SceneManager.LoadScene("Win");
         }
     }
 
