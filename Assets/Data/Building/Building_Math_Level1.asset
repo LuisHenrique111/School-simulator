@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameBuilding: Predio 1
   UISpriteBuilding: {fileID: 0}
-  nivel: 1
+  nivel: 3
   asset: {fileID: 7069786925682782386, guid: 847e6677835856e49b55f0837b4395c9, type: 3}
   evolutionAsset:
   - {fileID: 1142639317440616460, guid: 3e9e55b152d596246bc674502a6985d5, type: 3}
   - {fileID: 1807221667530694757, guid: b85779c32b540dd488b3db67f8db8f1c, type: 3}
   typeMatter: 0
-  spawned: 0
+  spawned: 1
   price: 20
   priceEvolution: 0100000001000000

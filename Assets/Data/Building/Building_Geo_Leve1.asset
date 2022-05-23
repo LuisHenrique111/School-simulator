@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameBuilding: 
   UISpriteBuilding: {fileID: 0}
-  nivel: 1
+  nivel: 3
   asset: {fileID: 8788374237380839671, guid: c1cd57ac7f2afc74abcfbcfcf47918c6, type: 3}
   evolutionAsset:
   - {fileID: 6447494746438054559, guid: b16625a50cb99cb4c94431155f0fc36b, type: 3}

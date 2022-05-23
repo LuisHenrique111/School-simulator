@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameBuilding: 
   UISpriteBuilding: {fileID: 0}
-  nivel: 1
+  nivel: 2
   asset: {fileID: 8061977963878588881, guid: 138c97647c3ee674db0992417e827bd1, type: 3}
   evolutionAsset:
   - {fileID: 7783381186358707879, guid: 72cce14a4c70267418b0bd4d7bb5f4da, type: 3}
   - {fileID: 2043479711001554407, guid: 2f9dc5f7df471314d81b9cf51d6fe53c, type: 3}
   typeMatter: 2
-  spawned: 0
+  spawned: 1
   price: 40
   priceEvolution: 0100000001000000
