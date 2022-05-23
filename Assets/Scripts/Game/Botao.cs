@@ -20,7 +20,6 @@ public class Botao : MonoBehaviour
                 Tween.Instance.OpenProfMenu();
             }
             if(Input.GetMouseButtonDown(1)){
-                Debug.Log("ABRIUUUUUUUUUUUUUUUUUUU");
                 Tween.Instance.OpenUpgrade(0);           
             }
         }

@@ -34,7 +34,7 @@ public class GameController : MonoBehaviour
         if(GameManager.Instance.newGame.Value == true){
             GameManager.Instance.SetEstudades(0);
             GameManager.Instance.SetFelicidade(50);
-            GameManager.Instance.SetMoedas(100);
+            GameManager.Instance.SetMoedas(900);
             for(int i =0; i<teachers.Length; i++){
                 teachers[i].contratado = false;
             }
@@ -89,18 +89,18 @@ public class GameController : MonoBehaviour
     
     public void GameOver(){
         if(GameManager.Instance.studentsManager.Value < 0){
-            GameManager.Instance.SetEstudades(7);
+            GameManager.Instance.SetEstudades(0);
             GameManager.Instance.SetFelicidade(50);
-            GameManager.Instance.SetMoedas(500);
+            GameManager.Instance.SetMoedas(900);
             SceneManager.LoadScene("GameOver");
         }
     }
 
     public void Win(){
         if(GameManager.Instance.studentsManager.Value >= 100 && GameManager.Instance.happiness.Value >= 80){
-            GameManager.Instance.SetEstudades(7);
+            GameManager.Instance.SetEstudades(0);
             GameManager.Instance.SetFelicidade(50);
-            GameManager.Instance.SetMoedas(500);
+            GameManager.Instance.SetMoedas(900);
             SceneManager.LoadScene("GameOver");
         }
     }
