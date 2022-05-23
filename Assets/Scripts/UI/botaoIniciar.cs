@@ -8,8 +8,12 @@ public class botaoIniciar : MonoBehaviour
     public string nomeCena;
 
     public void BtnMudaCena()
-    {
+    {   
+        if(nomeCena == "Game"){
+            GameManager.Instance.newGame.Value = true;
+        }
         SceneManager.LoadScene(nomeCena);
+        
     }
 
     public void QuitGame()

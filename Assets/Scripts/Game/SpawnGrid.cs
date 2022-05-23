@@ -20,6 +20,7 @@ public class SpawnGrid : MonoBehaviour
     private RaycastHit hit;
     [SerializeField] private LayerMask layerMask;
     public bool canPlace =true;
+    private int currentPredio;
    
 
     public float gridSize;
@@ -47,6 +48,18 @@ public class SpawnGrid : MonoBehaviour
             
             if(Input.GetKeyDown(KeyCode.Return) && canPlace){
                 PlaceObject();
+                if(currentPredio == 0){
+                    GameManager.Instance.DiminuirMoedas(GameController.Instance.building[0].price);
+                    GameController.Instance.building[0].spawned = true;
+                }
+                if(currentPredio == 1){
+                    GameManager.Instance.DiminuirMoedas(GameController.Instance.building[1].price);
+                    GameController.Instance.building[1].spawned = true;
+                }
+                if(currentPredio == 2){
+                    GameManager.Instance.DiminuirMoedas(GameController.Instance.building[2].price);
+                    GameController.Instance.building[2].spawned = true;
+                }
             }
             if(Input.GetKeyDown(KeyCode.R)){
                 RotateObject();
@@ -75,10 +88,9 @@ public class SpawnGrid : MonoBehaviour
         }
     }
     public void SelectObject(int index){
-        if(coin.Value >= 10){
+        if(coin.Value >= GameController.Instance.building[index].price){
             objectCasa = Instantiate(GameController.Instance.building[index].asset, pos, transform.rotation);
-            GameManager.Instance.DiminuirMoedas(GameController.Instance.building[index].price);
-            GameController.Instance.building[index].spawned = true;
+            currentPredio = index;
         }else{
             UIVariables.Instance.screenInsufficientMoney.SetActive(true);
             tween.ErroContrProf();

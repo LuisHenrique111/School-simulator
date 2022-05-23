@@ -17,7 +17,7 @@ namespace UI{
         public int activeProf = 0;
         int sideMenu = 1;
 
-
+        public GameObject[] upgradeConstructionUI;
         public GameObject professor;
         public Button contratarProf;
         public Color erroColorBt;
@@ -124,6 +124,26 @@ namespace UI{
         public void CloseProfMenu()
         {
             LeanTween.moveLocalY(profMenu, -900f, 1f).setEase(LeanTweenType.easeOutCubic).setOnComplete(DesativaProfMenu);
+        }
+
+        public void OpenUpgrade(int index){
+            upgradeConstructionUI[index].SetActive(true);
+            LeanTween.moveLocalY(upgradeConstructionUI[index],  0f, 1f).setEase(LeanTweenType.easeOutCubic);
+            if(GameController.Instance.building[index].nivel == 1 && GameManager.Instance.coinManager.Value >= GameController.Instance.building[index].priceEvolution[0]){
+                UIVariables.Instance.precoUpgrade[index].text = GameController.Instance.building[index].priceEvolution[0].ToString();
+                UIVariables.Instance.nivel[index].text = GameController.Instance.building[index].nivel.ToString();
+                UIVariables.Instance.imagemUpgrade[index].sprite = GameController.Instance.building[index].UISpriteBuilding;
+            }else if(GameController.Instance.building[index].nivel == 2 && GameManager.Instance.coinManager.Value >= GameController.Instance.building[index].priceEvolution[1]){
+                UIVariables.Instance.precoUpgrade[index].text = GameController.Instance.building[index].priceEvolution[1].ToString();
+                UIVariables.Instance.nivel[index].text = GameController.Instance.building[index].nivel.ToString();
+                UIVariables.Instance.imagemUpgrade[index].sprite = GameController.Instance.building[index].UISpriteBuilding;
+            }
+        }
+
+        public void CloseUpConst(int index)
+        {
+            LeanTween.moveLocalY(upgradeConstructionUI[index],  -900f, 1f).setEase(LeanTweenType.easeOutCubic);
+            upgradeConstructionUI[index].SetActive(false);
         }
 
         public void ErroContrProf()

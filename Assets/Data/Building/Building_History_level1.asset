@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Building_History_level1
   m_EditorClassIdentifier: 
   nameBuilding: 
-  UISpriteBuilding: {fileID: 0}
-  nivel: 2
+  UISpriteBuilding: {fileID: 21300000, guid: 61d1e95a6e45a6a4d9ad2b16de573a8d, type: 3}
+  nivel: 1
   asset: {fileID: 8061977963878588881, guid: 138c97647c3ee674db0992417e827bd1, type: 3}
   evolutionAsset:
   - {fileID: 7783381186358707879, guid: 72cce14a4c70267418b0bd4d7bb5f4da, type: 3}
@@ -22,4 +22,4 @@ MonoBehaviour:
   typeMatter: 2
   spawned: 1
   price: 40
-  priceEvolution: 0100000001000000
+  priceEvolution: 050000000a000000

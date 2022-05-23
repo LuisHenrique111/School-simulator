@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UI;
 
-public class Botao : MonoBehaviour
+public class Botao1 : MonoBehaviour
 {
     bool mouseDentroDoObjeto;
     // Start is called before the first frame update
@@ -20,8 +20,7 @@ public class Botao : MonoBehaviour
                 Tween.Instance.OpenProfMenu();
             }
             if(Input.GetMouseButtonDown(0)){
-                Debug.Log("ABRIUUUUUUUUUUUUUUUUUUU");
-                Tween.Instance.OpenUpgrade(0);           
+                Tween.Instance.OpenUpgrade(1);           
             }
         }
     }

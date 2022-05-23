@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: Building_Geo_Leve1
   m_EditorClassIdentifier: 
   nameBuilding: 
-  UISpriteBuilding: {fileID: 0}
-  nivel: 3
+  UISpriteBuilding: {fileID: 21300000, guid: 411619a2657df794aad037a69ab78ab0, type: 3}
+  nivel: 2
   asset: {fileID: 8788374237380839671, guid: c1cd57ac7f2afc74abcfbcfcf47918c6, type: 3}
   evolutionAsset:
   - {fileID: 6447494746438054559, guid: b16625a50cb99cb4c94431155f0fc36b, type: 3}
@@ -22,4 +22,4 @@ MonoBehaviour:
   typeMatter: 3
   spawned: 1
   price: 50
-  priceEvolution: 0100000001000000
+  priceEvolution: 0a00000014000000

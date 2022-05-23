@@ -13,9 +13,9 @@ GameObject:
   - component: {fileID: 1862989416595708237}
   - component: {fileID: 1016475002899088835}
   - component: {fileID: 1016475002899088836}
-  - component: {fileID: 1016475002899088837}
   - component: {fileID: 1016475002899088838}
   - component: {fileID: 1016475002899088839}
+  - component: {fileID: 9086903606370783914}
   m_Layer: 0
   m_Name: GeografiaLevel3
   m_TagString: Untagged
@@ -125,18 +125,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 30.979687, y: 10.472321, z: 12.848087}
   m_Center: {x: -0.00000047683716, y: 5.2361603, z: 1.4123952}
---- !u!114 &1016475002899088837
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 205572874949392536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daf35090afcd52f49bb8e3ef94f02667, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &1016475002899088838
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -150,9 +138,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   original: {fileID: 0}
+  original2: {fileID: 0}
+  original3: {fileID: 0}
   upgrade1: {fileID: 0}
   upgrade2: {fileID: 0}
-  currentCasa: 0
+  current: 0
 --- !u!114 &1016475002899088839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,6 +158,18 @@ MonoBehaviour:
   alunos: {fileID: 4060211839215157732, guid: b7818edd33c0e47209873067e736c8f0, type: 3}
   destinationPoint: {fileID: 833920029512453656}
   quantidadeAlunos: 0
+--- !u!114 &9086903606370783914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 205572874949392536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7b336f03280d587429eafbc72c6433b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &675574756052743560
 GameObject:
   m_ObjectHideFlags: 0

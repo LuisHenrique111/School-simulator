@@ -3447,7 +3447,7 @@ GameObject:
   - component: {fileID: 8959013653506207366}
   - component: {fileID: 4669737993220893082}
   - component: {fileID: 8279521280526925048}
-  - component: {fileID: 6163330023309877330}
+  - component: {fileID: -7491245462618663551}
   m_Layer: 0
   m_Name: HistoriaLevel1
   m_TagString: Untagged
@@ -3464,7 +3464,7 @@ Transform:
   m_GameObject: {fileID: 8061977963878588881}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 15, y: 15, z: 15}
+  m_LocalScale: {x: 25, y: 25, z: 25}
   m_Children:
   - {fileID: 3108828937276587232}
   - {fileID: 8829364299382770921}
@@ -3562,7 +3562,7 @@ MonoBehaviour:
   alunos: {fileID: 4060211839215157732, guid: b7818edd33c0e47209873067e736c8f0, type: 3}
   destinationPoint: {fileID: 1172669718697605775}
   quantidadeAlunos: 0
---- !u!114 &6163330023309877330
+--- !u!114 &-7491245462618663551
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3571,7 +3571,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 8061977963878588881}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: daf35090afcd52f49bb8e3ef94f02667, type: 3}
+  m_Script: {fileID: 11500000, guid: d59d3bc2dd992a84d940a1674961c696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &8226630062467249337

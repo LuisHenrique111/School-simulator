@@ -10,21 +10,12 @@ public class GameManager : MonoBehaviour
     public IntVariable happiness;
     public IntVariable coinManager;
     public IntVariable studentsManager;
-    public IntVariable porcentagemGanho;
-    public bool newGame;
+    public BoolVariable newGame;
     // Start is called before the first frame update
     void Start()
     {
         Instance = this;
-        if(newGame){
-            SetEstudades(7);
-            SetFelicidade(50);
-            SetMoedas(100);
-            porcentagemGanho.Value = 50;
-            for(int i =0; i<GameController.Instance.teachers.Length; i++){
-                GameController.Instance.teachers[i].contratado = false;
-            }
-        }
+
         
     }
 

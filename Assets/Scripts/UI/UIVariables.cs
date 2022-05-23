@@ -38,12 +38,22 @@ namespace UI{
         public Image imagemProfessor;
         public TMP_Text nameTeacher;
         public Button btnContratado;
-        public int currentProf=0;
+        public int currentProf;
         #endregion
+
+        #region store teacher
+        [Header("UI buildings Upgrade 1")]
+        public TMP_Text[] precoUpgrade;
+        public TMP_Text[] nivel;
+        public Image[] imagemUpgrade;
+        public Button[] btnUpgrade;
+        #endregion
+
 
         [Header("telas")]
         public GameObject screenInsufficientMoney;
         public bool isGame;
+        public bool isSalaDiretor;
 
         // Start is called before the first frame update
         void Start()
@@ -60,13 +70,34 @@ namespace UI{
                 textStudents.text = students.Value.ToString();
                 textMinutes.text = minutes.Value.ToString();
                 textHours.text = GameController.Instance.hours.ToString();
-    	        if(GameController.Instance.teachers[currentProf].contratado == false){
+                if(!isSalaDiretor){
+                    if(GameController.Instance.teachers[currentProf].contratado == false){
                     btnContratado.interactable = true;
-                }else{
-                    btnContratado.interactable = false;
+                    }else{
+                        btnContratado.interactable = false;
+                    }
+                    VerificaBotaoUpgrade();
                 }
             }
             
+        }
+
+        public void VerificaBotaoUpgrade(){
+            if(coin.Value >= GameController.Instance.building[0].priceEvolution[0]){
+                btnUpgrade[0].interactable = true;
+            }else{
+                btnUpgrade[0].interactable = false;
+            }
+            if(coin.Value >= GameController.Instance.building[1].priceEvolution[0]){
+                btnUpgrade[1].interactable = true;
+            }else{
+                btnUpgrade[1].interactable = false;
+            }
+            if(coin.Value >= GameController.Instance.building[2].priceEvolution[0]){
+                btnUpgrade[2].interactable = true;
+            }else{
+                btnUpgrade[2].interactable = false;
+            }
         }
 
         public void NextProf(){
@@ -95,7 +126,6 @@ namespace UI{
         }
 
         public void BtnContratacao(){
-            
             if(coin.Value>=GameController.Instance.teachers[currentProf].price){
             GameController.Instance.teachers[currentProf].contratado = true;
             GameManager.Instance.DiminuirMoedas(GameController.Instance.teachers[currentProf].price);
@@ -104,17 +134,16 @@ namespace UI{
                 screenInsufficientMoney.SetActive(true);
                 tween.ErroContrProf();
             }
-            
-            
         }
+
 
         public void HideScreenInsMoney(){
             screenInsufficientMoney.SetActive(false);
         }
 
-         public void SalaDiretor(){
-        SceneManager.LoadScene("Sala_Diretor");
-    }
+        public void SalaDiretor(){
+            SceneManager.LoadScene("Sala_Diretor");
+        }
         public void Game(){
             SceneManager.LoadScene("Game");
         }

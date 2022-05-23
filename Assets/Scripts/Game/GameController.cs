@@ -31,6 +31,19 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Instance = this;
+        if(GameManager.Instance.newGame.Value == true){
+            GameManager.Instance.SetEstudades(0);
+            GameManager.Instance.SetFelicidade(50);
+            GameManager.Instance.SetMoedas(100);
+            for(int i =0; i<teachers.Length; i++){
+                teachers[i].contratado = false;
+            }
+            for(int i = 0; i<building.Length; i++){
+                building[i].nivel = 1;
+                building[i].spawned = false;
+            }
+            GameManager.Instance.newGame.Value = false;
+        }
     }
 
     // Update is called once per frame
@@ -75,7 +88,7 @@ public class GameController : MonoBehaviour
     }
     
     public void GameOver(){
-        if(GameManager.Instance.studentsManager.Value <= 0){
+        if(GameManager.Instance.studentsManager.Value < 0){
             GameManager.Instance.SetEstudades(7);
             GameManager.Instance.SetFelicidade(50);
             GameManager.Instance.SetMoedas(500);
