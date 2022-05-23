@@ -3532,7 +3532,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!65 &4669737993220893082
 BoxCollider:
@@ -3545,8 +3545,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 3.64, y: 2.44, z: 2.62}
+  m_Center: {x: 0, y: 1.23, z: -0.27}
 --- !u!114 &8279521280526925048
 MonoBehaviour:
   m_ObjectHideFlags: 0
