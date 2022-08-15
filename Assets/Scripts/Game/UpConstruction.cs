@@ -20,6 +20,7 @@ public class UpConstruction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Verifica se esta na cena o objeto
         if(GameController.Instance.building[0].spawned == true){
             reitoriaOriginal = GameObject.Find("ReitoriaLevel1");
             if(GameManager.Instance.newGame.Value == false){
@@ -44,11 +45,14 @@ public class UpConstruction : MonoBehaviour
         }else if(GameController.Instance.building[index].nivel == 3 && GameManager.Instance.coinManager.Value >= GameController.Instance.building[index].priceEvolution[1]){
             GameManager.Instance.GanhoFelicidade(10);
             GameManager.Instance.DiminuirMoedas(GameController.Instance.building[index].priceEvolution[1]);
-            reitoriaUpgrade2 = Instantiate(GameController.Instance.building[index].evolutionAsset[1], reitoriaUpgrade1.transform.position, reitoriaUpgrade1.transform.rotation);
-            if(GameManager.Instance.newGame.Value == false){
-                GameObject.DontDestroyOnLoad(reitoriaUpgrade2);
+            if(index == 0){
+                reitoriaUpgrade2 = Instantiate(GameController.Instance.building[index].evolutionAsset[1], reitoriaUpgrade1.transform.position, reitoriaUpgrade1.transform.rotation);
+                if(GameManager.Instance.newGame.Value == false){
+                    GameObject.DontDestroyOnLoad(reitoriaUpgrade2);
+                }
+                Destroy(reitoriaUpgrade1);
             }
-            Destroy(reitoriaUpgrade1);
+            
         }
     }
 }
