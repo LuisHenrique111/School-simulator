@@ -9173,9 +9173,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6a12751929ff124bad1acad9bfbb291, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  reitoriaOriginal: {fileID: 0}
-  reitoriaUpgrade1: {fileID: 0}
-  reitoriaUpgrade2: {fileID: 0}
+  reitoriaOriginal: {fileID: 704498824808876526}
 --- !u!1 &1190921565
 GameObject:
   m_ObjectHideFlags: 0
