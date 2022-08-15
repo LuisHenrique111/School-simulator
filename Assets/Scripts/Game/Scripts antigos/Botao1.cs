@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UI;
@@ -32,4 +32,4 @@ public class Botao1 : MonoBehaviour
     void OnMouseExit(){
         mouseDentroDoObjeto = false;
     }
-}
+}*/

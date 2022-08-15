@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
@@ -37,7 +37,7 @@ public class teste : MonoBehaviour
                 agent.SetDestination(hit.point);
             }
         }
-        */
+        
         if(canChangeDestination)
         {
             canChangeDestination = false;
@@ -68,3 +68,4 @@ public class teste : MonoBehaviour
 
     }
 }
+*/

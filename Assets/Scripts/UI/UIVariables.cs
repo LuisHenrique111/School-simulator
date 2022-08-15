@@ -70,14 +70,14 @@ namespace UI{
                 textStudents.text = students.Value.ToString();
                 textMinutes.text = minutes.Value.ToString();
                 textHours.text = GameController.Instance.hours.ToString();
-                if(!isSalaDiretor){
+                /*if(!isSalaDiretor){
                     if(GameController.Instance.teachers[currentProf].contratado == false){
                     btnContratado.interactable = true;
                     }else{
                         btnContratado.interactable = false;
                     }
                     VerificaBotaoUpgrade();
-                }
+                }*/
             }
             
         }
@@ -100,7 +100,7 @@ namespace UI{
             }
         }
 
-        public void NextProf(){
+        /*public void NextProf(){
             currentProf = (currentProf + 1) % GameController.Instance.teachers.Length;
             sliderCarisma.value = GameController.Instance.teachers[currentProf].carisma;
             sliderDidatica.value = GameController.Instance.teachers[currentProf].didatica;
@@ -134,7 +134,7 @@ namespace UI{
                 screenInsufficientMoney.SetActive(true);
                 tween.ErroContrProf();
             }
-        }
+        }*/
 
 
         public void HideScreenInsMoney(){

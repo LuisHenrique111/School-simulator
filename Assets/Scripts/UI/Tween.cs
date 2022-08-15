@@ -105,7 +105,7 @@ namespace UI{
             constructionBG.SetActive(false);
             constructionInfo.SetActive(false);
         }    
-        void DesativaProfMenu()
+        /*void DesativaProfMenu()
         {
             profMenu.SetActive(false);
         }
@@ -124,7 +124,7 @@ namespace UI{
         public void CloseProfMenu()
         {
             LeanTween.moveLocalY(profMenu, -900f, 1f).setEase(LeanTweenType.easeOutCubic).setOnComplete(DesativaProfMenu);
-        }
+        }*/
 
         public void OpenUpgrade(int index){
             upgradeConstructionUI[index].SetActive(true);

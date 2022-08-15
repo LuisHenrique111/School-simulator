@@ -9,8 +9,6 @@ using UnityEngine.SceneManagement;
 public class GameController : MonoBehaviour
 {
     public static GameController Instance;
-    [Header("Vetor dos professores")]
-    public TeacherData[] teachers;
 
     [Header("Vetor dos predios")]
     public BuildingData[] building;
@@ -36,9 +34,6 @@ public class GameController : MonoBehaviour
             GameManager.Instance.SetEstudades(0);
             GameManager.Instance.SetFelicidade(50);
             GameManager.Instance.SetMoedas(900);
-            for(int i =0; i<teachers.Length; i++){
-                teachers[i].contratado = false;
-            }
             for(int i = 0; i<building.Length; i++){
                 building[i].nivel = 1;
                 building[i].spawned = false;
@@ -50,36 +45,9 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-        seconds.Value = seconds.Value + Time.deltaTime;
-        minutes.Value = (int)seconds.Value;
-        
-        if(seconds.Value >= 60){
-            seconds.Value = 0;
-            minutes.Value = 0;
-            hours = hours + 1;
-            profit();
-        }
 
-        TrocaDia();
         Win();
         GameOver();
-    }
-
-    public void profit(){
-        for(int i = 0; i < teachers.Length; i++){
-            if(teachers[i].contratado == true && ((hours % teachers[i].horaRentavel) == 0)){
-                coin.Value = coin.Value + teachers[i].rendaHora;
-            }
-        }
-    }
-
-    public void TrocaDia(){
-        if(hours == 10){
-            seconds.Value = 0;
-            minutes.Value = 0;
-            hours = 0;
-        }
     }
 
     public void ControllerAlunos(){

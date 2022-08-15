@@ -1,4 +1,4 @@
-using System.Collections;
+/*using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Game.Data;
@@ -38,7 +38,7 @@ public class UpgradeConstruction : MonoBehaviour
             }
         }
         if(GameController.Instance.building[2].spawned == true){
-            original3 = GameObject.Find("HistoriaLevel1(Clone)");
+            original3 = GameObject.Find("ReitoriaLevel1");
             if(GameManager.Instance.newGame.Value == false){
                 GameObject.DontDestroyOnLoad(original3);
             }
@@ -83,4 +83,4 @@ public class UpgradeConstruction : MonoBehaviour
             Destroy(upgrade1);
         }
     }
-}
+}*/
