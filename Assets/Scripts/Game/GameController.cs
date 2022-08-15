@@ -24,6 +24,7 @@ public class GameController : MonoBehaviour
     #endregion
 
     public GameObject telaGameOver;
+
     
     
 

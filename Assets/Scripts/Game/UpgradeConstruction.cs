@@ -19,7 +19,7 @@ public class UpgradeConstruction : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+      
     }
 
     // Update is called once per frame
@@ -27,14 +27,21 @@ public class UpgradeConstruction : MonoBehaviour
     {
         if(GameController.Instance.building[0].spawned == true){
             original = GameObject.Find("MatematicaLevel1(Clone)");
-
+            if(GameManager.Instance.newGame.Value == false){
+                GameObject.DontDestroyOnLoad(original);
+            }
         }
         if(GameController.Instance.building[1].spawned == true){
             original2 = GameObject.Find("GeografiaLevel1(Clone)");
-
+            if(GameManager.Instance.newGame.Value == false){
+                GameObject.DontDestroyOnLoad(original2);
+            }
         }
         if(GameController.Instance.building[2].spawned == true){
             original3 = GameObject.Find("HistoriaLevel1(Clone)");
+            if(GameManager.Instance.newGame.Value == false){
+                GameObject.DontDestroyOnLoad(original3);
+            }
         }
     }
 
@@ -46,14 +53,23 @@ public class UpgradeConstruction : MonoBehaviour
             GameManager.Instance.GanhoFelicidade(5);
             if(index == 0){
                 upgrade1 = Instantiate(GameController.Instance.building[index].evolutionAsset[0], original.transform.position, original.transform.rotation);
+                if(GameManager.Instance.newGame.Value == false){
+                    GameObject.DontDestroyOnLoad(upgrade1);
+                }
                 Destroy(original);
             }
             if(index == 1){
                 upgrade1 = Instantiate(GameController.Instance.building[index].evolutionAsset[0], original2.transform.position, original2.transform.rotation);
+                if(GameManager.Instance.newGame.Value == false){
+                    GameObject.DontDestroyOnLoad(upgrade1);
+                }
                 Destroy(original2);
             }
             if(index == 2){
                 upgrade1 = Instantiate(GameController.Instance.building[index].evolutionAsset[0], original3.transform.position, original3.transform.rotation);
+                if(GameManager.Instance.newGame.Value == false){
+                    GameObject.DontDestroyOnLoad(upgrade1);
+                }
                 Destroy(original3);
             }
         }
@@ -61,6 +77,9 @@ public class UpgradeConstruction : MonoBehaviour
             GameManager.Instance.GanhoFelicidade(10);
             GameManager.Instance.DiminuirMoedas(GameController.Instance.building[index].priceEvolution[1]);
             upgrade2 = Instantiate(GameController.Instance.building[index].evolutionAsset[1], upgrade1.transform.position, upgrade1.transform.rotation);
+            if(GameManager.Instance.newGame.Value == false){
+                GameObject.DontDestroyOnLoad(upgrade2);
+            }
             Destroy(upgrade1);
         }
     }
