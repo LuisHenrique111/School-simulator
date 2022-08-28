@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class grid : MonoBehaviour
+public class grinds : MonoBehaviour
 {
     public Transform cubo;
     public GameObject casa;
