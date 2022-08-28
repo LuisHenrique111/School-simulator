@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 public class CameraController : MonoBehaviour
 {
@@ -27,8 +28,11 @@ public class CameraController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-      
+      transform.position = ClampCamera(transform.position);
+
       newPosition = transform.position;
+      
+      
       newRotation = transform.rotation;
       newZoom = cameraTransform.localPosition;
 
@@ -39,12 +43,29 @@ public class CameraController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+
+
       MouseMove(); 
       MovimentKeys();
+      transform.position = ClampCamera(transform.position);
+      
+      
       
       
      
     }
+
+    private Vector3 ClampCamera(Vector3 target)
+    {
+      float clampX = Mathf.Clamp(target.x,-180 ,180);
+      float clampY = Mathf.Clamp(target.y, -20,80);
+      float clampZ = Mathf.Clamp(target.z,0,150);
+      
+
+      return new Vector3(clampX,clampY,clampZ);
+    }
+
+    
 
     public void MouseMove()
     {
