@@ -9,8 +9,8 @@ using UI;
 public class UpConstruction : MonoBehaviour
 {
     public GameObject reitoriaOriginal;
-    GameObject reitoriaUpgrade1;
-    GameObject reitoriaUpgrade2;
+    public GameObject reitoriaUpgrade1;
+    public GameObject reitoriaUpgrade2;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,12 +21,12 @@ public class UpConstruction : MonoBehaviour
     void Update()
     {
         //Verifica se esta na cena o objeto
-        if(GameController.Instance.building[0].spawned == true){
-            reitoriaOriginal = GameObject.Find("ReitoriaLevel1");
-            if(GameManager.Instance.newGame.Value == false){
-                GameObject.DontDestroyOnLoad(reitoriaOriginal);
-            }
+
+        reitoriaOriginal = GameObject.Find("ReitoriaLevel1");
+        if(GameManager.Instance.newGame.Value == false){
+            GameObject.DontDestroyOnLoad(reitoriaOriginal);
         }
+
     }
 
     public void Upgrade(int index){

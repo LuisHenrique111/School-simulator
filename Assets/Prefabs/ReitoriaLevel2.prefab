@@ -6910,7 +6910,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7863364828946062331}
   - component: {fileID: 3395100373260744796}
-  - component: {fileID: 9132152650887962907}
   - component: {fileID: 5519573134793144998}
   m_Layer: 0
   m_Name: ReitoriaLevel2
@@ -6928,7 +6927,7 @@ Transform:
   m_GameObject: {fileID: 7380159587154985281}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 644, y: 0, z: -379}
-  m_LocalScale: {x: 43.753174, y: 43.753174, z: 43.753174}
+  m_LocalScale: {x: 9.6, y: 9.6, z: 9.6}
   m_Children:
   - {fileID: 5579809608853432244}
   - {fileID: 2296087850667812694}
@@ -7050,23 +7049,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 3.26, y: 2.23, z: 5.35}
   m_Center: {x: -0.12, y: 1.07, z: -1.85}
---- !u!114 &9132152650887962907
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7380159587154985281}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4fa74458f66a844908ca889383292352, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  original: {fileID: 0}
-  original2: {fileID: 0}
-  original3: {fileID: 0}
-  upgrade1: {fileID: 0}
-  upgrade2: {fileID: 0}
 --- !u!114 &5519573134793144998
 MonoBehaviour:
   m_ObjectHideFlags: 0

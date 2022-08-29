@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Menu.unity
     guid: 0eb7ea4333b9f374dac548cf8fb0733d
   - enabled: 1
-    path: Assets/SimpleGridSystem/Game.unity
+    path: Assets/Scenes/Game.unity
     guid: fbb6e57eb87e3ac498343234cc0719dc
   - enabled: 1
     path: Assets/Scenes/Sala_Diretor.unity
