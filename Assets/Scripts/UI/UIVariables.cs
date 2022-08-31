@@ -33,16 +33,16 @@ namespace UI{
         #endregion
 
         #region store teacher
-        [Header("UI professor store")]
+        [Header("UI predios store")]
         public TMP_Text descricaoBuilding;
         public TMP_Text salario;
         public Image imagemProfessor;
         public TMP_Text nameTeacher;
-        public Button btnContratado;
+        public Button btnComprar;
         public int currentConst;
         #endregion
 
-        #region store teacher
+        #region store upgrade
         [Header("UI buildings Upgrade 1")]
         public TMP_Text[] precoUpgrade;
         public TMP_Text[] nivel;
@@ -72,6 +72,15 @@ namespace UI{
                 textStudents.text = students.Value.ToString();
                 textMinutes.text = minutes.Value.ToString();
                 textHours.text = GameController.Instance.hours.ToString();
+
+                if(GameController.Instance.predios[currentConst].spawned == false){
+                    btnComprar.interactable = true;
+                }else{
+                    btnComprar.interactable = false;
+                }
+                VerificaBotaoUpgrade();
+                
+                
                 /*if(!isSalaDiretor){
                     if(GameController.Instance.building[currentConst].contratado == false){
                     btnContratado.interactable = true;
@@ -90,15 +99,8 @@ namespace UI{
             }else{
                 btnUpgrade[0].interactable = false;
             }
-            if(coin.Value >= GameController.Instance.building[1].priceEvolution[0]){
-                btnUpgrade[1].interactable = true;
-            }else{
-                btnUpgrade[1].interactable = false;
-            }
-            if(coin.Value >= GameController.Instance.building[2].priceEvolution[0]){
-                btnUpgrade[2].interactable = true;
-            }else{
-                btnUpgrade[2].interactable = false;
+            if(GameController.Instance.building[0].nivel == 3){
+                btnUpgrade[0].interactable = false;
             }
         }
 
@@ -116,6 +118,7 @@ namespace UI{
             imagemProfessor.sprite = GameController.Instance.predios[currentConst].UISpriteBuilding;
             nameTeacher.text = GameController.Instance.predios[currentConst].nameBuilding;
             descricaoBuilding.text = GameController.Instance.predios[currentConst].descricaoBuilding;
+
             currentConst--;
 
             if (currentConst < 0)
