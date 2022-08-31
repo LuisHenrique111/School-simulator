@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UI;
 
-public class Botao : MonoBehaviour
+public class Grid : MonoBehaviour
 {
     bool mouseDentroDoObjeto;
     // Start is called before the first frame update
@@ -16,14 +16,17 @@ public class Botao : MonoBehaviour
     void Update()
     {
         if(mouseDentroDoObjeto == true){
-            if(Input.GetMouseButtonDown(0)){
-                Tween.Instance.OpenUpgrade(0);           
-            }
-            /*if(Input.GetMouseButtonDown(1)){
+            if(Input.GetMouseButtonDown(1)){
                 Tween.Instance.OpenProfMenu();
-            }*/
+            }
         }
     }
+
+    /*public void GridSpawn(int index){
+        Instantiate(GameController.Instance.building[index].asset, slot.transform.position, slot.transform.rotation);
+    }*/
+
+    
 
     void OnMouseEnter(){
         mouseDentroDoObjeto = true;

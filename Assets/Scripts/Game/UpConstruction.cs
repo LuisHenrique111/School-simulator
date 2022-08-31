@@ -20,12 +20,7 @@ public class UpConstruction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Verifica se esta na cena o objeto
-
-        reitoriaOriginal = GameObject.Find("ReitoriaLevel1");
-        if(GameManager.Instance.newGame.Value == false){
-            GameObject.DontDestroyOnLoad(reitoriaOriginal);
-        }
+    
 
     }
 

@@ -8,7 +8,7 @@ namespace Game.Data{
     [CreateAssetMenu(fileName = "Game/Building", menuName = "Game/Building", order =3)]
     public class BuildingData : ScriptableObject{
         public string nameBuilding;
-        
+        public string descricaoBuilding;   
         public Sprite UISpriteBuilding;
         public int nivel;
         public GameObject asset;

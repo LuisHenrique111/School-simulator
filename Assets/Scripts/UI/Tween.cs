@@ -105,7 +105,7 @@ namespace UI{
             constructionBG.SetActive(false);
             constructionInfo.SetActive(false);
         }    
-        /*void DesativaProfMenu()
+        void DesativaProfMenu()
         {
             profMenu.SetActive(false);
         }
@@ -114,17 +114,15 @@ namespace UI{
         {
             profMenu.SetActive(true);
             LeanTween.moveLocalY(profMenu, 0f, 1f).setEase(LeanTweenType.easeOutCubic);
-            UIVariables.Instance.sliderCarisma.value = GameController.Instance.teachers[UIVariables.Instance.currentProf].carisma;
-            UIVariables.Instance.sliderDidatica.value = GameController.Instance.teachers[UIVariables.Instance.currentProf].didatica;
-            UIVariables.Instance.sliderDiciplina.value = GameController.Instance.teachers[UIVariables.Instance.currentProf].diciplina;
-            UIVariables.Instance.salario.text = GameController.Instance.teachers[UIVariables.Instance.currentProf].price.ToString();
-            UIVariables.Instance.imagemProfessor.sprite = GameController.Instance.teachers[UIVariables.Instance.currentProf].UISprite;
-            UIVariables.Instance.nameTeacher.text = GameController.Instance.teachers[UIVariables.Instance.currentProf].nameTeacher;
+            UIVariables.Instance.salario.text = GameController.Instance.predios[UIVariables.Instance.currentConst].price.ToString();
+            UIVariables.Instance.imagemProfessor.sprite = GameController.Instance.predios[UIVariables.Instance.currentConst].UISpriteBuilding;
+            UIVariables.Instance.nameTeacher.text = GameController.Instance.predios[UIVariables.Instance.currentConst].nameBuilding;
+            UIVariables.Instance.descricaoBuilding.text = GameController.Instance.predios[UIVariables.Instance.currentConst].descricaoBuilding;
         }    
         public void CloseProfMenu()
         {
             LeanTween.moveLocalY(profMenu, -900f, 1f).setEase(LeanTweenType.easeOutCubic).setOnComplete(DesativaProfMenu);
-        }*/
+        }
 
         public void OpenUpgrade(int index){
             upgradeConstructionUI[index].SetActive(true);

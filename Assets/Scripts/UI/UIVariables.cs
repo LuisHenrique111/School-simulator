@@ -31,14 +31,12 @@ namespace UI{
 
         #region store teacher
         [Header("UI professor store")]
-        public Slider sliderCarisma;
-        public Slider sliderDidatica;
-        public Slider sliderDiciplina;
+        public TMP_Text descricaoBuilding;
         public TMP_Text salario;
         public Image imagemProfessor;
         public TMP_Text nameTeacher;
         public Button btnContratado;
-        public int currentProf;
+        public int currentConst;
         #endregion
 
         #region store teacher
@@ -71,7 +69,7 @@ namespace UI{
                 textMinutes.text = minutes.Value.ToString();
                 textHours.text = GameController.Instance.hours.ToString();
                 /*if(!isSalaDiretor){
-                    if(GameController.Instance.teachers[currentProf].contratado == false){
+                    if(GameController.Instance.building[currentConst].contratado == false){
                     btnContratado.interactable = true;
                     }else{
                         btnContratado.interactable = false;
@@ -100,41 +98,38 @@ namespace UI{
             }
         }
 
-        /*public void NextProf(){
-            currentProf = (currentProf + 1) % GameController.Instance.teachers.Length;
-            sliderCarisma.value = GameController.Instance.teachers[currentProf].carisma;
-            sliderDidatica.value = GameController.Instance.teachers[currentProf].didatica;
-            sliderDiciplina.value = GameController.Instance.teachers[currentProf].diciplina;
-            salario.text = GameController.Instance.teachers[currentProf].price.ToString();
-            imagemProfessor.sprite = GameController.Instance.teachers[currentProf].UISprite;
-            nameTeacher.text = GameController.Instance.teachers[currentProf].nameTeacher;
+        public void NextProf(){
+            currentConst = (currentConst + 1) % GameController.Instance.predios.Length;
+            salario.text = GameController.Instance.predios[currentConst].price.ToString();
+            imagemProfessor.sprite = GameController.Instance.predios[currentConst].UISpriteBuilding;
+            nameTeacher.text = GameController.Instance.predios[currentConst].nameBuilding;
+            descricaoBuilding.text = GameController.Instance.predios[currentConst].descricaoBuilding;
+
         }
 
         public void PrevProf(){
-            sliderCarisma.value = GameController.Instance.teachers[currentProf].carisma;
-            sliderDidatica.value = GameController.Instance.teachers[currentProf].didatica;
-            sliderDiciplina.value = GameController.Instance.teachers[currentProf].diciplina;
-            salario.text = GameController.Instance.teachers[currentProf].price.ToString();
-            imagemProfessor.sprite = GameController.Instance.teachers[currentProf].UISprite;
-            nameTeacher.text = GameController.Instance.teachers[currentProf].nameTeacher;
-            currentProf--;
+            salario.text = GameController.Instance.predios[currentConst].price.ToString();
+            imagemProfessor.sprite = GameController.Instance.predios[currentConst].UISpriteBuilding;
+            nameTeacher.text = GameController.Instance.predios[currentConst].nameBuilding;
+            descricaoBuilding.text = GameController.Instance.predios[currentConst].descricaoBuilding;
+            currentConst--;
 
-            if (currentProf < 0)
+            if (currentConst < 0)
             {
-                currentProf += GameController.Instance.teachers.Length;
+                currentConst += GameController.Instance.predios.Length;
             }
         }
 
         public void BtnContratacao(){
-            if(coin.Value>=GameController.Instance.teachers[currentProf].price){
-            GameController.Instance.teachers[currentProf].contratado = true;
-            GameManager.Instance.DiminuirMoedas(GameController.Instance.teachers[currentProf].price);
+            if(coin.Value>=GameController.Instance.predios[currentConst].price){
+            GameController.Instance.predios[currentConst].spawned = true;
+            GameManager.Instance.DiminuirMoedas(GameController.Instance.predios[currentConst].price);
             tween.ConfContrProf();
             }else{
                 screenInsufficientMoney.SetActive(true);
                 tween.ErroContrProf();
             }
-        }*/
+        }
 
 
         public void HideScreenInsMoney(){

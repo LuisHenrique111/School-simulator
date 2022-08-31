@@ -9,12 +9,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2610c67e6ed91b346b496866d115b72e, type: 3}
-  m_Name: Coin
+  m_Script: {fileID: 11500000, guid: 7905befeb0ef14be4b535441f8c12609, type: 3}
+  m_Name: Artes Cenicas
   m_EditorClassIdentifier: 
-  named: 0
-  variableName: 
-  OnValueChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  value: 600
+  nameBuilding: 
+  descricaoBuilding: 
+  UISpriteBuilding: {fileID: 0}
+  nivel: 0
+  asset: {fileID: 0}
+  evolutionAsset: []
+  typeMatter: 0
+  spawned: 0
+  price: 0
+  priceEvolution: 

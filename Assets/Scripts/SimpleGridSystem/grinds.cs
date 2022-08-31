@@ -6,16 +6,17 @@ public class grinds : MonoBehaviour
 {
     public Transform cubo;
     public GameObject casa;
-    void Start()
-    {
-        
-    }
 
-    
-    void Update()
+   
+
+    /*void Update()
     {
        if(Input.GetKeyDown(KeyCode.Mouse0)){
-        Instantiate(casa,cubo.position,cubo.rotation); 
-       } 
-    }
+            Instantiate(casa,cubo.position,cubo.rotation);
+       }else{
+            Instantiate(casa,cubo.position,cubo.rotation);
+       }
+    }*/
+
+ 
 }

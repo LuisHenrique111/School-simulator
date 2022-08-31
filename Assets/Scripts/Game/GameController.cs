@@ -12,6 +12,10 @@ public class GameController : MonoBehaviour
 
     [Header("Vetor dos predios")]
     public BuildingData[] building;
+    public BuildingData[] predios;
+
+    [Header("Vetor dos slots")]
+    public GameObject[] slots;
 
     [Header("Variaveis globais")] 
     #region variaveis globais 
