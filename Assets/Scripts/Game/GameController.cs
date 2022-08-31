@@ -49,7 +49,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        liberaPlacas();
         Win();
         GameOver();
     }
@@ -78,4 +78,14 @@ public class GameController : MonoBehaviour
         }
     }
 
+    public void liberaPlacas(){
+        if(building[0].nivel == 2){
+            slots[2].GetComponent<Renderer>().material.color = Color.cyan;
+            slots[2].GetComponent<BotaoPlacas>().enabled = true;
+        }
+        if(building[0].nivel == 3){
+            slots[3].GetComponent<Renderer>().material.color = Color.cyan;
+            slots[3].GetComponent<BotaoPlacas>().enabled = true;
+        }
+    }
 }
