@@ -16,9 +16,9 @@ MonoBehaviour:
   descricaoBuilding: Predio de ciencias biologicas
   UISpriteBuilding: {fileID: 21300000, guid: c4c548a339b4d41a590928c0c98934a7, type: 3}
   nivel: 0
-  asset: {fileID: 0}
+  asset: {fileID: 6447494746438054559, guid: b16625a50cb99cb4c94431155f0fc36b, type: 3}
   evolutionAsset: []
   typeMatter: 0
-  spawned: 0
+  spawned: 1
   price: 250
   priceEvolution: 

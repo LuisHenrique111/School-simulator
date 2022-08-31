@@ -151,7 +151,7 @@ namespace UI{
             contratarProf.colors = cb;
             //contratarProf.GetComponent<Button>().interactable = false;
             erroContProf.SetActive(true);
-            LeanTween.moveLocalY(erroContProf, 90f, 0.5f).setEase(LeanTweenType.easeInOutCubic);
+            LeanTween.moveLocalY(erroContProf, 60f, 0.5f).setEase(LeanTweenType.easeInOutCubic);
         }
 
         public void ConfContrProf()

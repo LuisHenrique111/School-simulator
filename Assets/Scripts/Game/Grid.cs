@@ -1,38 +1,38 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UI;
 
-public class Grid : MonoBehaviour
-{
-    bool mouseDentroDoObjeto;
-    // Start is called before the first frame update
-    void Start()
+namespace Game.Data{
+    public class Grid : MonoBehaviour
     {
-        mouseDentroDoObjeto = false;
-    }
+        public new Camera camera;
+        
+        void Start()
+        {
+            camera = Camera.main;
+        }
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(mouseDentroDoObjeto == true){
-            if(Input.GetMouseButtonDown(1)){
-                Tween.Instance.OpenProfMenu();
+        void Update()
+        {
+            if(Input.GetMouseButtonDown(1))
+            {
+                GameObject clicked = RaycastCamera(out Vector3 point);
+                Debug.Log($"Clicked at: {clicked} {point}");
             }
         }
-    }
 
-    /*public void GridSpawn(int index){
-        Instantiate(GameController.Instance.building[index].asset, slot.transform.position, slot.transform.rotation);
-    }*/
+        public GameObject RaycastCamera(out Vector3 point)
+        {
+            Ray ray = camera.ScreenPointToRay(Input.mousePosition);
 
-    
+            if(Physics.Raycast(ray.origin, ray.direction, out RaycastHit hit, 20f))
+            {
+                point = hit.point;
+                return hit.collider.gameObject;
+            }
 
-    void OnMouseEnter(){
-        mouseDentroDoObjeto = true;
-    }
-
-    void OnMouseExit(){
-        mouseDentroDoObjeto = false;
+            point = Vector3.zero;
+            return null;
+        }
     }
 }

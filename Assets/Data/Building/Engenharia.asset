@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7905befeb0ef14be4b535441f8c12609, type: 3}
   m_Name: Engenharia
   m_EditorClassIdentifier: 
-  nameBuilding: 
-  descricaoBuilding: 
-  UISpriteBuilding: {fileID: 0}
+  nameBuilding: Engenharia
+  descricaoBuilding: top
+  UISpriteBuilding: {fileID: 21300000, guid: 13d033d5f8e9c934d868aa4a1ed4f68a, type: 3}
   nivel: 0
-  asset: {fileID: 0}
+  asset: {fileID: 7069786925682782386, guid: 847e6677835856e49b55f0837b4395c9, type: 3}
   evolutionAsset: []
   typeMatter: 0
-  spawned: 0
-  price: 0
+  spawned: 1
+  price: 150
   priceEvolution: 

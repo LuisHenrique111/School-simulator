@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7905befeb0ef14be4b535441f8c12609, type: 3}
   m_Name: Artes Cenicas
   m_EditorClassIdentifier: 
-  nameBuilding: 
-  descricaoBuilding: 
-  UISpriteBuilding: {fileID: 0}
+  nameBuilding: Artes cenicas
+  descricaoBuilding: magico
+  UISpriteBuilding: {fileID: 21300000, guid: 5f7fa9a7940a64e79b5a42d9f661d42c, type: 3}
   nivel: 0
-  asset: {fileID: 0}
+  asset: {fileID: 8788374237380839671, guid: c1cd57ac7f2afc74abcfbcfcf47918c6, type: 3}
   evolutionAsset: []
   typeMatter: 0
-  spawned: 0
-  price: 0
+  spawned: 1
+  price: 400
   priceEvolution: 

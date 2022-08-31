@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7905befeb0ef14be4b535441f8c12609, type: 3}
   m_Name: Humanas
   m_EditorClassIdentifier: 
-  nameBuilding: 
-  descricaoBuilding: 
-  UISpriteBuilding: {fileID: 0}
+  nameBuilding: Humanas
+  descricaoBuilding: maconheiro
+  UISpriteBuilding: {fileID: -3231624653304714029, guid: ccd8b8856eed52a47a22f527d060b04e, type: 3}
   nivel: 0
-  asset: {fileID: 0}
+  asset: {fileID: 1142639317440616460, guid: 3e9e55b152d596246bc674502a6985d5, type: 3}
   evolutionAsset: []
   typeMatter: 0
-  spawned: 0
-  price: 0
+  spawned: 1
+  price: 200
   priceEvolution: 

@@ -6,11 +6,14 @@ using Game.Variables;
 using TMPro;
 using UnityEngine.SceneManagement;
 
+
 namespace UI{
     public class UIVariables : MonoBehaviour
     {
         public static UIVariables Instance;
         public Tween tween;
+        public Vector3 position;
+        public Quaternion rotation;
 
         #region variaveis globais
         [Header("Variaveis globais")]        
@@ -63,6 +66,7 @@ namespace UI{
         void Update()
         {
             if(isGame){
+                
                 textCoin.text = coin.Value.ToString();
                 textHappiness.text = happiness.Value.ToString();
                 textStudents.text = students.Value.ToString();
@@ -120,16 +124,17 @@ namespace UI{
             }
         }
 
-        public void BtnContratacao(){
-            if(coin.Value>=GameController.Instance.predios[currentConst].price){
+        public void BtnComprar(){
+        if(coin.Value>=GameController.Instance.predios[currentConst].price){
+            Instantiate(GameController.Instance.predios[currentConst].asset, position, rotation);
             GameController.Instance.predios[currentConst].spawned = true;
             GameManager.Instance.DiminuirMoedas(GameController.Instance.predios[currentConst].price);
             tween.ConfContrProf();
-            }else{
-                screenInsufficientMoney.SetActive(true);
-                tween.ErroContrProf();
-            }
+        }else{
+            screenInsufficientMoney.SetActive(true);
+            tween.ErroContrProf();
         }
+    }
 
 
         public void HideScreenInsMoney(){
