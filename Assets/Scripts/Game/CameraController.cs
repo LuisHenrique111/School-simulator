@@ -57,9 +57,9 @@ public class CameraController : MonoBehaviour
 
     private Vector3 ClampCamera(Vector3 target)
     {
-      float clampX = Mathf.Clamp(target.x,-180 ,180);
-      float clampY = Mathf.Clamp(target.y, -20,80);
-      float clampZ = Mathf.Clamp(target.z,0,150);
+      float clampX = Mathf.Clamp(target.x,-132 ,132);
+      float clampY = Mathf.Clamp(target.y, -50,80);
+      float clampZ = Mathf.Clamp(target.z,0,200);
       
 
       return new Vector3(clampX,clampY,clampZ);
@@ -93,7 +93,6 @@ public class CameraController : MonoBehaviour
         {
           dragEndPosition = ray.GetPoint(enter);
           newPosition = transform.position + (dragEndPosition - dragStartPosition);
-          
         }
       }
       if(Input.GetMouseButtonDown(2))
@@ -114,7 +113,7 @@ public class CameraController : MonoBehaviour
 
       if(Input.mouseScrollDelta.y != 0)
       {
-        newZoom += zoomValue * Input.mouseScrollDelta.y;
+        newZoom -= zoomValue * Input.mouseScrollDelta.y;
       }
       cameraTransform.localPosition = Vector3.Lerp(cameraTransform.localPosition, newZoom, Time.deltaTime * movimentTime);
     }
