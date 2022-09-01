@@ -34,7 +34,16 @@ public class GameController : MonoBehaviour
     void Start()
     {
         Instance = this;
-        NewGame();
+        if(GameManager.Instance.newGame.Value == true){
+            GameManager.Instance.SetEstudades(0);
+            GameManager.Instance.SetFelicidade(50);
+            GameManager.Instance.SetMoedas(900);
+            for(int i = 0; i<building.Length; i++){
+                building[i].nivel = 1;
+                building[i].spawned = false;
+            }
+            GameManager.Instance.newGame.Value = false;
+        }
     }
 
     // Update is called once per frame
@@ -77,26 +86,6 @@ public class GameController : MonoBehaviour
         if(building[0].nivel == 3){
             slots[3].GetComponent<Renderer>().material.color = Color.cyan;
             slots[3].GetComponent<BotaoPlacas>().enabled = true;
-        }
-    }
-
-    public void NewGame(){
-        if(GameManager.Instance.newGame.Value == true){
-            GameManager.Instance.SetEstudades(0);
-            GameManager.Instance.SetFelicidade(50);
-            GameManager.Instance.SetMoedas(1000);
-            building[0].nivel = 1;
-            for(int i = 0; i<predios.Length; i++){
-                
-                predios[i].spawned = false;
-            }
-            if(building[0].nivel == 1){
-                GameObject obj = GameObject.Find("ReitoriaLevel2(Clone)");
-                GameObject obj2 = GameObject.Find("ReitoriaLevel3(Clone)");
-                Destroy(obj);
-                Destroy(obj2);
-            }
-            GameManager.Instance.newGame.Value = false;
         }
     }
 }
