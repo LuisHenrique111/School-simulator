@@ -15,7 +15,7 @@ MonoBehaviour:
   nameBuilding: Engenharia
   descricaoBuilding: top
   UISpriteBuilding: {fileID: 21300000, guid: 13d033d5f8e9c934d868aa4a1ed4f68a, type: 3}
-  nivel: 0
+  nivel: 1
   asset: {fileID: 7069786925682782386, guid: 847e6677835856e49b55f0837b4395c9, type: 3}
   evolutionAsset: []
   typeMatter: 0

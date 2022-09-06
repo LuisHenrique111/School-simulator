@@ -66,25 +66,17 @@ namespace UI{
         void Update()
         {
             if(isGame){
-                
                 textCoin.text = coin.Value.ToString();
                 textHappiness.text = happiness.Value.ToString();
                 textStudents.text = students.Value.ToString();
                 textMinutes.text = minutes.Value.ToString();
                 textHours.text = GameController.Instance.hours.ToString();
-                /*if(!isSalaDiretor){
-                    if(GameController.Instance.building[currentConst].contratado == false){
-                    btnContratado.interactable = true;
-                    }else{
-                        btnContratado.interactable = false;
-                    }
-                    VerificaBotaoUpgrade();
-                }*/
+                VerificaBotaoCompra();       
             }
             
         }
 
-        public void VerificaBotaoUpgrade(){
+       /* public void VerificaBotaoUpgrade(){
             if(coin.Value >= GameController.Instance.building[0].priceEvolution[0]){
                 btnUpgrade[0].interactable = true;
             }else{
@@ -100,6 +92,14 @@ namespace UI{
             }else{
                 btnUpgrade[2].interactable = false;
             }
+        }*/
+
+        public void VerificaBotaoCompra(){
+            if(GameController.Instance.predios[currentConst].spawned == true){
+                btnContratado.interactable = false;
+            }else{
+                btnContratado.interactable = true;
+            }
         }
 
         public void NextProf(){
@@ -108,6 +108,7 @@ namespace UI{
             imagemProfessor.sprite = GameController.Instance.predios[currentConst].UISpriteBuilding;
             nameTeacher.text = GameController.Instance.predios[currentConst].nameBuilding;
             descricaoBuilding.text = GameController.Instance.predios[currentConst].descricaoBuilding;
+            
 
         }
 
@@ -116,7 +117,9 @@ namespace UI{
             imagemProfessor.sprite = GameController.Instance.predios[currentConst].UISpriteBuilding;
             nameTeacher.text = GameController.Instance.predios[currentConst].nameBuilding;
             descricaoBuilding.text = GameController.Instance.predios[currentConst].descricaoBuilding;
+           
             currentConst--;
+            
 
             if (currentConst < 0)
             {
@@ -128,8 +131,10 @@ namespace UI{
         if(coin.Value>=GameController.Instance.predios[currentConst].price){
             Instantiate(GameController.Instance.predios[currentConst].asset, position, rotation);
             GameController.Instance.predios[currentConst].spawned = true;
+            
             GameManager.Instance.DiminuirMoedas(GameController.Instance.predios[currentConst].price);
             tween.ConfContrProf();
+            tween.CloseProfMenu();
         }else{
             screenInsufficientMoney.SetActive(true);
             tween.ErroContrProf();

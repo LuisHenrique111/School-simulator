@@ -38,9 +38,12 @@ public class GameController : MonoBehaviour
             GameManager.Instance.SetEstudades(0);
             GameManager.Instance.SetFelicidade(50);
             GameManager.Instance.SetMoedas(900);
-            for(int i = 0; i<building.Length; i++){
-                building[i].nivel = 1;
-                building[i].spawned = false;
+            building[0].nivel = 1;
+            for(int i = 0; i<predios.Length; i++){
+                
+                predios[i].nivel = 1;
+                predios[i].spawned = false;
+                
             }
             GameManager.Instance.newGame.Value = false;
         }

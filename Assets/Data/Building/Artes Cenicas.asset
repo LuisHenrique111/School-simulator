@@ -15,7 +15,7 @@ MonoBehaviour:
   nameBuilding: Artes cenicas
   descricaoBuilding: magico
   UISpriteBuilding: {fileID: 21300000, guid: 5f7fa9a7940a64e79b5a42d9f661d42c, type: 3}
-  nivel: 0
+  nivel: 1
   asset: {fileID: 8788374237380839671, guid: c1cd57ac7f2afc74abcfbcfcf47918c6, type: 3}
   evolutionAsset: []
   typeMatter: 0
