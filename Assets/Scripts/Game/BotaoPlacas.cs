@@ -25,6 +25,7 @@ public class BotaoPlacas : MonoBehaviour
                 Tween.Instance.OpenProfMenu();
                 UIVariables.Instance.position = gameObject.transform.position;
                 UIVariables.Instance.rotation = gameObject.transform.rotation;
+                Destroy(gameObject);
             }
         }
     }

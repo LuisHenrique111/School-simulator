@@ -16,9 +16,9 @@ MonoBehaviour:
   descricaoBuilding: magico
   UISpriteBuilding: {fileID: 21300000, guid: 5f7fa9a7940a64e79b5a42d9f661d42c, type: 3}
   nivel: 1
-  asset: {fileID: 8788374237380839671, guid: c1cd57ac7f2afc74abcfbcfcf47918c6, type: 3}
+  asset: {fileID: 6447494746438054559, guid: b16625a50cb99cb4c94431155f0fc36b, type: 3}
   evolutionAsset: []
   typeMatter: 0
-  spawned: 1
+  spawned: 0
   price: 400
   priceEvolution: 
