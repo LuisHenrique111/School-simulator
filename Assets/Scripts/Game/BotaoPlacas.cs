@@ -7,8 +7,8 @@ using UI;
 public class BotaoPlacas : MonoBehaviour
 {
     bool mouseDentroDoObjeto;
-
     public static BotaoPlacas Instance;
+    public GameObject gameO;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,13 +19,13 @@ public class BotaoPlacas : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
         if(mouseDentroDoObjeto == true){
             if(Input.GetMouseButtonDown(0)){
                 Tween.Instance.OpenProfMenu();
                 UIVariables.Instance.position = gameObject.transform.position;
                 UIVariables.Instance.rotation = gameObject.transform.rotation;
-                Destroy(gameObject);
+                
+                
             }
         }
     }

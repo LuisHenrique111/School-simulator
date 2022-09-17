@@ -15,6 +15,7 @@ public class Botao : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        
         if(mouseDentroDoObjeto == true){
             if(Input.GetMouseButtonDown(0)){
                 Tween.Instance.OpenUpgrade(0);           

@@ -42,12 +42,21 @@ namespace UI{
         public int currentConst;
         #endregion
 
-        #region store teacher
-        [Header("UI buildings Upgrade 1")]
+        #region store Upgrade reitoria
+        [Header("store Upgrade reitoria")]
         public TMP_Text[] precoUpgrade;
         public TMP_Text[] nivel;
         public Image[] imagemUpgrade;
         public Button[] btnUpgrade;
+        #endregion
+
+        #region store Upgrade predios
+        [Header("store Upgrade predios")]
+        public TMP_Text precoUpgradePredios;
+        public TMP_Text nivelPredios;
+        public Image imagemUpgradePredios;
+        public Button btnUpgradePredios;
+        public int currentPredio;
         #endregion
 
 
@@ -127,19 +136,34 @@ namespace UI{
             }
         }
 
-        public void BtnComprar(){
-        if(coin.Value>=GameController.Instance.predios[currentConst].price){
-            Instantiate(GameController.Instance.predios[currentConst].asset, position, rotation);
-            GameController.Instance.predios[currentConst].spawned = true;
-            
-            GameManager.Instance.DiminuirMoedas(GameController.Instance.predios[currentConst].price);
-            tween.ConfContrProf();
-            tween.CloseProfMenu();
-        }else{
-            screenInsufficientMoney.SetActive(true);
-            tween.ErroContrProf();
+        public void InfoUpgradePredios(){
+            precoUpgradePredios.text = GameController.Instance.predios[currentPredio].priceEvolution[0].ToString();
+            nivelPredios.text = GameController.Instance.predios[currentPredio].nivel.ToString();
+            imagemUpgradePredios.sprite = GameController.Instance.predios[currentPredio].UISpriteBuilding;
+
         }
-    }
+
+        public void BtnCompraUpgrade(){
+            if(coin.Value >= GameController.Instance.predios[currentPredio].priceEvolution[UpConstruction.Instance.currentEvolution]){
+                UpConstruction.Instance.UpgradeConstrucao();
+                tween.CloseUpConstrucao();
+            }else{
+                screenInsufficientMoney.SetActive(true);
+            }
+        }
+
+        public void BtnComprar(){
+            if(coin.Value>=GameController.Instance.predios[currentConst].price){
+                Instantiate(GameController.Instance.predios[currentConst].asset, position, rotation);
+                GameController.Instance.predios[currentConst].spawned = true;
+                GameManager.Instance.DiminuirMoedas(GameController.Instance.predios[currentConst].price);
+                tween.ConfContrProf();
+                tween.CloseProfMenu();
+            }else{
+                screenInsufficientMoney.SetActive(true);
+                tween.ErroContrProf();
+            }
+        }   
 
 
         public void HideScreenInsMoney(){

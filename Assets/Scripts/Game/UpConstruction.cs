@@ -1,53 +1,44 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using Game.Data;
-using Game.Variables;
-using Game.Variables.Generic;
 using UI;
 
 public class UpConstruction : MonoBehaviour
 {
-    public GameObject reitoriaOriginal;
-    public GameObject reitoriaUpgrade1;
-    public GameObject reitoriaUpgrade2;
+    GameObject auxEvolution1;
+
+    public int currentEvolution;
+
+    public static UpConstruction Instance;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        Instance = this;
     }
 
     // Update is called once per frame
     void Update()
     {
-    
-
+        
     }
 
-    public void Upgrade(int index){
-        GameController.Instance.building[index].nivel = GameController.Instance.building[index].nivel + 1;
-        Tween.Instance.CloseUpConst(index);
-        if(GameController.Instance.building[index].nivel == 2 && GameManager.Instance.coinManager.Value >= GameController.Instance.building[index].priceEvolution[0]){
-            GameManager.Instance.DiminuirMoedas(GameController.Instance.building[index].priceEvolution[0]);
-            GameManager.Instance.GanhoFelicidade(5);
-            if(index == 0){
-                reitoriaUpgrade1 = Instantiate(GameController.Instance.building[index].evolutionAsset[0], reitoriaOriginal.transform.position, reitoriaOriginal.transform.rotation);
-                if(GameManager.Instance.newGame.Value == false){
-                    GameObject.DontDestroyOnLoad(reitoriaUpgrade1);
-                }
-                Destroy(reitoriaOriginal);
-            }
-        }else if(GameController.Instance.building[index].nivel == 3 && GameManager.Instance.coinManager.Value >= GameController.Instance.building[index].priceEvolution[1]){
-            GameManager.Instance.GanhoFelicidade(10);
-            GameManager.Instance.DiminuirMoedas(GameController.Instance.building[index].priceEvolution[1]);
-            if(index == 0){
-                reitoriaUpgrade2 = Instantiate(GameController.Instance.building[index].evolutionAsset[1], reitoriaUpgrade1.transform.position, reitoriaUpgrade1.transform.rotation);
-                if(GameManager.Instance.newGame.Value == false){
-                    GameObject.DontDestroyOnLoad(reitoriaUpgrade2);
-                }
-                Destroy(reitoriaUpgrade1);
-            }
-            
+    public void UpgradeConstrucao(){
+        GameController.Instance.predios[UIVariables.Instance.currentPredio].nivel = GameController.Instance.predios[UIVariables.Instance.currentPredio].nivel +1;
+        Tween.Instance.CloseUpConstrucao();
+        if(GameController.Instance.predios[UIVariables.Instance.currentPredio].nivel == 2 && GameManager.Instance.coinManager.Value >= GameController.Instance.predios[UIVariables.Instance.currentPredio].priceEvolution[0]){
+            auxEvolution1 = GameObject.Find("engenharia_level_01(Clone)");
+            currentEvolution = 1;
+            Instantiate(GameController.Instance.predios[UIVariables.Instance.currentPredio].evolutionAsset[0], auxEvolution1.transform.position, auxEvolution1.transform.rotation);
+            GameManager.Instance.DiminuirMoedas(GameController.Instance.predios[UIVariables.Instance.currentConst].priceEvolution[0]);
+            Destroy(auxEvolution1);
+        }
+        else if(GameController.Instance.predios[UIVariables.Instance.currentPredio].nivel == 3 && GameManager.Instance.coinManager.Value >= GameController.Instance.predios[UIVariables.Instance.currentPredio].priceEvolution[1]){
+            auxEvolution1 = GameObject.Find("engenharia_level_02(Clone)");
+            currentEvolution = 2;
+            Instantiate(GameController.Instance.predios[UIVariables.Instance.currentPredio].evolutionAsset[0], auxEvolution1.transform.position, auxEvolution1.transform.rotation);
+            GameManager.Instance.DiminuirMoedas(GameController.Instance.predios[UIVariables.Instance.currentConst].priceEvolution[0]);
+            Destroy(auxEvolution1);
         }
     }
 }

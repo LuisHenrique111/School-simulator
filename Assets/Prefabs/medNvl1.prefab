@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 691593152627625913}
   - component: {fileID: 4483003419220066332}
   - component: {fileID: 1860589807477568726}
+  - component: {fileID: 2102809998157344554}
+  - component: {fileID: 4167764134220629728}
   m_Layer: 0
   m_Name: medNvl1
-  m_TagString: Untagged
+  m_TagString: Medicina
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -81,3 +83,29 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &2102809998157344554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203463399529911555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6a08143fe7a4fc7a17cd990c5ce951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPredio: {fileID: 0}
+--- !u!65 &4167764134220629728
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 203463399529911555}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 39.44436, y: 10.16926, z: 39.960545}
+  m_Center: {x: 0.0044040685, y: 5.044997, z: 0.995659}

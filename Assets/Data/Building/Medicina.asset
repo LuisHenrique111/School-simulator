@@ -21,6 +21,6 @@ MonoBehaviour:
   - {fileID: 1638335947487062193, guid: 613454230e3a45f489ef086e5cd6b58a, type: 3}
   - {fileID: 6028493164434123737, guid: 79ba023876fedd5499580e9953e47f5a, type: 3}
   typeMatter: 0
-  spawned: 0
+  spawned: 1
   price: 250
-  priceEvolution: 6400000096000000
+  priceEvolution: f401000058020000

@@ -22,9 +22,9 @@ namespace Game.Data{
     [Serializable]
     public enum BuildingType{
         Reitoria,
-        math,
-        science,
-        history,
-        geography,
+        Engenharia,
+        Medicina,
+        ArtesCenicas,
+        Humanas,
     }
 }

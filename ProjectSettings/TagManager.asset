@@ -8,6 +8,8 @@ TagManager:
   - casa
   - onibus
   - PontoOnibus
+  - Engenharia
+  - Medicina
   layers:
   - Default
   - TransparentFX

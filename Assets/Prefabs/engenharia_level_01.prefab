@@ -335,9 +335,11 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6152721570763236934}
+  - component: {fileID: 4943099169567657179}
+  - component: {fileID: 684198743478319303}
   m_Layer: 0
   m_Name: engenharia_level_01
-  m_TagString: Untagged
+  m_TagString: Engenharia
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -358,6 +360,32 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 91.87, z: 0}
+--- !u!114 &4943099169567657179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6784966438597278972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9f6a08143fe7a4fc7a17cd990c5ce951, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentPredio: {fileID: 0}
+--- !u!65 &684198743478319303
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6784966438597278972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20.1, y: 4.72, z: 17.97}
+  m_Center: {x: 0, y: 2.02, z: 0}
 --- !u!1 &6879677072166216911
 GameObject:
   m_ObjectHideFlags: 0

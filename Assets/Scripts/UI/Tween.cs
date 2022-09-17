@@ -8,13 +8,11 @@ namespace UI{
     {
         [SerializeField]
         GameObject constructionBG, constructionInfo, profMenu, sidePanel, sidepanelBt, menuPanel, erroContProf,
-            const1, const2, const3, stamp, GameOverBtMenu, GameOverBtNovo, GameOverBtSair;
+            const1, const2, const3, stamp, GameOverBtMenu, GameOverBtNovo, GameOverBtSair, UpConstruction;
         
         [SerializeField]
         CanvasGroup aConsBox, amenuPanel;
 
-        public GameObject[] prof;
-        public int activeProf = 0;
         int sideMenu = 1;
 
         public GameObject[] upgradeConstructionUI;
@@ -28,7 +26,7 @@ namespace UI{
         public static Tween Instance;
 
 
-
+        
 
         void Start()
         {
@@ -177,7 +175,21 @@ namespace UI{
         }
 
 
+        void DesativaUpConstrucao()
+        {
+            UpConstruction.SetActive(false);
+        }
 
+        public void OpenUpConstrucao()
+        {
+            UpConstruction.SetActive(true);
+            LeanTween.moveLocalY(UpConstruction, 0f, 1f).setEase(LeanTweenType.easeOutCubic);
+            UIVariables.Instance.InfoUpgradePredios();
+        }    
+        public void CloseUpConstrucao()
+        {
+            LeanTween.moveLocalY(UpConstruction, -900f, 1f).setEase(LeanTweenType.easeOutCubic).setOnComplete(DesativaUpConstrucao);
+        }
 
 
 
