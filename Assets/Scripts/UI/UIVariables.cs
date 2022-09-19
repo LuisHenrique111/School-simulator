@@ -122,33 +122,45 @@ namespace UI{
         }
 
         public void PrevProf(){
+            currentConst--;
             salario.text = GameController.Instance.predios[currentConst].price.ToString();
             imagemProfessor.sprite = GameController.Instance.predios[currentConst].UISpriteBuilding;
             nameTeacher.text = GameController.Instance.predios[currentConst].nameBuilding;
             descricaoBuilding.text = GameController.Instance.predios[currentConst].descricaoBuilding;
            
-            currentConst--;
             
-
             if (currentConst < 0)
             {
                 currentConst += GameController.Instance.predios.Length;
             }
         }
 
-        public void InfoUpgradePredios(){
-            precoUpgradePredios.text = GameController.Instance.predios[currentPredio].priceEvolution[0].ToString();
+        public void InfoUpgradePredios(int i){
+            precoUpgradePredios.text = GameController.Instance.predios[currentPredio].priceEvolution[i].ToString();
             nivelPredios.text = GameController.Instance.predios[currentPredio].nivel.ToString();
             imagemUpgradePredios.sprite = GameController.Instance.predios[currentPredio].UISpriteBuilding;
 
         }
 
         public void BtnCompraUpgrade(){
-            if(coin.Value >= GameController.Instance.predios[currentPredio].priceEvolution[UpConstruction.Instance.currentEvolution]){
-                UpConstruction.Instance.UpgradeConstrucao();
-                tween.CloseUpConstrucao();
-            }else{
-                screenInsufficientMoney.SetActive(true);
+            
+            if( GameController.Instance.predios[UIVariables.Instance.currentPredio].nivel == 1){
+                if(coin.Value >= GameController.Instance.predios[currentPredio].priceEvolution[0]){
+                    UpConstruction.Instance.UpgradeConstrucao();
+                    tween.CloseUpConstrucao();
+                }else{
+                    screenInsufficientMoney.SetActive(true);
+                    tween.ErroCompUp();
+                }
+            }
+            else if( GameController.Instance.predios[UIVariables.Instance.currentPredio].nivel == 2){
+                if(coin.Value >= GameController.Instance.predios[currentPredio].priceEvolution[0]){
+                    UpConstruction.Instance.UpgradeConstrucao();
+                    tween.CloseUpConstrucao();
+                }else{
+                    screenInsufficientMoney.SetActive(true);
+                    tween.ErroCompUp();
+                }
             }
         }
 

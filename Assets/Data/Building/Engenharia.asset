@@ -17,7 +17,9 @@ MonoBehaviour:
   UISpriteBuilding: {fileID: 21300000, guid: 13d033d5f8e9c934d868aa4a1ed4f68a, type: 3}
   nivel: 1
   asset: {fileID: 6784966438597278972, guid: d93612b9672e5464aaf25e3077b9efbe, type: 3}
-  evolutionAsset: []
+  evolutionAsset:
+  - {fileID: 5039518666331038796, guid: ff47c4bbd2ddd9b409775b4b29171a74, type: 3}
+  - {fileID: 1081525596055590565, guid: ec2712ec27006804f9d07bf4f7b7ff02, type: 3}
   typeMatter: 0
   spawned: 1
   price: 150

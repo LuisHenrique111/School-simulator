@@ -7,7 +7,7 @@ namespace UI{
     public class Tween : MonoBehaviour
     {
         [SerializeField]
-        GameObject constructionBG, constructionInfo, profMenu, sidePanel, sidepanelBt, menuPanel, erroContProf,
+        GameObject constructionBG, constructionInfo, profMenu, sidePanel, sidepanelBt, menuPanel, erroContProf, erroCompUp,
             const1, const2, const3, stamp, GameOverBtMenu, GameOverBtNovo, GameOverBtSair, UpConstruction;
         
         [SerializeField]
@@ -18,6 +18,7 @@ namespace UI{
         public GameObject[] upgradeConstructionUI;
         public GameObject professor;
         public Button contratarProf;
+        public Button comprarUp;
         public Color erroColorBt;
         public Color confirmColorBt;
 
@@ -147,9 +148,21 @@ namespace UI{
             ColorBlock cb = contratarProf.colors;
             cb.selectedColor = erroColorBt;
             contratarProf.colors = cb;
+            
+            contratarProf.colors = cb;
             //contratarProf.GetComponent<Button>().interactable = false;
             erroContProf.SetActive(true);
             LeanTween.moveLocalY(erroContProf, 60f, 0.5f).setEase(LeanTweenType.easeInOutCubic);
+        }
+
+        public void ErroCompUp()
+        {
+            ColorBlock cb = comprarUp.colors;
+            cb.selectedColor = erroColorBt;
+            comprarUp.colors = cb;
+            //contratarProf.GetComponent<Button>().interactable = false;
+            erroCompUp.SetActive(true);
+            LeanTween.moveLocalY(erroCompUp, 60f, 0.5f).setEase(LeanTweenType.easeInOutCubic);
         }
 
         public void ConfContrProf()
@@ -158,6 +171,15 @@ namespace UI{
             cb.pressedColor = confirmColorBt;
             //cb.selectedColor = confirmColorBt;
             contratarProf.colors = cb;
+        }
+
+        public void CloseErrorCompraUp()
+        {
+            LeanTween.moveLocalY(erroCompUp, -750f, 1f).setEase(LeanTweenType.easeOutCubic).setOnComplete(DesativaErrorCompraUp);
+        }
+        void DesativaErrorCompraUp()
+        {
+            erroCompUp.SetActive(false);
         }
 
         public void CloseError()
@@ -184,7 +206,13 @@ namespace UI{
         {
             UpConstruction.SetActive(true);
             LeanTween.moveLocalY(UpConstruction, 0f, 1f).setEase(LeanTweenType.easeOutCubic);
-            UIVariables.Instance.InfoUpgradePredios();
+            if( GameController.Instance.predios[UIVariables.Instance.currentPredio].nivel == 1){
+                UIVariables.Instance.InfoUpgradePredios(0);
+            }
+            else if( GameController.Instance.predios[UIVariables.Instance.currentPredio].nivel == 2){
+                UIVariables.Instance.InfoUpgradePredios(1);
+            }
+            
         }    
         public void CloseUpConstrucao()
         {

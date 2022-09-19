@@ -15,10 +15,10 @@ MonoBehaviour:
   nameBuilding: Medicina
   descricaoBuilding: Predio de ciencias biologicas
   UISpriteBuilding: {fileID: 21300000, guid: c4c548a339b4d41a590928c0c98934a7, type: 3}
-  nivel: 1
+  nivel: 2
   asset: {fileID: 203463399529911555, guid: a8908f6704e40e14b8c22ab91023bc13, type: 3}
   evolutionAsset:
-  - {fileID: 1638335947487062193, guid: 613454230e3a45f489ef086e5cd6b58a, type: 3}
+  - {fileID: 8032750430934931425, guid: 613454230e3a45f489ef086e5cd6b58a, type: 3}
   - {fileID: 6028493164434123737, guid: 79ba023876fedd5499580e9953e47f5a, type: 3}
   typeMatter: 0
   spawned: 1
