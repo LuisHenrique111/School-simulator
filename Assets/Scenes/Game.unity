@@ -365,7 +365,6 @@ MonoBehaviour:
   isGame: 1
   isSalaDiretor: 0
   collegeName: {fileID: 11400000, guid: cbaee8d196666b0458154550889a5068, type: 2}
-  barNameCollege: {fileID: 549777346}
   nameCollege: {fileID: 1094313497}
 --- !u!4 &33835134
 Transform:
@@ -8503,7 +8502,7 @@ MonoBehaviour:
   m_CharacterValidation: 0
   m_RegexValue: 
   m_GlobalPointSize: 14
-  m_CharacterLimit: 0
+  m_CharacterLimit: 14
   m_OnEndEdit:
     m_PersistentCalls:
       m_Calls:
