@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour
     public IntVariable coinManager;
     public IntVariable studentsManager;
     public BoolVariable newGame;
+
     // Start is called before the first frame update
     void Start()
     {

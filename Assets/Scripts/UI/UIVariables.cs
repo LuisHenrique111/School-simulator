@@ -65,6 +65,9 @@ namespace UI{
         public bool isGame;
         public bool isSalaDiretor;
 
+        public StringVariable collegeName;
+        public TMP_Text nameCollege;
+
         // Start is called before the first frame update
         void Start()
         {
@@ -80,6 +83,7 @@ namespace UI{
                 textStudents.text = students.Value.ToString();
                 textMinutes.text = minutes.Value.ToString();
                 textHours.text = GameController.Instance.hours.ToString();
+                nameCollege.text = collegeName.Value.ToString();
                 VerificaBotaoCompra();       
             }
             
@@ -176,6 +180,10 @@ namespace UI{
                 tween.ErroContrProf();
             }
         }   
+
+        public void ConfirmarNameCollege(){
+            tween.CloseNameCollege();
+        }
 
 
         public void HideScreenInsMoney(){

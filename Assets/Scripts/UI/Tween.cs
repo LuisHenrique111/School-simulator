@@ -8,7 +8,7 @@ namespace UI{
     {
         [SerializeField]
         GameObject constructionBG, constructionInfo, profMenu, sidePanel, sidepanelBt, menuPanel, erroContProf, erroCompUp,
-            const1, const2, const3, stamp, GameOverBtMenu, GameOverBtNovo, GameOverBtSair, UpConstruction;
+            const1, const2, const3, stamp, GameOverBtMenu, GameOverBtNovo, GameOverBtSair, UpConstruction, nameCollege;
         
         [SerializeField]
         CanvasGroup aConsBox, amenuPanel;
@@ -219,28 +219,25 @@ namespace UI{
             LeanTween.moveLocalY(UpConstruction, -900f, 1f).setEase(LeanTweenType.easeOutCubic).setOnComplete(DesativaUpConstrucao);
         }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
         public void QuitGame()
         {
             Debug.Log("Quit!");
             Application.Quit();
+        }
+
+        public void NameCollege()
+        {
+            nameCollege.SetActive(true);
+            LeanTween.moveLocalY(nameCollege, 60f, 0.5f).setEase(LeanTweenType.easeInOutCubic);
+        }
+
+        public void CloseNameCollege()
+        {
+            LeanTween.moveLocalY(nameCollege, -946f, 1f).setEase(LeanTweenType.easeOutCubic).setOnComplete(DesativaErrorCompraUp);
+        }
+        void DesativaNameCollege()
+        {
+            nameCollege.SetActive(false);
         }
 
     }

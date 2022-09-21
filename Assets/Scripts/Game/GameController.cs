@@ -5,6 +5,7 @@ using Game.Data;
 using Game.Variables;
 using Game.Variables.Generic;
 using UnityEngine.SceneManagement;
+using UI;
 
 public class GameController : MonoBehaviour
 {
@@ -28,6 +29,8 @@ public class GameController : MonoBehaviour
     public GameObject telaGameOver;
 
     
+
+    
     
 
     // Start is called before the first frame update
@@ -35,6 +38,8 @@ public class GameController : MonoBehaviour
     {
         Instance = this;
         if(GameManager.Instance.newGame.Value == true){
+            UIVariables.Instance.collegeName.Value = " ";
+            Tween.Instance.NameCollege();
             GameManager.Instance.SetEstudades(0);
             GameManager.Instance.SetFelicidade(50);
             GameManager.Instance.SetMoedas(900);
