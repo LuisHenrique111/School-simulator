@@ -183,6 +183,7 @@ namespace UI{
         }   
 
         public void ConfirmarNameCollege(){
+            Time.timeScale = 1f;
             tween.CloseNameCollege();
         }
 
