@@ -10,6 +10,9 @@ TagManager:
   - PontoOnibus
   - Engenharia
   - Medicina
+  - Points
+  - Fim
+  - NPC
   layers:
   - Default
   - TransparentFX

@@ -28,6 +28,8 @@ public class GameController : MonoBehaviour
 
     public GameObject telaGameOver;
 
+    public Transform[] wayPointListController;
+
     
 
     
