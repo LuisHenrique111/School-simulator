@@ -28,6 +28,8 @@ public class GameController : MonoBehaviour
 
     public GameObject telaGameOver;
 
+    public Transform[] wayPointListController;
+
     
 
     
@@ -44,11 +46,11 @@ public class GameController : MonoBehaviour
             GameManager.Instance.SetFelicidade(50);
             GameManager.Instance.SetMoedas(900);
             building[0].nivel = 1;
+            Time.timeScale = 0f;
             for(int i = 0; i<predios.Length; i++){
                 
                 predios[i].nivel = 1;
                 predios[i].spawned = false;
-                
             }
             GameManager.Instance.newGame.Value = false;
         }

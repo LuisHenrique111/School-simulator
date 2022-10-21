@@ -173,6 +173,7 @@ namespace UI{
                 Instantiate(GameController.Instance.predios[currentConst].asset, position, rotation);
                 GameController.Instance.predios[currentConst].spawned = true;
                 GameManager.Instance.DiminuirMoedas(GameController.Instance.predios[currentConst].price);
+                GameManager.Instance.IncrementarEstudantes(10);
                 tween.ConfContrProf();
                 tween.CloseProfMenu();
             }else{
@@ -182,6 +183,7 @@ namespace UI{
         }   
 
         public void ConfirmarNameCollege(){
+            Time.timeScale = 1f;
             tween.CloseNameCollege();
         }
 
