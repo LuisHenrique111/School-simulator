@@ -7,11 +7,11 @@ public class videocontrole : MonoBehaviour
     private static videocontrole instace;
     [SerializeField]
     private GameObject videoPrincipal;
-    [SerializeField]
-    private List<GameObject> videosSecundarios = new List<GameObject>();
     public void ChangerVideo(GameObject video)
     {
+        GameObject videoAuxiliar = videoPrincipal;
         videoPrincipal = video;
+        video = videoAuxiliar;
     }
     void Awake()
     {
