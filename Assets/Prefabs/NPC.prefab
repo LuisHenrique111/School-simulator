@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1259157022975582183}
   - component: {fileID: 1259157022975582184}
   - component: {fileID: 3395020583683545854}
-  - component: {fileID: 7459342285540631037}
+  - component: {fileID: -2451926455284264036}
   m_Layer: 0
   m_Name: NPC
   m_TagString: Untagged
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad82ca3c7928b4845a3c4bdac3bcf1c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7459342285540631037
+--- !u!114 &-2451926455284264036
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -119,25 +119,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 1259157022975582186}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 247b968aa85214a4cbe31172b55d1a48, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a2ee427dd49b154bab57242bb5e17ee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wayPointList:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  currentWayPoint: 0
-  speed: 4
