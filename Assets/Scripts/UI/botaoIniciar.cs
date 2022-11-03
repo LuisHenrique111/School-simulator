@@ -13,7 +13,7 @@ public class botaoIniciar : MonoBehaviour
             GameManager.Instance.newGame.Value = true;
         }
         SceneManager.LoadScene(nomeCena);
-        
+        Debug.Log("voltou");
     }
 
     public void QuitGame()
