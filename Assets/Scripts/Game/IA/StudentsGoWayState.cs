@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class StudentsGoWayState : Entity.State
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+    public int continueWalking;
+    public override void OnEnter(){
+        continueWalking = Random.Range(0,100);
         
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void Update(){
+        if(continueWalking<50){
+            entity.SetState<StudentsWalkingState>();
+        }else{
+            SpawnNPC.Instance.contador--;
+            Destroy(gameObject);
+        }
     }
 }

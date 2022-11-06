@@ -35,7 +35,7 @@ public class GameManager : MonoBehaviour
     }
 
     public void AumentarMoedas(int valueCoin){
-        happiness.Value = happiness.Value + valueCoin;
+        coinManager.Value = coinManager.Value + valueCoin;
     }
 
     public void DiminuirMoedas(int valueCoin){

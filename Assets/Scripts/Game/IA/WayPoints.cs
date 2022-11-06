@@ -18,7 +18,7 @@ public class WayPoints : MonoBehaviour {
     // Use this for initialization
     void Start () {
         for(int i = 0; i<wayPointList.Length; i++){
-            wayPointList[i] = GameController.Instance.wayPointListController[i];
+            //wayPointList[i] = GameController.Instance.wayPointListController[i];
         }
 
         speed = Random.Range(3,10);

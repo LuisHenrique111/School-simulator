@@ -4,39 +4,56 @@ using UnityEngine;
 
 public class StudentsWalkingState : Entity.State
 {
-    // put the points from unity interface
-    public Transform[] wayPointList;
-
+    
+    public Transform[] wayPointsCont;
     public int currentWayPoint = 0; 
     Transform targetWayPoint;
     GameObject aux;
 
     public float speed = 4f;
+    public float auxSpeed;
+    public bool insideClassroom;
+    public float time;
+
+    public GameObject wayPoints;
+    public int currentBuilding;
+    
 
     public override void OnEnter(){
+        currentBuilding = Random.Range(1,4);
+        if(currentBuilding == 1){
+            wayPoints = GameObject.Find("WayPoints1");
+        }else if(currentBuilding == 2){
+            wayPoints = GameObject.Find("WayPoints2");
+        }else if(currentBuilding == 3){
+            wayPoints = GameObject.Find("WayPoints3");
+        }else if(currentBuilding == 4){
+            wayPoints = GameObject.Find("WayPoints4");
+        }
         
-        /*for(int i = 0; i<GameController.Instance.wayPointListController.Length; i++){
-            Debug.Log("Entrou");
-            wayPointList[i] = GameController.Instance.wayPointListController[i];
-        }*/
+        wayPointsCont = wayPoints.GetComponentsInChildren<Transform>();
 
-        speed = Random.Range(3,10);
-    }
-
-    void Start(){
+        speed = Random.Range(20, 40);
         
     }
 
 
     // Update is called once per frame
     void Update () {
+
         // check if we have somewere to walk
-        if(currentWayPoint < GameController.Instance.wayPointListController.Length)
+        if(currentWayPoint < wayPointsCont.Length)
         {
             if(targetWayPoint == null)
-                targetWayPoint = GameController.Instance.wayPointListController[currentWayPoint];
+                targetWayPoint = wayPointsCont[currentWayPoint];
             walk();
         }
+        if(insideClassroom == true){
+            speed = 0.0f;
+            time = time + Time.deltaTime;
+            StopClassroom();
+        }
+        
     }
 
     void walk(){
@@ -49,7 +66,30 @@ public class StudentsWalkingState : Entity.State
         if(transform.position == targetWayPoint.position)
         {
             currentWayPoint ++ ;
-            targetWayPoint = GameController.Instance.wayPointListController[currentWayPoint];
+            if(currentWayPoint == wayPointsCont.Length){
+                currentWayPoint=0;
+            }
+            targetWayPoint = wayPointsCont[currentWayPoint];
+            
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    { 
+        if(other.gameObject.tag == "Predios"){
+            insideClassroom = true;
+            auxSpeed = speed;
+            GameManager.Instance.AumentarMoedas(50);
+        }
+        if(other.gameObject.tag == "Fim"){
+            entity.SetState<StudentsGoWayState>();
+        }
+    }
+
+    public void StopClassroom(){
+        if(time > 10.0f){
+            speed = auxSpeed;
+            insideClassroom = false;  
         }
     }
 }

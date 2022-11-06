@@ -28,10 +28,10 @@ public class GameController : MonoBehaviour
 
     public GameObject telaGameOver;
 
-    public Transform[] wayPointListController;
+    public GameObject waypointPredio2;
+    public GameObject waypointPredio3;
 
     
-
     
     
 
@@ -92,10 +92,12 @@ public class GameController : MonoBehaviour
         if(building[0].nivel == 2){
             slots[2].GetComponent<Renderer>().material.color = Color.cyan;
             slots[2].GetComponent<BotaoPlacas>().enabled = true;
+            waypointPredio2.SetActive(true);
         }
         if(building[0].nivel == 3){
             slots[3].GetComponent<Renderer>().material.color = Color.cyan;
             slots[3].GetComponent<BotaoPlacas>().enabled = true;
+            waypointPredio3.SetActive(true);
         }
     }
 }

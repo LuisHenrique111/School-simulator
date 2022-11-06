@@ -13,6 +13,9 @@ public class SpawnNPC : MonoBehaviour
     public Transform position;
     public int contador;
 
+    public Mesh mesh;
+    public Material material;
+
     void Start(){
         Instance = this;
     }
@@ -20,8 +23,8 @@ public class SpawnNPC : MonoBehaviour
     public void SpawnDoNPC(){
         if(contador<quatidadeNpc.Value){
             for(int i = 0; i < (quatidadeNpc.Value - contador); i++){
-
-                Instantiate(prefabNpc, position.position, position.rotation);
+                //Instantiate(prefabNpc, position.position, position.rotation);
+                Factory.CreateNPC(mesh, material, position);
                 contador++;
             }
         }

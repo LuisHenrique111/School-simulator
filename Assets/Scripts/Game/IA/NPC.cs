@@ -6,26 +6,21 @@ using Game.Variables.Generic;
 
 public class NPC : MonoBehaviour
 {
+    public static NPC instance;
+    // put the points from unity interface
+    
 
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        instance = this;
     }
 
     void OnTriggerEnter(Collider other)
-    {
-        
+    { 
         if(other.gameObject.tag == "Fim"){
             SpawnNPC.Instance.contador--;
             Destroy(gameObject);
         }
-    }
-
+    }    
 }

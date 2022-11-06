@@ -10,6 +10,7 @@ namespace Game.Data{
         public string nameBuilding;
         public string descricaoBuilding;   
         public Sprite UISpriteBuilding;
+        public int countStudents;
         public int nivel;
         public GameObject asset;
         public GameObject[] evolutionAsset;

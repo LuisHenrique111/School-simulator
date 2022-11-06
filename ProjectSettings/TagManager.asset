@@ -13,6 +13,7 @@ TagManager:
   - Points
   - Fim
   - NPC
+  - Predios
   layers:
   - Default
   - TransparentFX

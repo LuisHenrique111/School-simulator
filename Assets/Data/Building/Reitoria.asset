@@ -15,7 +15,8 @@ MonoBehaviour:
   nameBuilding: 
   descricaoBuilding: 
   UISpriteBuilding: {fileID: 0}
-  nivel: 2
+  countStudents: 0
+  nivel: 1
   asset: {fileID: 3590746244211373721, guid: c6c7c3a8a20b1884bb39ddb2b2a28704, type: 3}
   evolutionAsset:
   - {fileID: 7380159587154985281, guid: d032bfd874c7a584d9ae20fd184e43e2, type: 3}
