@@ -5,8 +5,6 @@ using UnityEngine;
 
 public class Students : Entity
 {
-
-
     public void OnEnable() 
     {
 

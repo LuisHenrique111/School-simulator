@@ -4,8 +4,6 @@ using UnityEngine;
 
 public class Entity : MonoBehaviour
 {
-
-
     public class State : MonoBehaviour{
         public Entity entity;
         public virtual void OnEnter(){}

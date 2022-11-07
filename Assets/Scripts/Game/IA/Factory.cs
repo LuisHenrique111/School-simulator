@@ -15,6 +15,5 @@ public class Factory : MonoBehaviour
         obj.AddComponent<Students>();
         obj.transform.position = pos.transform.position;
         return obj;
-
     }
 }
