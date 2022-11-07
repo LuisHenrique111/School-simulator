@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7018130764445847497}
   - component: {fileID: 6254008027205468268}
   - component: {fileID: 8155531169590867110}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: predioMedNvl3 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}

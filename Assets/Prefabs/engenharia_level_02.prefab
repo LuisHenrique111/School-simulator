@@ -342,7 +342,7 @@ GameObject:
   - component: {fileID: 5666697293876494070}
   - component: {fileID: 1146282453771793830}
   - component: {fileID: 3436640409225177086}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: engenharia_level_02
   m_TagString: Engenharia
   m_Icon: {fileID: 0}

@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -287,10 +287,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 33250962}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e90a2449629c5e54e8a108536ed80d1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fda813c698e2ac40bbb76abde956742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagemGrande: {fileID: 2064870610}
+  imagemGrande: {fileID: 0}
+  RawimagemGrande: {fileID: 0}
 --- !u!114 &33250965
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -335,7 +336,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 33250964}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ChangeImage, Assembly-CSharp
         m_MethodName: SwapImage
         m_Mode: 2
@@ -3418,10 +3419,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1288048760}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e90a2449629c5e54e8a108536ed80d1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fda813c698e2ac40bbb76abde956742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagemGrande: {fileID: 2064870610}
+  imagemGrande: {fileID: 0}
+  RawimagemGrande: {fileID: 0}
 --- !u!114 &1288048766
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3466,7 +3468,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1288048765}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ChangeImage, Assembly-CSharp
         m_MethodName: SwapImage
         m_Mode: 2
@@ -3880,10 +3882,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1432027831}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e90a2449629c5e54e8a108536ed80d1f, type: 3}
+  m_Script: {fileID: 11500000, guid: 5fda813c698e2ac40bbb76abde956742, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  imagemGrande: {fileID: 2064870610}
+  imagemGrande: {fileID: 0}
+  RawimagemGrande: {fileID: 0}
 --- !u!114 &1432027834
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3928,9 +3931,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1432027833}
+      - m_Target: {fileID: 1432027831}
         m_TargetAssemblyTypeName: ChangeImage, Assembly-CSharp
-        m_MethodName: SwapImage
+        m_MethodName: 
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 1432027835}
@@ -3969,7 +3972,7 @@ VideoPlayer:
   m_EnabledAudioTracks: 01
   m_DirectAudioMutes: 00
   m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_SkipOnDrop: 1
   m_Looping: 0
   m_WaitForFirstFrame: 1

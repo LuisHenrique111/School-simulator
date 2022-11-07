@@ -92,7 +92,7 @@ GameObject:
   m_Component:
   - component: {fileID: 308929095714114591}
   - component: {fileID: 8625591150845918476}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: engenharia_level_03
   m_TagString: Engenharia
   m_Icon: {fileID: 0}

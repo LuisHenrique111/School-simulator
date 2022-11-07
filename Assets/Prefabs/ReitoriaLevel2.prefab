@@ -6911,7 +6911,7 @@ GameObject:
   - component: {fileID: 7863364828946062331}
   - component: {fileID: 3395100373260744796}
   - component: {fileID: 5519573134793144998}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: ReitoriaLevel2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

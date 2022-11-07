@@ -337,7 +337,7 @@ GameObject:
   - component: {fileID: 6152721570763236934}
   - component: {fileID: 4943099169567657179}
   - component: {fileID: 684198743478319303}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: engenharia_level_01
   m_TagString: Engenharia
   m_Icon: {fileID: 0}
@@ -372,7 +372,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9f6a08143fe7a4fc7a17cd990c5ce951, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentPredio: {fileID: 0}
+  currentPredio: 0
 --- !u!65 &684198743478319303
 BoxCollider:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8393288608442857012}
   - component: {fileID: 732142812363633766}
   - component: {fileID: 893756115531141184}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: medNvl2
   m_TagString: Untagged
   m_Icon: {fileID: 0}

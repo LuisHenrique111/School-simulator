@@ -179,7 +179,7 @@ GameObject:
   - component: {fileID: 4790394315980182346}
   - component: {fileID: 6177658436859072448}
   - component: {fileID: 6177658436859072451}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: GeografiaLevel2
   m_TagString: casa
   m_Icon: {fileID: 0}
