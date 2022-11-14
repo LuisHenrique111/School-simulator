@@ -12,8 +12,10 @@ public class GameController : MonoBehaviour
     public static GameController Instance;
 
     [Header("Vetor dos predios")]
-    public BuildingData[] building;
     public BuildingData[] predios;
+
+    [Header("Vetor dos predios")]
+    public BuildingData[] building;
 
     [Header("Vetor dos slots")]
     public GameObject[] slots;
@@ -25,8 +27,6 @@ public class GameController : MonoBehaviour
     public IntVariable minutes;
     public IntVariable coin;
     #endregion
-
-    public GameObject telaGameOver;
 
     public GameObject waypointPredio2;
     public GameObject waypointPredio3;
