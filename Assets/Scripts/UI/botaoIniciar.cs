@@ -16,6 +16,14 @@ public class botaoIniciar : MonoBehaviour
         Debug.Log("voltou");
     }
 
+    public void BtnContinuar()
+    {   
+        if(nomeCena == "Game"){
+            GameManager.Instance.newGame.Value = false;
+        }
+        SceneManager.LoadScene(nomeCena);
+    }
+
     public void QuitGame()
     {
 

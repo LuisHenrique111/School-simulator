@@ -48,11 +48,17 @@ public class GameController : MonoBehaviour
             building[0].nivel = 1;
             Time.timeScale = 0f;
             for(int i = 0; i<predios.Length; i++){
-                
                 predios[i].nivel = 1;
                 predios[i].spawned = false;
             }
             GameManager.Instance.newGame.Value = false;
+        }else{
+            
+            for(int i = 0; i<predios.Length; i++){
+                if(predios[i].spawned == true){
+                    DontDestroyOnLoad(predios[i].asset);
+                }
+            }
         }
     }
 
@@ -99,5 +105,17 @@ public class GameController : MonoBehaviour
             slots[3].GetComponent<BotaoPlacas>().enabled = true;
             waypointPredio3.SetActive(true);
         }
+    }
+
+    public void AceleraTempo(){
+        Time.timeScale = 2.0f;
+    }
+
+    public void Play(){
+        Time.timeScale = 1.0f;
+    }
+
+    public void Pause(){
+        Time.timeScale = 0.0f;
     }
 }
