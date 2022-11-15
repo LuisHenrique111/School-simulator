@@ -1,4 +1,8 @@
 using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+using UI;
+
 
 public class RayParaHUD : MonoBehaviour
 {
@@ -7,6 +11,10 @@ public class RayParaHUD : MonoBehaviour
     public GameObject overlay;
     //POSINICIAL � onde o objeto deve ir quando seu mouse n�o est� em cima de nada em particular
     private Vector3 posInicial;
+    public TMP_Text nomePredio;
+    public Image imagemPredio;
+    public TMP_Text nivelPredio;
+    public TMP_Text pricePredio;
 
     //OFFSET � um Vector3 usado para "arredar" a posi��o do nosso overlay, sen�o ele ficaria exatamente no centro do mouse
     //e n�o nos deixaria ver a constru��o
@@ -41,5 +49,19 @@ public class RayParaHUD : MonoBehaviour
                 overlay.transform.position = posInicial;
             }
         }
+
+        imagemPredio.sprite = GameController.Instance.predios[UIVariables.Instance.currentConst].UISpriteBuilding;
+        nomePredio.text = GameController.Instance.predios[UIVariables.Instance.currentConst].nameBuilding;
+        nivelPredio.text = GameController.Instance.predios[UIVariables.Instance.currentConst].nivel.ToString();
+        if(GameController.Instance.predios[UIVariables.Instance.currentConst].nivel == 1){
+            pricePredio.text = GameController.Instance.predios[UIVariables.Instance.currentConst].price.ToString();
+        }
+        if(GameController.Instance.predios[UIVariables.Instance.currentConst].nivel == 2){
+            pricePredio.text = GameController.Instance.predios[UIVariables.Instance.currentConst].priceEvolution[0].ToString();
+        }
+        if(GameController.Instance.predios[UIVariables.Instance.currentConst].nivel == 3){
+            pricePredio.text = GameController.Instance.predios[UIVariables.Instance.currentConst].priceEvolution[1].ToString();
+        }
+
     }
 }

@@ -20,8 +20,8 @@ MonoBehaviour:
   asset: {fileID: 6784966438597278972, guid: d93612b9672e5464aaf25e3077b9efbe, type: 3}
   evolutionAsset:
   - {fileID: 5039518666331038796, guid: ff47c4bbd2ddd9b409775b4b29171a74, type: 3}
-  - {fileID: 1081525596055590565, guid: ec2712ec27006804f9d07bf4f7b7ff02, type: 3}
+  - {fileID: 3456155446485917776, guid: ec2712ec27006804f9d07bf4f7b7ff02, type: 3}
   typeMatter: 0
-  spawned: 1
+  spawned: 0
   price: 150
   priceEvolution: 64000000c8000000

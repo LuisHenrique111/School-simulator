@@ -33,13 +33,13 @@ public class UpConstruction : MonoBehaviour
         if(GameController.Instance.predios[UIVariables.Instance.currentPredio].nivel == 2){
             currentEvolution = 1;
             if(UIVariables.Instance.currentPredio == 0){
-                auxEvolution2 = GameObject.Find("artes_cenicas_lv1(Clone)");
+                auxEvolution1 = GameObject.Find("artes_cenicas_lv1(Clone)");
             }
             if(UIVariables.Instance.currentPredio == 1){
                 auxEvolution1 = GameObject.Find("engenharia_level_01(Clone)");
             }
             if(UIVariables.Instance.currentPredio == 2){
-                auxEvolution2 = GameObject.Find("humanas_lv1(Clone)");
+                auxEvolution1 = GameObject.Find("humanas_lv1(Clone)");
             }
             if(UIVariables.Instance.currentPredio == 3){
                 auxEvolution1 = GameObject.Find("medNvl1(Clone)");

@@ -335,8 +335,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6152721570763236934}
+  - component: {fileID: 5552944938644237836}
   - component: {fileID: 4943099169567657179}
-  - component: {fileID: 684198743478319303}
   m_Layer: 6
   m_Name: engenharia_level_01
   m_TagString: Engenharia
@@ -351,15 +351,28 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6784966438597278972}
-  m_LocalRotation: {x: -0, y: 0.7185538, z: -0, w: 0.69547147}
-  m_LocalPosition: {x: -129.39, y: 1.9000015, z: 63.95124}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
+  m_LocalPosition: {x: 203.0003, y: 1, z: 374.00018}
+  m_LocalScale: {x: 4, y: 4, z: 4}
   m_Children:
   - {fileID: 601454682273012333}
   - {fileID: 166293146988219454}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 91.87, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+--- !u!65 &5552944938644237836
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6784966438597278972}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 21.292566, y: 6.4667926, z: 22.32037}
+  m_Center: {x: 0.23413159, y: 2.7333963, z: -0.8431862}
 --- !u!114 &4943099169567657179
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -373,19 +386,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPredio: 0
---- !u!65 &684198743478319303
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6784966438597278972}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 20.1, y: 4.72, z: 17.97}
-  m_Center: {x: 0, y: 2.02, z: 0}
 --- !u!1 &6879677072166216911
 GameObject:
   m_ObjectHideFlags: 0

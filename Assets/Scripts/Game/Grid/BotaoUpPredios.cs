@@ -28,7 +28,7 @@ public class BotaoUpPredios : MonoBehaviour
                 if(gameObject.tag == "Humanas"){
                     UIVariables.Instance.currentPredio = 2;
                 }
-                if(gameObject.tag == "ArtesCenicas"){
+                if(gameObject.tag == "Artes"){
                     UIVariables.Instance.currentPredio = 0;
                 }
                 Tween.Instance.OpenUpConstrucao();
