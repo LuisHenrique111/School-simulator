@@ -41,7 +41,7 @@ public class CameraController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void FixedUpdate()
+    void Update()
     {
 
 
@@ -57,9 +57,9 @@ public class CameraController : MonoBehaviour
 
     private Vector3 ClampCamera(Vector3 target)
     {
-      float clampX = Mathf.Clamp(target.x,-132 ,132);
+      float clampX = Mathf.Clamp(target.x,-450 ,275);
       float clampY = Mathf.Clamp(target.y, -50,80);
-      float clampZ = Mathf.Clamp(target.z,0,200);
+      float clampZ = Mathf.Clamp(target.z,0,400);
       
 
       return new Vector3(clampX,clampY,clampZ);
