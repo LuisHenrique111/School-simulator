@@ -6,6 +6,7 @@ using Game.Variables;
 using Game.Variables.Generic;
 using UnityEngine.SceneManagement;
 using UI;
+using UnityEngine.UI;
 
 public class GameController : MonoBehaviour
 {
@@ -20,8 +21,16 @@ public class GameController : MonoBehaviour
     [Header("Vetor dos slots")]
     public GameObject[] slots;
 
+    [Header("Vetor dos NPCs")]
+    public GameObject[] npc;
+
+    [Header("Vetor Sprite happiness")]
+    public Sprite[] spriteHappiness;
+
     [Header("Variaveis globais")] 
-    #region variaveis globais 
+    #region variaveis globais
+    public Image happinessGeneral;
+    public int  averageHappiness = 50, happinessAdd;
     public FloatVariable seconds;
     public int hours;
     public IntVariable minutes;
@@ -30,9 +39,10 @@ public class GameController : MonoBehaviour
 
     public GameObject waypointPredio2;
     public GameObject waypointPredio3;
+    public GameObject content,prefabBirdder;
 
     
-    
+
     
 
     // Start is called before the first frame update
@@ -68,6 +78,7 @@ public class GameController : MonoBehaviour
         liberaPlacas();
         Win();
         GameOver();
+        ControlHappiness();
     }
 
     public void ControllerAlunos(){
@@ -105,6 +116,45 @@ public class GameController : MonoBehaviour
             slots[3].GetComponent<BotaoPlacas>().enabled = true;
             waypointPredio3.SetActive(true);
         }
+    }
+
+    public void ControlHappiness()
+    {
+        npc = GameObject.FindGameObjectsWithTag("NPC");
+
+        foreach (var item in npc)
+        {
+            happinessAdd += item.GetComponent<NPC_control>().individualHappiness;
+        }
+
+        if(npc.Length <= 0)
+        {
+
+        }
+        else
+        {
+            averageHappiness = happinessAdd/npc.Length;
+            happinessAdd = 0;
+        }
+        
+
+        if(averageHappiness < 50)
+        {
+            happinessGeneral.sprite = spriteHappiness[0];
+        }
+        else if(averageHappiness >= 50 && averageHappiness < 60)
+        {
+            happinessGeneral.sprite = spriteHappiness[1];
+        }
+        else if(averageHappiness >= 60 && averageHappiness < 80)
+        {
+            happinessGeneral.sprite = spriteHappiness[2];
+        }
+        else
+        {
+            happinessGeneral.sprite = spriteHappiness[3];
+        }
+
     }
 
     public void AceleraTempo(){

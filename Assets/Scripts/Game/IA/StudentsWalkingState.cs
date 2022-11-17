@@ -17,6 +17,7 @@ public class StudentsWalkingState : Entity.State
 
     public GameObject wayPoints;
     public int currentBuilding;
+    public int inside;
     
 
     public override void OnEnter(){
@@ -49,6 +50,7 @@ public class StudentsWalkingState : Entity.State
             walk();
         }
         if(insideClassroom == true){
+            inside++;
             speed = 0.0f;
             time = time + Time.deltaTime;
             StopClassroom();
@@ -81,14 +83,24 @@ public class StudentsWalkingState : Entity.State
             auxSpeed = speed;
             GameManager.Instance.AumentarMoedas(50);
         }
-        if(other.gameObject.tag == "Fim"){
+
+        if(other.gameObject.tag == "Fim" && inside > 0)
+        {
             entity.SetState<StudentsGoWayState>();
+        }
+        else if(other.gameObject.tag == "Fim" && inside <= 0)
+        {
+            Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+            gameObject.GetComponent<NPC_control>().individualHappiness -= 40;
+            entity.SetState<StudentsGoWayState>();
+            GameManager.Instance.DiminuirMoedas(30);
         }
     }
 
     public void StopClassroom(){
         if(time > 10.0f){
             speed = auxSpeed;
+            gameObject.GetComponent<NPC_control>().individualHappiness += 20;
             insideClassroom = false;  
         }
     }
