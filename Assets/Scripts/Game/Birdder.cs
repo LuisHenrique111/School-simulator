@@ -12,5 +12,9 @@ public class Birdder : MonoBehaviour
         textIssuer.text = Reader.instance.Issuer();
         textMessage.text = Reader.instance.Message();
     }
+    public void DestroyMessage()
+    {
+        Destroy(this.gameObject);
+    }
 
 }
