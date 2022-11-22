@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Game.Variables;
+using Game.Data;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
     public IntVariable coinManager;
     public IntVariable studentsManager;
     public BoolVariable newGame;
+
+    public BuildingData[] predios;
 
     // Start is called before the first frame update
     void Start()

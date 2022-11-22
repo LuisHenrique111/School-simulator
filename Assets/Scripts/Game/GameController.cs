@@ -63,7 +63,7 @@ public class GameController : MonoBehaviour
             }
             GameManager.Instance.newGame.Value = false;
         }else{
-            
+            SaveControler.Load();
             for(int i = 0; i<predios.Length; i++){
                 if(predios[i].spawned == true){
                     DontDestroyOnLoad(predios[i].asset);
