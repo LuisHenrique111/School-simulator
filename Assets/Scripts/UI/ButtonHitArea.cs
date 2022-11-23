@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class ButtonHitArea : MonoBehaviour
 {
-    //public GameObject constPanel;
+    public GameObject panelBirdder;
     
     void Start()
     {
@@ -21,6 +21,13 @@ public class ButtonHitArea : MonoBehaviour
     {
         LeanTween.scale(this.gameObject, (this.transform.localScale / 1.05f), 0.1f).setEase(LeanTweenType.easeInOutSine);
 
+    }
+
+    public void OpenBirdder()
+    {
+        Animator anim = panelBirdder.GetComponent<Animator>();
+        bool isOpen = anim.GetBool("Open");
+        anim.SetBool("Open",!isOpen);
     }
 
     /*private void Update()
