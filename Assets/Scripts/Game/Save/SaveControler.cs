@@ -9,7 +9,6 @@ public class SaveControler : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.H)){
-            GameManager.Instance.save.Value = true;
             Save();
         }
     }
@@ -21,6 +20,12 @@ public class SaveControler : MonoBehaviour
         for(int i = 0; i < buildlist.Length; i++){
             scene.buildings[i] = SaveAdapter.Building2Data(buildlist[i]);
         }
+        Reitoria[] reitoriaList = GameObject.FindObjectsOfType<Reitoria>();
+        scene.reitoriaBuild = new BuildingSaveData[reitoriaList.Length];
+        for(int j = 0; j<reitoriaList.Length; j++){
+            scene.reitoriaBuild[j] = SaveAdapter.Building2DataReitoria(reitoriaList[j]);
+        }
+        GameManager.Instance.save.Value = true;
         scene.game = new GameSaveData();
         scene.game.time = 0; //salva o tempo
         string s = JsonUtility.ToJson(scene);
@@ -36,5 +41,9 @@ public class SaveControler : MonoBehaviour
         for(int i = 0; i < data.buildings.Length; i++){
             SaveAdapter.Data2Building(data.buildings[i]);
         }
+        for(int j=0; j<data.reitoriaBuild.Length; j++){
+            SaveAdapter.Data2BuildingReitoria(data.reitoriaBuild[j]);
+        }
+        
     }
 }

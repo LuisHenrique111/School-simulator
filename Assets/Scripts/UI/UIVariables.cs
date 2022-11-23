@@ -198,6 +198,9 @@ namespace UI{
 
         public void ConfirmarNameCollege(){
             Time.timeScale = 1f;
+            CameraController.instance.speed = 5.0f;
+            CameraController.instance.movimentTime = 1.5f;
+            CameraController.instance.rotationValue = 1.0f;
             tween.CloseNameCollege();
         }
 
@@ -212,9 +215,12 @@ namespace UI{
         }
         public void Game(){
             SceneManager.LoadScene("Game");
+            
         }
         public void Menu(){
             SceneManager.LoadScene("Menu");
+            
+            SaveControler.Save();
         }
     }
 }

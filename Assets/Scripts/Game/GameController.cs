@@ -43,6 +43,7 @@ public class GameController : MonoBehaviour
     public GameObject telaName;
 
     public BoolVariable save;
+    
 
     
     
@@ -52,20 +53,7 @@ public class GameController : MonoBehaviour
     {
         Instance = this;
         if(GameManager.Instance.newGame.Value == true){
-            UIVariables.Instance.collegeName.Value = " ";
-            Tween.Instance.NameCollege();
-            GameManager.Instance.SetEstudades(0);
-            GameManager.Instance.save.Value = false;
-            File.Delete(Application.persistentDataPath + "/saveGame.txt");
-            GameManager.Instance.SetFelicidade(50);
-            GameManager.Instance.SetMoedas(900);
-            building[0].nivel = 1;
-            Time.timeScale = 0f;
-            for(int i = 0; i<predios.Length; i++){
-                predios[i].nivel = 1;
-                predios[i].spawned = false;
-            }
-            GameManager.Instance.newGame.Value = false;
+            ReinicioGame();
         }else{
             SaveControler.Load();
             telaName.SetActive(false);
@@ -168,5 +156,29 @@ public class GameController : MonoBehaviour
 
     public void Pause(){
         Time.timeScale = 0.0f;
+    }
+
+    public void ReinicioGame(){
+        Instantiate(building[0].asset, new Vector3(-56, 1.4f, 363), Quaternion.Euler(new Vector3(0, 180, 0)));
+        building[0].spawned = true;
+        UIVariables.Instance.collegeName.Value = " ";
+        Tween.Instance.NameCollege();
+        CameraController.instance.speed = 0.0f;
+        CameraController.instance.movimentTime = 0.0f;
+        CameraController.instance.rotationValue = 0.0f;
+        GameManager.Instance.SetEstudades(0);
+        GameManager.Instance.save.Value = false;
+        UIVariables.Instance.minutes.Value = 0;
+        UIVariables.Instance.hours.Value = 0;
+        File.Delete(Application.persistentDataPath + "/saveGame.txt");
+        GameManager.Instance.SetFelicidade(50);
+        GameManager.Instance.SetMoedas(900);
+        building[0].nivel = 1;
+        Time.timeScale = 0f;
+        for(int i = 0; i<predios.Length; i++){
+            predios[i].nivel = 1;
+            predios[i].spawned = false;
+        }
+        GameManager.Instance.newGame.Value = false;
     }
 }
