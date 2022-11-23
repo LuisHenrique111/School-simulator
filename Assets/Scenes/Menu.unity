@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028305, g: 0.22571313, b: 0.3069213, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1305,11 +1305,9 @@ MonoBehaviour:
   coinManager: {fileID: 11400000, guid: 44f96d2da099fde44a94d15ad2544322, type: 2}
   studentsManager: {fileID: 11400000, guid: d590dce03fc9c7b4498d8bca714925b0, type: 2}
   newGame: {fileID: 11400000, guid: b59a3f375b4cf7d4da5c7a10f264904c, type: 2}
-  predios:
-  - {fileID: 11400000, guid: 15afbe2b959c9694b9a657afeb62e40b, type: 2}
-  - {fileID: 11400000, guid: 33344b97a09680c488dd3c85c8ded583, type: 2}
-  - {fileID: 11400000, guid: 68f26d109734f36418182e8553b60aa6, type: 2}
-  - {fileID: 11400000, guid: d3f487650a70b7d4ca9adfaec04edbc7, type: 2}
+  save: {fileID: 11400000, guid: 94b9e8b0426558042b045013a8d6fc2a, type: 2}
+  Continue: {fileID: 689680998}
+  IsMenu: 1
 --- !u!4 &305981453
 Transform:
   m_ObjectHideFlags: 0

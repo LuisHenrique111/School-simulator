@@ -28567,7 +28567,9 @@ MonoBehaviour:
   coinManager: {fileID: 11400000, guid: 44f96d2da099fde44a94d15ad2544322, type: 2}
   studentsManager: {fileID: 11400000, guid: d590dce03fc9c7b4498d8bca714925b0, type: 2}
   newGame: {fileID: 11400000, guid: b59a3f375b4cf7d4da5c7a10f264904c, type: 2}
-  predios: []
+  save: {fileID: 11400000, guid: 94b9e8b0426558042b045013a8d6fc2a, type: 2}
+  Continue: {fileID: 0}
+  IsMenu: 0
 --- !u!4 &2003998323
 Transform:
   m_ObjectHideFlags: 0
@@ -30467,6 +30469,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4030181293863596408, guid: fcbd0e0c98e8541c2b43a87e5c3479e2, type: 3}
+      propertyPath: save
+      value: 
+      objectReference: {fileID: 11400000, guid: 94b9e8b0426558042b045013a8d6fc2a, type: 2}
     - target: {fileID: 4030181293863596408, guid: fcbd0e0c98e8541c2b43a87e5c3479e2, type: 3}
       propertyPath: content
       value: 

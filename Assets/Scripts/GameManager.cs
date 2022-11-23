@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Game.Variables;
 using Game.Data;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -12,20 +13,32 @@ public class GameManager : MonoBehaviour
     public IntVariable coinManager;
     public IntVariable studentsManager;
     public BoolVariable newGame;
+    public BoolVariable save;
 
-    public BuildingData[] predios;
+
+    [Header("botao Continuar")]
+    public Button Continue;
+    public bool IsMenu;
 
     // Start is called before the first frame update
     void Start()
     {
         Instance = this;
-
+        
         
     }
 
     // Update is called once per frame
     void Update()
     {
+        if(IsMenu){
+            if(save.Value == true){
+                Continue.interactable = true;
+            }else{
+                Continue.interactable = false;
+            }
+        }
+        
         
     }
 

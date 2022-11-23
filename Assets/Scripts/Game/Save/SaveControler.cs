@@ -9,6 +9,7 @@ public class SaveControler : MonoBehaviour
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.H)){
+            GameManager.Instance.save.Value = true;
             Save();
         }
     }

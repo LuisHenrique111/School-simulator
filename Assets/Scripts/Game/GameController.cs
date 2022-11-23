@@ -7,6 +7,7 @@ using Game.Variables.Generic;
 using UnityEngine.SceneManagement;
 using UI;
 using UnityEngine.UI;
+using System.IO;
 
 public class GameController : MonoBehaviour
 {
@@ -41,6 +42,8 @@ public class GameController : MonoBehaviour
 
     public GameObject telaName;
 
+    public BoolVariable save;
+
     
     
 
@@ -52,7 +55,8 @@ public class GameController : MonoBehaviour
             UIVariables.Instance.collegeName.Value = " ";
             Tween.Instance.NameCollege();
             GameManager.Instance.SetEstudades(0);
-            
+            GameManager.Instance.save.Value = false;
+            File.Delete(Application.persistentDataPath + "/saveGame.txt");
             GameManager.Instance.SetFelicidade(50);
             GameManager.Instance.SetMoedas(900);
             building[0].nivel = 1;
@@ -88,6 +92,7 @@ public class GameController : MonoBehaviour
             GameManager.Instance.SetEstudades(0);
             GameManager.Instance.SetFelicidade(50);
             GameManager.Instance.SetMoedas(900);
+            GameManager.Instance.save.Value = false;
             SceneManager.LoadScene("GameOver");
         }
     }

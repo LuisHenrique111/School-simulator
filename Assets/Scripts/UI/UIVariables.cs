@@ -71,6 +71,8 @@ namespace UI{
         public TMP_Text nameCollege;
         int minutesAux;
 
+        
+
         // Start is called before the first frame update
         void Start()
         {
