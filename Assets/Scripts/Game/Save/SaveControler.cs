@@ -13,7 +13,7 @@ public class SaveControler : MonoBehaviour
         }
     }
 
-    public void Save(){
+    public static void Save(){
         SceneData scene = new SceneData();
         Building[] buildlist = GameObject.FindObjectsOfType<Building>();
         scene.buildings = new BuildingSaveData[buildlist.Length]; 

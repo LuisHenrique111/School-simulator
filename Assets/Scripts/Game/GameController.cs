@@ -31,9 +31,7 @@ public class GameController : MonoBehaviour
     #region variaveis globais
     public Image happinessGeneral;
     public int  averageHappiness = 50, happinessAdd;
-    public FloatVariable seconds;
-    public int hours;
-    public IntVariable minutes;
+    
     public IntVariable coin;
     #endregion
 
@@ -44,7 +42,6 @@ public class GameController : MonoBehaviour
     public GameObject telaName;
 
     
-
     
 
     // Start is called before the first frame update
@@ -55,6 +52,7 @@ public class GameController : MonoBehaviour
             UIVariables.Instance.collegeName.Value = " ";
             Tween.Instance.NameCollege();
             GameManager.Instance.SetEstudades(0);
+            
             GameManager.Instance.SetFelicidade(50);
             GameManager.Instance.SetMoedas(900);
             building[0].nivel = 1;

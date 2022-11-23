@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2610c67e6ed91b346b496866d115b72e, type: 3}
-  m_Name: minutes
+  m_Name: hours
   m_EditorClassIdentifier: 
   named: 0
   variableName: 
   OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
-  value: 5
+  value: 1
