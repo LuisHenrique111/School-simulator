@@ -8,6 +8,7 @@ using UnityEngine.SceneManagement;
 using UI;
 using UnityEngine.UI;
 using System.IO;
+using System;
 
 public class GameController : MonoBehaviour
 {
@@ -63,6 +64,7 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        averageHappiness = Mathf.Clamp(averageHappiness,0,60);
         liberaPlacas();
         Win();
         GameOver();
@@ -123,6 +125,7 @@ public class GameController : MonoBehaviour
         else
         {
             averageHappiness = happinessAdd/npc.Length;
+            GameManager.Instance.SetFelicidade(averageHappiness);
             happinessAdd = 0;
         }
         
