@@ -22,6 +22,10 @@ public class CameraController : MonoBehaviour
   Vector3 rotateStartPosition;
   Vector3 rotateEndPosition;
 
+  Quaternion target,startRotation;
+  GameObject canvas;
+
+
   
 
 
@@ -29,12 +33,11 @@ public class CameraController : MonoBehaviour
   // Start is called before the first frame update
   void Start()
   {
+    startRotation = Camera.main.transform.rotation;
     instance = this;
     transform.position = ClampCamera(transform.position);
 
     newPosition = transform.position;
-    
-    
     newRotation = transform.rotation;
     newZoom = cameraTransform.localPosition;
     
@@ -43,16 +46,10 @@ public class CameraController : MonoBehaviour
   // Update is called once per frame
   void Update()
   {
-
-
     MouseMove(); 
     MovimentKeys();
     transform.position = ClampCamera(transform.position);
-    
-    
-    
-    
-    
+    Focus();
   }
 
   private Vector3 ClampCamera(Vector3 target)
@@ -66,7 +63,40 @@ public class CameraController : MonoBehaviour
   }
 
   
+  public void Focus()
+  {
+    RaycastHit hit;
+    Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        
+    if(Input.GetMouseButtonDown(0))
+    {  
+      if(Physics.Raycast(ray,out hit))
+      {
+        if(hit.collider.tag == "NPC")
+        {
+          
+          target = Quaternion.LookRotation(hit.collider.transform.position - Camera.main.transform.position);
+          canvas = hit.collider.gameObject.transform.GetChild(0).gameObject;
+          canvas.SetActive(true);
+        } 
+        else
+        {
+          canvas.SetActive(false);
+          target = startRotation;    
+        }       
+      }          
+    }
+    else if(Input.GetMouseButtonDown(1))
+    {
+      if(canvas != null)
+      {
+        canvas.SetActive(false);
+      }
+      target = startRotation;
+    }
 
+    Camera.main.transform.rotation = Quaternion.Slerp(Camera.main.transform.rotation,target, 1f*Time.fixedDeltaTime);
+  }
   public void MouseMove()
   {
     if(Input.GetMouseButtonDown(1))
