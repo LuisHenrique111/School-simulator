@@ -67,7 +67,7 @@ public class GameController : MonoBehaviour
         averageHappiness = Mathf.Clamp(averageHappiness,0,60);
         liberaPlacas();
         Win();
-        GameOver();
+        
         ControlHappiness();
     }
 
@@ -78,13 +78,9 @@ public class GameController : MonoBehaviour
     }
     
     public void GameOver(){
-        if(GameManager.Instance.studentsManager.Value < 0){
-            GameManager.Instance.SetEstudades(0);
-            GameManager.Instance.SetFelicidade(50);
-            GameManager.Instance.SetMoedas(900);
-            GameManager.Instance.save.Value = false;
-            SceneManager.LoadScene("GameOver");
-        }
+        
+        SceneManager.LoadScene("GameOver");
+        
     }
 
     public void Win(){
@@ -130,7 +126,11 @@ public class GameController : MonoBehaviour
         }
         
 
-        if(averageHappiness < 50)
+        if(averageHappiness <= 10  )
+        {
+            GameOver();
+        }
+        else if(averageHappiness < 50)
         {
             happinessGeneral.sprite = spriteHappiness[0];
         }
