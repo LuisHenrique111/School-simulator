@@ -41,6 +41,8 @@ public class GameController : MonoBehaviour
     public GameObject waypointPredio3;
     public GameObject content,prefabBirdder;
 
+    public GameObject telaName;
+
     
 
     
@@ -64,11 +66,7 @@ public class GameController : MonoBehaviour
             GameManager.Instance.newGame.Value = false;
         }else{
             SaveControler.Load();
-            for(int i = 0; i<predios.Length; i++){
-                if(predios[i].spawned == true){
-                    DontDestroyOnLoad(predios[i].asset);
-                }
-            }
+            telaName.SetActive(false);
         }
     }
 

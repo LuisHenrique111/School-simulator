@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4983093113017166038}
   - component: {fileID: 7058305722887646691}
   - component: {fileID: 6469171448964929022}
+  - component: {fileID: -5280450652797916382}
   m_Layer: 6
   m_Name: medNvl2
   m_TagString: Medicina
@@ -119,3 +120,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPredio: 0
+--- !u!114 &-5280450652797916382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6784528496908224771}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0a4f16ae7a948ddb76f54864affa89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 3

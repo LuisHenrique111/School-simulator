@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -25602,7 +25602,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1375887548}
   m_HandleRect: {fileID: 1375887547}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -30592,6 +30592,10 @@ PrefabInstance:
       propertyPath: content
       value: 
       objectReference: {fileID: 586868350}
+    - target: {fileID: 4030181293863596408, guid: fcbd0e0c98e8541c2b43a87e5c3479e2, type: 3}
+      propertyPath: telaName
+      value: 
+      objectReference: {fileID: 1442561141}
     - target: {fileID: 4030181293863596408, guid: fcbd0e0c98e8541c2b43a87e5c3479e2, type: 3}
       propertyPath: waypointPredio2
       value: 

@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 3287020508261847878}
   - component: {fileID: 1283668825884992672}
   - component: {fileID: 1312217148930835800}
+  - component: {fileID: -3652296028802854553}
   m_Layer: 6
   m_Name: artes_cenicas_lv1
   m_TagString: Artes
@@ -144,6 +145,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPredio: 0
+--- !u!114 &-3652296028802854553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2798431984814082556}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0a4f16ae7a948ddb76f54864affa89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 0
 --- !u!1 &5489584794272471641
 GameObject:
   m_ObjectHideFlags: 0
