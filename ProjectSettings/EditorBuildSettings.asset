@@ -15,8 +15,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Game.unity
     guid: fbb6e57eb87e3ac498343234cc0719dc
   - enabled: 0
-    path: Assets/Scenes/Sala_Diretor.unity
+    path: 
     guid: b109b7624d31c6343beb4d31f30fad47
+  - enabled: 1
+    path: Assets/Scenes/Creditos.unity
+    guid: a42a7b0bacff21f49b2f6b7a5f1ee9d9
   - enabled: 1
     path: Assets/Scenes/GameOver.unity
     guid: 60591fe1dbb235b4d8fd58394a7a3fe4

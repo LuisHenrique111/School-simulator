@@ -15,6 +15,7 @@ TagManager:
   - NPC
   - Predios
   - Artes
+  - Humanas
   layers:
   - Default
   - TransparentFX
