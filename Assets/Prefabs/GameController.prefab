@@ -68,14 +68,13 @@ MonoBehaviour:
   happinessGeneral: {fileID: 0}
   averageHappiness: 50
   happinessAdd: 0
-  seconds: {fileID: 11400000, guid: 108d89f32388d3947a44a8edbc499f48, type: 2}
-  hours: 0
-  minutes: {fileID: 11400000, guid: c11c004658b2c50488088343da5f357d, type: 2}
   coin: {fileID: 11400000, guid: 44f96d2da099fde44a94d15ad2544322, type: 2}
   waypointPredio2: {fileID: 0}
   waypointPredio3: {fileID: 0}
   content: {fileID: 0}
   prefabBirdder: {fileID: 6639938145132770208, guid: 9efe0924e3e26724e850cfd24c4f7b89, type: 3}
+  telaName: {fileID: 0}
+  save: {fileID: 0}
 --- !u!114 &4030181293863596410
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -16,6 +16,9 @@ TagManager:
   - Predios
   - Artes
   - Humanas
+  - Engenharia1
+  - Engenharia2
+  - Message
   layers:
   - Default
   - TransparentFX

@@ -9,6 +9,8 @@ using UI;
 using UnityEngine.UI;
 using System.IO;
 using System;
+using TMPro;
+using System.Linq;
 
 public class GameController : MonoBehaviour
 {
@@ -32,6 +34,7 @@ public class GameController : MonoBehaviour
     [Header("Variaveis globais")] 
     #region variaveis globais
     public Image happinessGeneral;
+    public TextMeshProUGUI qtdemsg;
     public int  averageHappiness = 50, happinessAdd;
     
     public IntVariable coin;
@@ -45,6 +48,7 @@ public class GameController : MonoBehaviour
 
     public BoolVariable save;
     
+    GameObject[] qtdeMessage;
 
     
     
@@ -69,6 +73,7 @@ public class GameController : MonoBehaviour
         Win();
         
         ControlHappiness();
+        CountMessage();
     }
 
     public void ControllerAlunos(){
@@ -103,6 +108,11 @@ public class GameController : MonoBehaviour
             slots[3].GetComponent<BotaoPlacas>().enabled = true;
             waypointPredio3.SetActive(true);
         }
+    }
+    public void CountMessage()
+    {
+        qtdeMessage = GameObject.FindGameObjectsWithTag("Message");
+        qtdemsg.text = qtdeMessage.Length.ToString();
     }
 
     public void ControlHappiness()

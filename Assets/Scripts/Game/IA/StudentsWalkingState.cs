@@ -81,7 +81,7 @@ public class StudentsWalkingState : Entity.State
         if(other.gameObject.tag == "Predios"){
             insideClassroom = true;
             auxSpeed = speed;
-            GameManager.Instance.AumentarMoedas(50);
+            GameManager.Instance.AumentarMoedas(30);
         }
 
         if(other.gameObject.tag == "Fim" && inside > 0)
@@ -91,7 +91,7 @@ public class StudentsWalkingState : Entity.State
         else if(other.gameObject.tag == "Fim" && inside <= 0)
         {
             Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
-            gameObject.GetComponent<NPC_control>().individualHappiness -= 40;
+            gameObject.GetComponent<NPC_control>().individualHappiness -= 20;
             entity.SetState<StudentsGoWayState>();
             GameManager.Instance.DiminuirMoedas(30);
         }
