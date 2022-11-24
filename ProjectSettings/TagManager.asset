@@ -16,10 +16,19 @@ TagManager:
   - Predios
   - Artes
   - Humanas
-  - Engenharia1
-  - Engenharia2
   - Message
-  - Medicina1
+  - Engenharia_lvl1
+  - Engenharia_lvl2
+  - Engenharia_lvl3
+  - Humanas_lvl1
+  - Humanas_lvl2
+  - Humanas_lvl3
+  - Artes_lvl1
+  - Artes_lvl2
+  - Artes_lvl3
+  - Medicina_lvl1
+  - Medicina_lvl2
+  - Medicina_lvl3
   layers:
   - Default
   - TransparentFX

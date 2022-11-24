@@ -18,21 +18,29 @@ public class NPC_control : MonoBehaviour
 
     void FixedUpdate()
     {
-        if(individualHappiness < 50)
+        if(individualHappiness <= 20  )
+        {
+            Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+        }
+        else if(individualHappiness < 30)
         {
             happinessStatus.sprite = happiness[0];
         }
-        else if(individualHappiness >= 50 && individualHappiness < 60)
+        else if(individualHappiness >= 30 && individualHappiness < 50)
         {
             happinessStatus.sprite = happiness[1];
         }
-        else if(individualHappiness >= 60 && individualHappiness < 80)
+        else if(individualHappiness >= 50 && individualHappiness < 60)
         {
             happinessStatus.sprite = happiness[2];
         }
-        else
+        else if(individualHappiness >= 60 && individualHappiness < 80)
         {
             happinessStatus.sprite = happiness[3];
+        }
+        else
+        {
+            happinessStatus.sprite = happiness[4];
         }
     }
 }

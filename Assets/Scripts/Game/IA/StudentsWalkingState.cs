@@ -10,6 +10,10 @@ public class StudentsWalkingState : Entity.State
     Transform targetWayPoint;
     GameObject aux;
 
+    const int coinLvl1 = 10,coinLvl2 = 20,coinLvl3 = 30;
+    const int happLvl1 = 10,happLvl2 = 15,happLvl3 = 20;
+    
+
     public float speed = 4f;
     public float auxSpeed;
     public bool insideClassroom;
@@ -78,12 +82,11 @@ public class StudentsWalkingState : Entity.State
 
     void OnTriggerEnter(Collider other)
     { 
+        
         if(other.gameObject.tag == "Predios"){
             insideClassroom = true;
             auxSpeed = speed;
-            GameManager.Instance.AumentarMoedas(30);
         }
-
         if(other.gameObject.tag == "Fim" && inside > 0)
         {
             entity.SetState<StudentsGoWayState>();
@@ -91,16 +94,84 @@ public class StudentsWalkingState : Entity.State
         else if(other.gameObject.tag == "Fim" && inside <= 0)
         {
             Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
-            gameObject.GetComponent<NPC_control>().individualHappiness -= 20;
+            gameObject.GetComponent<NPC_control>().individualHappiness -= (happLvl3);
             entity.SetState<StudentsGoWayState>();
-            GameManager.Instance.DiminuirMoedas(30);
         }
+        
+        #region Trigger Level 1
+        else if(other.gameObject.tag == "Artes_lvl1")
+        {
+            GameManager.Instance.AumentarMoedas(coinLvl1);
+            gameObject.GetComponent<NPC_control>().individualHappiness += happLvl1;
+        }
+        else if(other.gameObject.tag == "Humanas_lvl1")
+        {
+            GameManager.Instance.AumentarMoedas(coinLvl1);
+            gameObject.GetComponent<NPC_control>().individualHappiness += happLvl1;
+        }
+        else if(other.gameObject.tag == "Engenharia_lvl1")
+        {
+            GameManager.Instance.AumentarMoedas(coinLvl1);
+            gameObject.GetComponent<NPC_control>().individualHappiness += happLvl1;
+        }
+        else if(other.gameObject.tag == "Medicina_lvl1")
+        {
+            GameManager.Instance.AumentarMoedas(coinLvl1);
+            gameObject.GetComponent<NPC_control>().individualHappiness += happLvl1;
+        }
+        #endregion
+
+        #region Trigger Level 2
+        else if(other.gameObject.tag == "Artes_lvl2")
+        {
+            GameManager.Instance.AumentarMoedas(coinLvl2);
+            gameObject.GetComponent<NPC_control>().individualHappiness += happLvl2;
+        }
+        else if(other.gameObject.tag == "Humanas_lvl2")
+        {
+            GameManager.Instance.AumentarMoedas(coinLvl2);
+            gameObject.GetComponent<NPC_control>().individualHappiness += happLvl2;
+        }
+        else if(other.gameObject.tag == "Engenharia_lvl2")
+        {
+            GameManager.Instance.AumentarMoedas(coinLvl2);
+            gameObject.GetComponent<NPC_control>().individualHappiness += happLvl2;
+        }
+        else if(other.gameObject.tag == "Medicina_lvl2")
+        {
+            GameManager.Instance.AumentarMoedas(coinLvl2);
+            gameObject.GetComponent<NPC_control>().individualHappiness += happLvl2;
+        }
+        #endregion
+
+        #region Trigger Level 3
+        else if(other.gameObject.tag == "Artes_lvl3")
+        {
+            GameManager.Instance.AumentarMoedas(coinLvl3);
+            gameObject.GetComponent<NPC_control>().individualHappiness += happLvl3;
+        }
+        else if(other.gameObject.tag == "Humanas_lvl3")
+        {
+            GameManager.Instance.AumentarMoedas(coinLvl3);
+            gameObject.GetComponent<NPC_control>().individualHappiness += happLvl3;
+        }
+        else if(other.gameObject.tag == "Engenharia_lvl3")
+        {
+            GameManager.Instance.AumentarMoedas(coinLvl3);
+            gameObject.GetComponent<NPC_control>().individualHappiness += happLvl3;
+        }
+        else if(other.gameObject.tag == "Medicina_lvl3")
+        {
+            GameManager.Instance.AumentarMoedas(coinLvl3);
+            gameObject.GetComponent<NPC_control>().individualHappiness += happLvl3;
+        }
+        #endregion
+
     }
 
     public void StopClassroom(){
         if(time > 10.0f){
             speed = auxSpeed;
-            gameObject.GetComponent<NPC_control>().individualHappiness += 20;
             insideClassroom = false;  
         }
     }

@@ -14,9 +14,10 @@ GameObject:
   - component: {fileID: 8838686493537145701}
   - component: {fileID: 844232088358149985}
   - component: {fileID: 3936119825471311277}
+  - component: {fileID: -7459064318314438180}
   m_Layer: 0
-  m_Name: Engenharia_Level_01
-  m_TagString: Engenharia
+  m_Name: engenharia_level_01
+  m_TagString: Engenharia_lvl1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -105,7 +106,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1092922601697106746}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 16.42051, y: 5.354355, z: 14.687256}
@@ -123,3 +124,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentPredio: 0
+--- !u!54 &-7459064318314438180
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092922601697106746}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0

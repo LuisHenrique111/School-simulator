@@ -68,10 +68,8 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        averageHappiness = Mathf.Clamp(averageHappiness,0,60);
         liberaPlacas();
-        Win();
-        
+        //Win();
         ControlHappiness();
         CountMessage();
     }
@@ -140,21 +138,25 @@ public class GameController : MonoBehaviour
         {
             GameOver();
         }
-        else if(averageHappiness < 50)
+        else if(averageHappiness < 30)
         {
             happinessGeneral.sprite = spriteHappiness[0];
         }
-        else if(averageHappiness >= 50 && averageHappiness < 60)
+        else if(averageHappiness >= 30 && averageHappiness < 50)
         {
             happinessGeneral.sprite = spriteHappiness[1];
         }
-        else if(averageHappiness >= 60 && averageHappiness < 80)
+        else if(averageHappiness >= 50 && averageHappiness < 60)
         {
             happinessGeneral.sprite = spriteHappiness[2];
         }
-        else
+        else if(averageHappiness >= 60 && averageHappiness < 80)
         {
             happinessGeneral.sprite = spriteHappiness[3];
+        }
+        else
+        {
+            happinessGeneral.sprite = spriteHappiness[4];
         }
 
     }
