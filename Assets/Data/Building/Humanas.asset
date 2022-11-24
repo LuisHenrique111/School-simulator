@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Humanas
   m_EditorClassIdentifier: 
   nameBuilding: Humanas
-  descricaoBuilding: maconheiro
+  descricaoBuilding: Pensar o passado para compreender o presente e idealizar o futuro
   UISpriteBuilding: {fileID: -3231624653304714029, guid: ccd8b8856eed52a47a22f527d060b04e, type: 3}
   countStudents: 0
   nivel: 3

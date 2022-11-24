@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Medicina
   m_EditorClassIdentifier: 
   nameBuilding: Medicina
-  descricaoBuilding: Predio de ciencias biologicas
+  descricaoBuilding: "O melhor m\xE9dico \xE9 aquele que mais esperan\xE7a inspira"
   UISpriteBuilding: {fileID: 21300000, guid: c4c548a339b4d41a590928c0c98934a7, type: 3}
   countStudents: 0
   nivel: 1

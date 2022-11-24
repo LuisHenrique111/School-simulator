@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Artes Cenicas
   m_EditorClassIdentifier: 
   nameBuilding: Artes cenicas
-  descricaoBuilding: magico
+  descricaoBuilding: "Ser ou n\xE3o ser, eis a quest\xE3o."
   UISpriteBuilding: {fileID: 21300000, guid: 5f7fa9a7940a64e79b5a42d9f661d42c, type: 3}
   countStudents: 0
-  nivel: 1
+  nivel: 2
   asset: {fileID: 6920874183461340779, guid: 1450aaa191667004e9989cc44a53b692, type: 3}
   evolutionAsset:
   - {fileID: 8762433269847068578, guid: 910d4b7fb4be5f84b9c66d1865b77050, type: 3}
   - {fileID: 5254321182955945682, guid: 6f428d358959d92429d55d986f82d889, type: 3}
   typeMatter: 0
-  spawned: 0
+  spawned: 1
   price: 200
   priceEvolution: 96000000c8000000

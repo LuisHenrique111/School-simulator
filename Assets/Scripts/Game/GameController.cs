@@ -50,6 +50,9 @@ public class GameController : MonoBehaviour
     
     GameObject[] qtdeMessage;
 
+    public GameObject[] placasNegativas;
+    public GameObject[] placasPositivas;
+
     
     
 
@@ -97,11 +100,16 @@ public class GameController : MonoBehaviour
 
     public void liberaPlacas(){
         if(building[0].nivel == 2){
+            placasPositivas[0].SetActive(true);
+            placasNegativas[0].SetActive(false);
             slots[2].GetComponent<Renderer>().material.color = Color.cyan;
             slots[2].GetComponent<BotaoPlacas>().enabled = true;
+            
             waypointPredio2.SetActive(true);
         }
         if(building[0].nivel == 3){
+            placasPositivas[1].SetActive(true);
+            placasNegativas[1].SetActive(false);
             slots[3].GetComponent<Renderer>().material.color = Color.cyan;
             slots[3].GetComponent<BotaoPlacas>().enabled = true;
             waypointPredio3.SetActive(true);
