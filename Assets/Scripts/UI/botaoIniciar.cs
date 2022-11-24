@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 public class botaoIniciar : MonoBehaviour
 {
     public string nomeCena;
+    
 
     public void BtnMudaCena()
     {   

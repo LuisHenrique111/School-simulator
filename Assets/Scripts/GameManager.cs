@@ -4,6 +4,7 @@ using UnityEngine;
 using Game.Variables;
 using Game.Data;
 using UnityEngine.UI;
+using System.IO;
 
 public class GameManager : MonoBehaviour
 {
@@ -19,20 +20,27 @@ public class GameManager : MonoBehaviour
     [Header("botao Continuar")]
     public Button Continue;
     public bool IsMenu;
+    public bool fileExists;
 
     // Start is called before the first frame update
     void Start()
     {
         Instance = this;
         
-        
+        if(File.Exists(Application.persistentDataPath + "/saveGame.txt")){
+            fileExists = true;
+            save.Value = true;
+        }else{
+            fileExists = false;
+        }
     }
 
     // Update is called once per frame
     void Update()
     {
         if(IsMenu){
-            if(save.Value == true){
+
+            if(save.Value == true ){
                 Continue.interactable = true;
             }else{
                 Continue.interactable = false;
