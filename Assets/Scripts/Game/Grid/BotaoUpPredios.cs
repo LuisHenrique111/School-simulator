@@ -23,13 +23,16 @@ public class BotaoUpPredios : MonoBehaviour
                     UIVariables.Instance.currentPredio = 1;
                 }
                 if(gameObject.tag == "Medicina"){
-                    UIVariables.Instance.currentPredio = 3;
+                    //UIVariables.Instance.currentPredio = 3;
                 }
                 if(gameObject.tag == "Humanas"){
                     UIVariables.Instance.currentPredio = 2;
                 }
                 if(gameObject.tag == "Artes"){
                     UIVariables.Instance.currentPredio = 0;
+                }
+                if(gameObject.tag == "Medicina1"){
+                    UIVariables.Instance.currentPredio = 3;
                 }
                 Tween.Instance.OpenUpConstrucao();
             }

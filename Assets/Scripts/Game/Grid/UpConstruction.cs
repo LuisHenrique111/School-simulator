@@ -53,7 +53,7 @@ public class UpConstruction : MonoBehaviour
                 auxEvolution2 = GameObject.Find("Arts_Level_02(Clone)");
             }
             if(UIVariables.Instance.currentPredio == 1){
-                auxEvolution2 = GameObject.Find("Engenharia_Level_02(Clone)");
+                auxEvolution2 = GameObject.Find("engenharia_level_02(Clone)");
             }
             if(UIVariables.Instance.currentPredio == 2){
                 auxEvolution2 = GameObject.Find("humanas_lv2(Clone)");
