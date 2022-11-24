@@ -10,7 +10,7 @@ public class Birdder : MonoBehaviour
     void Start()
     {
         textIssuer.text = Reader.instance.Issuer();
-        textMessage.text = Reader.instance.Message();
+        textMessage.text = Reader.instance.BadMessage();
     }
     public void DestroyMessage()
     {

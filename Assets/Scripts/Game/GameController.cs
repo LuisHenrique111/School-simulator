@@ -7,6 +7,10 @@ using Game.Variables.Generic;
 using UnityEngine.SceneManagement;
 using UI;
 using UnityEngine.UI;
+using System.IO;
+using System;
+using TMPro;
+using System.Linq;
 
 public class GameController : MonoBehaviour
 {
@@ -30,10 +34,9 @@ public class GameController : MonoBehaviour
     [Header("Variaveis globais")] 
     #region variaveis globais
     public Image happinessGeneral;
+    public TextMeshProUGUI qtdemsg;
     public int  averageHappiness = 50, happinessAdd;
-    public FloatVariable seconds;
-    public int hours;
-    public IntVariable minutes;
+    
     public IntVariable coin;
     #endregion
 
@@ -41,8 +44,16 @@ public class GameController : MonoBehaviour
     public GameObject waypointPredio3;
     public GameObject content,prefabBirdder;
 
-    
+    public GameObject telaName;
 
+    public BoolVariable save;
+    
+    GameObject[] qtdeMessage;
+
+    public GameObject[] placasNegativas;
+    public GameObject[] placasPositivas;
+
+    
     
 
     // Start is called before the first frame update
@@ -50,25 +61,10 @@ public class GameController : MonoBehaviour
     {
         Instance = this;
         if(GameManager.Instance.newGame.Value == true){
-            UIVariables.Instance.collegeName.Value = " ";
-            Tween.Instance.NameCollege();
-            GameManager.Instance.SetEstudades(0);
-            GameManager.Instance.SetFelicidade(50);
-            GameManager.Instance.SetMoedas(900);
-            building[0].nivel = 1;
-            Time.timeScale = 0f;
-            for(int i = 0; i<predios.Length; i++){
-                predios[i].nivel = 1;
-                predios[i].spawned = false;
-            }
-            GameManager.Instance.newGame.Value = false;
+            ReinicioGame();
         }else{
             SaveControler.Load();
-            for(int i = 0; i<predios.Length; i++){
-                if(predios[i].spawned == true){
-                    DontDestroyOnLoad(predios[i].asset);
-                }
-            }
+            telaName.SetActive(false);
         }
     }
 
@@ -76,9 +72,9 @@ public class GameController : MonoBehaviour
     void Update()
     {
         liberaPlacas();
-        Win();
-        GameOver();
+        //Win();
         ControlHappiness();
+        CountMessage();
     }
 
     public void ControllerAlunos(){
@@ -88,12 +84,9 @@ public class GameController : MonoBehaviour
     }
     
     public void GameOver(){
-        if(GameManager.Instance.studentsManager.Value < 0){
-            GameManager.Instance.SetEstudades(0);
-            GameManager.Instance.SetFelicidade(50);
-            GameManager.Instance.SetMoedas(900);
-            SceneManager.LoadScene("GameOver");
-        }
+        
+        SceneManager.LoadScene("GameOver");
+        
     }
 
     public void Win(){
@@ -107,15 +100,25 @@ public class GameController : MonoBehaviour
 
     public void liberaPlacas(){
         if(building[0].nivel == 2){
+            placasPositivas[0].SetActive(true);
+            placasNegativas[0].SetActive(false);
             slots[2].GetComponent<Renderer>().material.color = Color.cyan;
             slots[2].GetComponent<BotaoPlacas>().enabled = true;
+            
             waypointPredio2.SetActive(true);
         }
         if(building[0].nivel == 3){
+            placasPositivas[1].SetActive(true);
+            placasNegativas[1].SetActive(false);
             slots[3].GetComponent<Renderer>().material.color = Color.cyan;
             slots[3].GetComponent<BotaoPlacas>().enabled = true;
             waypointPredio3.SetActive(true);
         }
+    }
+    public void CountMessage()
+    {
+        qtdeMessage = GameObject.FindGameObjectsWithTag("Message");
+        qtdemsg.text = qtdeMessage.Length.ToString();
     }
 
     public void ControlHappiness()
@@ -134,25 +137,34 @@ public class GameController : MonoBehaviour
         else
         {
             averageHappiness = happinessAdd/npc.Length;
+            GameManager.Instance.SetFelicidade(averageHappiness);
             happinessAdd = 0;
         }
         
 
-        if(averageHappiness < 50)
+        if(averageHappiness <= 10  )
+        {
+            GameOver();
+        }
+        else if(averageHappiness < 30)
         {
             happinessGeneral.sprite = spriteHappiness[0];
         }
-        else if(averageHappiness >= 50 && averageHappiness < 60)
+        else if(averageHappiness >= 30 && averageHappiness < 50)
         {
             happinessGeneral.sprite = spriteHappiness[1];
         }
-        else if(averageHappiness >= 60 && averageHappiness < 80)
+        else if(averageHappiness >= 50 && averageHappiness < 60)
         {
             happinessGeneral.sprite = spriteHappiness[2];
         }
-        else
+        else if(averageHappiness >= 60 && averageHappiness < 80)
         {
             happinessGeneral.sprite = spriteHappiness[3];
+        }
+        else
+        {
+            happinessGeneral.sprite = spriteHappiness[4];
         }
 
     }
@@ -167,5 +179,29 @@ public class GameController : MonoBehaviour
 
     public void Pause(){
         Time.timeScale = 0.0f;
+    }
+
+    public void ReinicioGame(){
+        Instantiate(building[0].asset, new Vector3(-56, 1.4f, 363), Quaternion.Euler(new Vector3(0, 180, 0)));
+        building[0].spawned = true;
+        UIVariables.Instance.collegeName.Value = " ";
+        Tween.Instance.NameCollege();
+        CameraController.instance.speed = 0.0f;
+        CameraController.instance.movimentTime = 0.0f;
+        CameraController.instance.rotationValue = 0.0f;
+        GameManager.Instance.SetEstudades(0);
+        GameManager.Instance.save.Value = false;
+        UIVariables.Instance.minutes.Value = 0;
+        UIVariables.Instance.hours.Value = 0;
+        File.Delete(Application.persistentDataPath + "/saveGame.txt");
+        GameManager.Instance.SetFelicidade(50);
+        GameManager.Instance.SetMoedas(900);
+        building[0].nivel = 1;
+        Time.timeScale = 0f;
+        for(int i = 0; i<predios.Length; i++){
+            predios[i].nivel = 1;
+            predios[i].spawned = false;
+        }
+        GameManager.Instance.newGame.Value = false;
     }
 }

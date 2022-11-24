@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using Game.Variables;
 using TMPro;
 using UnityEngine.SceneManagement;
+using System;
 
 
 namespace UI{
@@ -20,7 +21,8 @@ namespace UI{
         public IntVariable coin;
         public IntVariable happiness;
         public IntVariable students;
-        public IntVariable minutes;
+        public IntVariable hours;
+        public FloatVariable minutes;
         #endregion
 
         [Header("UI consumiveis")]
@@ -67,6 +69,9 @@ namespace UI{
 
         public StringVariable collegeName;
         public TMP_Text nameCollege;
+        int minutesAux;
+
+        
 
         // Start is called before the first frame update
         void Start()
@@ -78,11 +83,20 @@ namespace UI{
         void Update()
         {
             if(isGame){
+                minutes.Value += Time.deltaTime;
+                minutesAux = Convert.ToInt32(minutes.Value);
+                if(minutes.Value>=60){
+                    hours.Value++;
+                    minutes.Value = 0;
+                }
+                if(hours.Value>=60){
+                    hours.Value = 0;
+                }
                 textCoin.text = coin.Value.ToString();
                 textHappiness.text = happiness.Value.ToString();
                 textStudents.text = students.Value.ToString();
-                textMinutes.text = minutes.Value.ToString();
-                textHours.text = GameController.Instance.hours.ToString();
+                textMinutes.text = minutesAux.ToString();
+                textHours.text = hours.Value.ToString();
                 nameCollege.text = collegeName.Value.ToString();
                 VerificaBotaoCompra();       
             }
@@ -184,6 +198,9 @@ namespace UI{
 
         public void ConfirmarNameCollege(){
             Time.timeScale = 1f;
+            CameraController.instance.speed = 5.0f;
+            CameraController.instance.movimentTime = 1.5f;
+            CameraController.instance.rotationValue = 1.0f;
             tween.CloseNameCollege();
         }
 
@@ -192,14 +209,18 @@ namespace UI{
             screenInsufficientMoney.SetActive(false);
         }
 
-        public void SalaDiretor(){
-            SceneManager.LoadScene("Sala_Diretor");
+        public void TutorialGame(){
+            SaveControler.Save();
+            SceneManager.LoadScene("Tutorial");
         }
         public void Game(){
             SceneManager.LoadScene("Game");
+            
         }
         public void Menu(){
             SceneManager.LoadScene("Menu");
+            
+            SaveControler.Save();
         }
     }
 }

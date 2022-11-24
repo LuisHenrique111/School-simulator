@@ -13,13 +13,15 @@ MonoBehaviour:
   m_Name: Humanas
   m_EditorClassIdentifier: 
   nameBuilding: Humanas
-  descricaoBuilding: maconheiro
-  UISpriteBuilding: {fileID: -3231624653304714029, guid: ccd8b8856eed52a47a22f527d060b04e, type: 3}
+  descricaoBuilding: Pensar o passado para compreender o presente e idealizar o futuro
+  UISpriteBuilding: {fileID: 21300000, guid: 297446db35f6547158c066979c671137, type: 3}
   countStudents: 0
   nivel: 1
-  asset: {fileID: 1142639317440616460, guid: 3e9e55b152d596246bc674502a6985d5, type: 3}
-  evolutionAsset: []
+  asset: {fileID: 4612635332937218995, guid: 94e3e4aa85e41a64499a14ee288f35c9, type: 3}
+  evolutionAsset:
+  - {fileID: 7115254149991616382, guid: 8fcfec113ba977845aba7c650e4f0dfd, type: 3}
+  - {fileID: 1294205565095241258, guid: 5338981dc9fbf6b4ebdf4c680026cd44, type: 3}
   typeMatter: 0
-  spawned: 1
+  spawned: 0
   price: 200
-  priceEvolution: 
+  priceEvolution: 6400000096000000

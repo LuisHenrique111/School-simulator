@@ -19,17 +19,42 @@ public class BotaoUpPredios : MonoBehaviour
     {
         if(mouseDentroDoObjeto == true){
             if(Input.GetMouseButtonDown(0)){
-                if(gameObject.tag == "Engenharia"){
+                
+                if(gameObject.tag == "Artes_lvl1"){
+                    UIVariables.Instance.currentPredio = 0;
+                }
+                if(gameObject.tag == "Artes_lvl2"){
+                    UIVariables.Instance.currentPredio = 0;
+                }
+                if(gameObject.tag == "Artes_lvl3"){
+                    UIVariables.Instance.currentPredio = 0;
+                }
+                if(gameObject.tag == "Engenharia_lvl1"){
                     UIVariables.Instance.currentPredio = 1;
                 }
-                if(gameObject.tag == "Medicina"){
-                    UIVariables.Instance.currentPredio = 3;
+                if(gameObject.tag == "Engenharia_lvl2"){
+                    UIVariables.Instance.currentPredio = 1;
                 }
-                if(gameObject.tag == "Humanas"){
+                if(gameObject.tag == "Engenharia_lvl3"){
+                    UIVariables.Instance.currentPredio = 1;
+                }
+                if(gameObject.tag == "Humanas_lvl1"){
                     UIVariables.Instance.currentPredio = 2;
                 }
-                if(gameObject.tag == "Artes"){
-                    UIVariables.Instance.currentPredio = 0;
+                if(gameObject.tag == "Humanas_lvl2"){
+                    UIVariables.Instance.currentPredio = 2;
+                }
+                if(gameObject.tag == "Humanas_lvl3"){
+                    UIVariables.Instance.currentPredio = 2;
+                }
+                if(gameObject.tag == "Medicina_lvl1"){
+                    UIVariables.Instance.currentPredio = 3;
+                }
+                if(gameObject.tag == "Medicina_lvl2"){
+                    UIVariables.Instance.currentPredio = 3;
+                }
+                if(gameObject.tag == "Medicina_lvl3"){
+                    UIVariables.Instance.currentPredio = 3;
                 }
                 Tween.Instance.OpenUpConstrucao();
             }

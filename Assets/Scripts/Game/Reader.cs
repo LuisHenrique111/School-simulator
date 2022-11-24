@@ -10,12 +10,13 @@ public class Reader : MonoBehaviour
     public static Reader instance;
 
     [Header("Files")]
-    [SerializeField] TextAsset fileNames,fileSocial;
-
+    [SerializeField] TextAsset fileNames,fileSocialRuim,fileSocialBom;
+    
     [Header("Arrays")]
     ArrayList singleNames = new ArrayList();
     public ArrayList listNames = new ArrayList();
-    public ArrayList listSocial = new ArrayList();
+    public ArrayList listSocialRuim = new ArrayList();
+    public ArrayList listSocialBom = new ArrayList();
 
     void Awake() 
     {
@@ -39,11 +40,18 @@ public class Reader : MonoBehaviour
     {
         var lineBreak = new string [] {"\r\n","\r","\n"};
 
-        var text = fileSocial.text.Split(lineBreak,StringSplitOptions.RemoveEmptyEntries);
+        var text = fileSocialRuim.text.Split(lineBreak,StringSplitOptions.RemoveEmptyEntries);
 
         for (int i = 0; i < text.Length; i++)
         {
-            listSocial.Add(text[i]); 
+            listSocialRuim.Add(text[i]); 
+        }
+
+        var text1 = fileSocialBom.text.Split(lineBreak,StringSplitOptions.RemoveEmptyEntries);
+
+        for (int i = 0; i < text1.Length; i++)
+        {
+            listSocialBom.Add(text1[i]); 
         }
     }
 
@@ -72,10 +80,15 @@ public class Reader : MonoBehaviour
         return null;
     
     }
-    public string Message()
+    public string GoodMessage()
     {
-        int rnd = Random.Range(0,listSocial.Count);
-        return listSocial[rnd].ToString();
+        int rnd = Random.Range(0,listSocialBom.Count);
+        return listSocialBom[rnd].ToString();
+    }
+    public string BadMessage()
+    {
+        int rnd = Random.Range(0,listSocialRuim.Count);
+        return listSocialRuim[rnd].ToString();
     }
 
 

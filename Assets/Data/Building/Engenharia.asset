@@ -13,15 +13,15 @@ MonoBehaviour:
   m_Name: Engenharia
   m_EditorClassIdentifier: 
   nameBuilding: Engenharia
-  descricaoBuilding: top
-  UISpriteBuilding: {fileID: 21300000, guid: 13d033d5f8e9c934d868aa4a1ed4f68a, type: 3}
+  descricaoBuilding: x = b^2 - 4.a.c
+  UISpriteBuilding: {fileID: 21300000, guid: 0af7469ab584549edb3c4a7314cd3608, type: 3}
   countStudents: 0
   nivel: 1
-  asset: {fileID: 6784966438597278972, guid: d93612b9672e5464aaf25e3077b9efbe, type: 3}
+  asset: {fileID: 1092922601697106746, guid: 5686bc3e42e5fe14ea1c0fffa0bdfb0e, type: 3}
   evolutionAsset:
-  - {fileID: 5039518666331038796, guid: ff47c4bbd2ddd9b409775b4b29171a74, type: 3}
-  - {fileID: 3456155446485917776, guid: ec2712ec27006804f9d07bf4f7b7ff02, type: 3}
+  - {fileID: 129030523389783394, guid: 4fcc5ffd4c16af8438e5d8e38eba5e2a, type: 3}
+  - {fileID: 3148164891941294403, guid: 87e0152eaa743de4b8952f4de09a57ce, type: 3}
   typeMatter: 0
-  spawned: 1
+  spawned: 0
   price: 150
   priceEvolution: 64000000c8000000
