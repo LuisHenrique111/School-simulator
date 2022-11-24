@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nameBuilding: 
   descricaoBuilding: 
-  UISpriteBuilding: {fileID: 0}
+  UISpriteBuilding: {fileID: 21300000, guid: e6caa4ac9aada471ab490766bea7c025, type: 3}
   countStudents: 0
-  nivel: 3
+  nivel: 1
   asset: {fileID: 7028795673456729093, guid: 0f25e7a28e39f8c48995e37d752c3f13, type: 3}
   evolutionAsset:
   - {fileID: 6465972775002773950, guid: e05d680eb7f340c4a88d2f69dd0f1342, type: 3}
