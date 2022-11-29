@@ -7,7 +7,6 @@ public class ChangeImage : MonoBehaviour
 {
     [SerializeField] VideoPlayer imagemGrande;
     [SerializeField] RawImage RawimagemGrande;
-    [SerializeField] RawImage rawImagePequeno;
     public void SwapImage(VideoPlayer myImage)
     {
         RawImage rawImagePequeno = GetComponent<RawImage>();
@@ -18,7 +17,7 @@ public class ChangeImage : MonoBehaviour
         //Debug.Log(rawImageAUX.name);
 
         RawimagemGrande.texture = rawImagePequeno.texture;
-        imagemGrande.clip = myImage.clip; //
+        imagemGrande.clip = aux2.clip; //
         imagemGrande.targetTexture = myImage.targetTexture; //
         imagemGrande.Play();
 
@@ -26,5 +25,8 @@ public class ChangeImage : MonoBehaviour
         myImage.clip = aux.clip;
         myImage.targetTexture = aux.targetTexture;
         myImage.Stop();
+
     }
+
+    
 }
