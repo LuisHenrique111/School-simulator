@@ -82,7 +82,6 @@ public class StudentsWalkingState : Entity.State
 
     void OnTriggerEnter(Collider other)
     { 
-        
         if(other.gameObject.tag == "Predios"){
             insideClassroom = true;
             auxSpeed = speed;
@@ -90,6 +89,7 @@ public class StudentsWalkingState : Entity.State
         if(other.gameObject.tag == "Fim" && inside > 0)
         {
             entity.SetState<StudentsGoWayState>();
+            
         }
         else if(other.gameObject.tag == "Fim" && inside <= 0)
         {
