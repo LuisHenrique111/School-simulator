@@ -6794,7 +6794,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9862839b11959dd4da180735c2a8ab07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameO: {fileID: 0}
 --- !u!4 &279213892 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6366483491302283819, guid: 27ed6e6019920c540ac167636ac436bf, type: 3}
@@ -17242,7 +17241,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9862839b11959dd4da180735c2a8ab07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameO: {fileID: 0}
 --- !u!1 &689217820
 GameObject:
   m_ObjectHideFlags: 0
@@ -40327,6 +40325,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   slider: {fileID: 1514006174}
   audio: {fileID: 546603345}
+  sliderES: {fileID: 0}
+  audioES: {fileID: 0}
+  sliderMusic: {fileID: 0}
+  check: {fileID: 0}
+  noCheck: {fileID: 0}
+  musicVariable: {fileID: 0}
+  efeitosVariable: {fileID: 0}
+  volumeVariable: {fileID: 0}
+  isAudio: {fileID: 0}
 --- !u!4 &1642887578
 Transform:
   m_ObjectHideFlags: 0
@@ -43738,7 +43745,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9862839b11959dd4da180735c2a8ab07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameO: {fileID: 0}
 --- !u!4 &1750545877 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6366483491302283819, guid: 27ed6e6019920c540ac167636ac436bf, type: 3}
@@ -47049,7 +47055,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9862839b11959dd4da180735c2a8ab07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gameO: {fileID: 0}
 --- !u!1001 &1861302007
 PrefabInstance:
   m_ObjectHideFlags: 0

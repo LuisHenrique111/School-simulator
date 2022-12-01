@@ -16,7 +16,7 @@ MonoBehaviour:
   descricaoBuilding: x = b^2 - 4.a.c
   UISpriteBuilding: {fileID: 21300000, guid: 0af7469ab584549edb3c4a7314cd3608, type: 3}
   countStudents: 0
-  nivel: 1
+  nivel: 3
   asset: {fileID: 1092922601697106746, guid: 5686bc3e42e5fe14ea1c0fffa0bdfb0e, type: 3}
   evolutionAsset:
   - {fileID: 129030523389783394, guid: 4fcc5ffd4c16af8438e5d8e38eba5e2a, type: 3}

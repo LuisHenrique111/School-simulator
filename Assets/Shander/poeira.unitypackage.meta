@@ -1,4 +1,5 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Prefabs/smoke.prefab.meta
 <<<<<<<< HEAD:Assets/Prefabs/smoke.prefab.meta
 guid: fd58a49a5f2ec634393646c611428909
 PrefabImporter:
@@ -7,6 +8,10 @@ guid: f05ab9676706fb34f87f7a3dc398798d
 folderAsset: yes
 DefaultImporter:
 >>>>>>>> eb8688889ff5aec57f493072c0bc2469b0fd55e4:Assets/Data/audio.meta
+=======
+guid: f8cb23a82b6dabe43b6d818f8105cba8
+DefaultImporter:
+>>>>>>> parent of cdcb54e (smoke):Assets/Scenes/poeira.unitypackage.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
