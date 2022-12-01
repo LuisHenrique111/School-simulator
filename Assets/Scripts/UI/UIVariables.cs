@@ -219,7 +219,6 @@ namespace UI{
         }
         public void Menu(){
             SceneManager.LoadScene("Menu");
-            
             SaveControler.Save();
         }
     }

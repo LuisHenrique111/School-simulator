@@ -26,6 +26,9 @@ namespace UI{
 
         public static Tween Instance;
 
+        public GameObject[] tutorial;
+        public int currentPag;
+
 
         
 
@@ -222,6 +225,7 @@ namespace UI{
 
         public void QuitGame()
         {
+            SaveControler.Save();
             Debug.Log("Quit!");
             Application.Quit();
         }
@@ -239,6 +243,29 @@ namespace UI{
         void DesativaNameCollege()
         {
             nameCollege.SetActive(false);
+        }
+
+        public void nextPag(){
+            tutorial[currentPag].SetActive(false);
+            currentPag++;   
+            if(currentPag<6)             
+                tutorial[currentPag].SetActive(true);
+            
+        }
+
+        public void prevPag(){
+            tutorial[currentPag].SetActive(false);
+            currentPag--;            
+            tutorial[currentPag].SetActive(true);
+            if(currentPag == 0){
+                currentPag = 0;
+            }
+        }
+
+        public void finalizar(){
+            for(int i = 0; i<tutorial.Length; i++){
+                tutorial[i].SetActive(false);
+            }
         }
 
     }

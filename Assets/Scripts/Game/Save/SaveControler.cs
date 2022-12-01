@@ -10,9 +10,7 @@ public class SaveControler : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.H)){
-            Save();
-        }
+        
     }
 
     public static void Save(){
