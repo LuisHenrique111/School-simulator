@@ -54,6 +54,7 @@ namespace UI{
         {
             menuPanel.SetActive(true);
             LeanTween.alphaCanvas(amenuPanel, 1, .2f);
+            
         }
         public void FechaMenu()
         {

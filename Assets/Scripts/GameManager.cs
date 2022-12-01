@@ -28,10 +28,13 @@ public class GameManager : MonoBehaviour
         Instance = this;
         
         if(File.Exists(Application.persistentDataPath + "/saveGame.txt")){
+            Debug.Log("Existe");
             fileExists = true;
             save.Value = true;
         }else{
             fileExists = false;
+            save.Value = false;
+            Debug.Log("nao existe");
         }
     }
 
