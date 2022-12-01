@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 6946267349863718695}
   - component: {fileID: 7151652087181398285}
   - component: {fileID: 8983711651562586724}
+  - component: {fileID: -5635940656330528592}
   m_Layer: 0
   m_Name: engenharia_level_03
   m_TagString: Engenharia_lvl3
@@ -28,14 +29,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3148164891941294403}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: -121.43609, y: 0, z: 268.25314}
   m_LocalScale: {x: 5, y: 5, z: 5}
   m_Children:
   - {fileID: 8317670342809032691}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!33 &1681122989723812956
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -127,6 +128,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-5635940656330528592
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3148164891941294403}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c0a4f16ae7a948ddb76f54864affa89, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  level: 1
 --- !u!1001 &5371853494116404977
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -20,7 +20,7 @@ public class NPC_control : MonoBehaviour
     {
         if(individualHappiness <= 20  )
         {
-            Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+           
         }
         else if(individualHappiness < 30)
         {

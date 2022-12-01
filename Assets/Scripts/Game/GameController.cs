@@ -11,6 +11,7 @@ using System.IO;
 using System;
 using TMPro;
 using System.Linq;
+using System.Collections;
 
 public class GameController : MonoBehaviour
 {
@@ -53,6 +54,10 @@ public class GameController : MonoBehaviour
     public GameObject[] placasNegativas;
     public GameObject[] placasPositivas;
 
+    float time;
+
+    static bool isPause;
+
     
     
 
@@ -75,8 +80,19 @@ public class GameController : MonoBehaviour
         //Win();
         ControlHappiness();
         CountMessage();
+        if(Input.GetKeyDown(KeyCode.Escape)){
+            Tween.Instance.Menu();
+            StartCoroutine(PauseAfter());
+        }
+        
     }
 
+
+    public IEnumerator PauseAfter()
+    {
+        yield return new WaitForSeconds(2f);
+        Pause();
+    }
     public void ControllerAlunos(){
         if(GameManager.Instance.happiness.Value <= 30){
             GameManager.Instance.DiminuirEstudades(8);
@@ -175,6 +191,7 @@ public class GameController : MonoBehaviour
 
     public void Play(){
         Time.timeScale = 1.0f;
+        isPause = false;
     }
 
     public void Pause(){

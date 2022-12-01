@@ -8,7 +8,6 @@ public class BotaoPlacas : MonoBehaviour
 {
     bool mouseDentroDoObjeto;
     public static BotaoPlacas Instance;
-    public GameObject gameO;
     // Start is called before the first frame update
     void Start()
     {
