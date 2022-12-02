@@ -93,7 +93,10 @@ public class StudentsWalkingState : Entity.State
         }
         else if(other.gameObject.tag == "Fim" && inside <= 0)
         {
+            
             Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+            Birdder.instance.textMessage.text = Reader.instance.BadMessage(); 
+            
             gameObject.GetComponent<NPC_control>().individualHappiness -= (happLvl3);
             entity.SetState<StudentsGoWayState>();
         }

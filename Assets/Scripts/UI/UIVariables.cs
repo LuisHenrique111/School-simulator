@@ -163,7 +163,28 @@ namespace UI{
         public void BtnCompraUpgrade(){
             
             if( GameController.Instance.predios[UIVariables.Instance.currentPredio].nivel == 1){
-                if(coin.Value >= GameController.Instance.predios[currentPredio].priceEvolution[0]){
+                if(coin.Value >= GameController.Instance.predios[currentPredio].priceEvolution[0])
+                {
+                   if(GameController.Instance.predios[UIVariables.Instance.currentPredio].nameBuilding == "Artes cenicas")
+                   {
+                        Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+                        Birdder.instance.textMessage.text = Reader.instance.ArtesMsg();
+                   }
+                   else if(GameController.Instance.predios[UIVariables.Instance.currentPredio].nameBuilding == "Engenharia")
+                   {
+                        Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+                        Birdder.instance.textMessage.text = Reader.instance.EngenhariaMsg();
+                   }
+                   else if(GameController.Instance.predios[UIVariables.Instance.currentPredio].nameBuilding == "Humanas")
+                   {
+                        Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+                        Birdder.instance.textMessage.text = Reader.instance.HumanasMsg();
+                   }
+                   else if(GameController.Instance.predios[UIVariables.Instance.currentPredio].nameBuilding == "Medicina")
+                   {
+                        Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+                        Birdder.instance.textMessage.text = Reader.instance.MedicinaMsg();
+                   }
                     UpConstruction.Instance.UpgradeConstrucao();
                     tween.CloseUpConstrucao();
                 }else{
@@ -173,6 +194,26 @@ namespace UI{
             }
             else if( GameController.Instance.predios[UIVariables.Instance.currentPredio].nivel == 2){
                 if(coin.Value >= GameController.Instance.predios[currentPredio].priceEvolution[0]){
+                    if(GameController.Instance.predios[UIVariables.Instance.currentPredio].nameBuilding == "Artes cenicas")
+                   {
+                        Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+                        Birdder.instance.textMessage.text = Reader.instance.ArtesMsg();
+                   }
+                   else if(GameController.Instance.predios[UIVariables.Instance.currentPredio].nameBuilding == "Engenharia")
+                   {
+                        Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+                        Birdder.instance.textMessage.text = Reader.instance.EngenhariaMsg();
+                   }
+                   else if(GameController.Instance.predios[UIVariables.Instance.currentPredio].nameBuilding == "Humanas")
+                   {
+                        Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+                        Birdder.instance.textMessage.text = Reader.instance.HumanasMsg();
+                   }
+                   else if(GameController.Instance.predios[UIVariables.Instance.currentPredio].nameBuilding == "Medicina")
+                   {
+                        Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+                        Birdder.instance.textMessage.text = Reader.instance.MedicinaMsg();
+                   }
                     UpConstruction.Instance.UpgradeConstrucao();
                     tween.CloseUpConstrucao();
                 }else{
@@ -190,6 +231,28 @@ namespace UI{
                 GameManager.Instance.IncrementarEstudantes(10);
                 tween.ConfContrProf();
                 tween.CloseProfMenu();
+                
+                if(GameController.Instance.predios[currentConst].nameBuilding == "Artes cenicas")
+                {
+                        Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+                        Birdder.instance.textMessage.text = Reader.instance.ArtesMsg();
+                }
+                else if(GameController.Instance.predios[currentConst].nameBuilding == "Engenharia")
+                {
+                        Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+                        Birdder.instance.textMessage.text = Reader.instance.EngenhariaMsg();
+                }
+                else if(GameController.Instance.predios[currentConst].nameBuilding == "Humanas")
+                {
+                        Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+                        Birdder.instance.textMessage.text = Reader.instance.HumanasMsg();
+                }
+                else if(GameController.Instance.predios[currentConst].nameBuilding == "Medicina")
+                {
+                        Instantiate(GameController.Instance.prefabBirdder,GameController.Instance.content.transform);
+                        Birdder.instance.textMessage.text = Reader.instance.MedicinaMsg();
+                }
+
             }else{
                 screenInsufficientMoney.SetActive(true);
                 tween.ErroContrProf();

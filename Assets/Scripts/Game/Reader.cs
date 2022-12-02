@@ -13,6 +13,11 @@ public class Reader : MonoBehaviour
     [SerializeField] TextAsset fileNames,fileSocialRuim,fileSocialBom;
     
     [Header("Arrays")]
+    public string[] tips;
+    public string[] msgHumanas;
+    public string[] msgMedicina;
+    public string[] msgArtes;
+    public string[] msgEngenharia;
     ArrayList singleNames = new ArrayList();
     public ArrayList listNames = new ArrayList();
     public ArrayList listSocialRuim = new ArrayList();
@@ -89,6 +94,26 @@ public class Reader : MonoBehaviour
     {
         int rnd = Random.Range(0,listSocialRuim.Count);
         return listSocialRuim[rnd].ToString();
+    }
+    public string HumanasMsg()
+    {
+        int rnd = Random.Range(0,msgHumanas.Length);
+        return msgHumanas[rnd];
+    }
+    public string MedicinaMsg()
+    {
+        int rnd = Random.Range(0,msgMedicina.Length);
+        return msgMedicina[rnd];
+    }
+    public string ArtesMsg()
+    {
+        int rnd = Random.Range(0,msgArtes.Length);
+        return msgArtes[rnd];
+    }
+    public string EngenhariaMsg()
+    {
+        int rnd = Random.Range(0,msgEngenharia.Length);
+        return msgEngenharia[rnd];
     }
 
 
