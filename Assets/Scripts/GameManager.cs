@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     [Header("botao Continuar")]
     public Button Continue;
+    public Button VoltaJogo;
     public bool IsMenu;
     public bool fileExists;
 
@@ -45,8 +46,10 @@ public class GameManager : MonoBehaviour
 
             if(save.Value == true ){
                 Continue.interactable = true;
+                VoltaJogo.interactable = true;
             }else{
                 Continue.interactable = false;
+                VoltaJogo.interactable = false;
             }
         }
         
