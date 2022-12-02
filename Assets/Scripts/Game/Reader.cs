@@ -115,6 +115,11 @@ public class Reader : MonoBehaviour
         int rnd = Random.Range(0,msgEngenharia.Length);
         return msgEngenharia[rnd];
     }
+    public string GenerateTips()
+    {
+        int rnd = Random.Range(0,tips.Length);
+        return tips[rnd];
+    }
 
 
 }

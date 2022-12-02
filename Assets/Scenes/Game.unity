@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4107,6 +4107,7 @@ GameObject:
   - component: {fileID: 122689804}
   - component: {fileID: 122689806}
   - component: {fileID: 122689805}
+  - component: {fileID: 122689807}
   m_Layer: 0
   m_Name: Image
   m_TagString: Untagged
@@ -4172,6 +4173,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 122689803}
   m_CullTransparentMesh: 1
+--- !u!95 &122689807
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 122689803}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 44e5cd641cb9aaf4894a03df855a345b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &130394113
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6753,7 +6773,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 1396121715}
+  m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 16429900}
   m_HandleRect: {fileID: 1396121714}
   m_Direction: 0
@@ -6787,8 +6807,9 @@ GameObject:
   - component: {fileID: 210649962}
   - component: {fileID: 210649964}
   - component: {fileID: 210649963}
+  - component: {fileID: 210649965}
   m_Layer: 0
-  m_Name: Image
+  m_Name: TipsSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6852,6 +6873,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 210649961}
   m_CullTransparentMesh: 1
+--- !u!114 &210649965
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 210649961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceeac3dbd70fee6439e35cafda77c66e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tip: {fileID: 122689803}
+  text: {fileID: 1573896720}
 --- !u!1 &211925490
 GameObject:
   m_ObjectHideFlags: 0
@@ -44841,7 +44876,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 1
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -51333,7 +51368,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1375887548}
   m_HandleRect: {fileID: 1375887547}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -62155,7 +62190,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4030181293863596404, guid: fcbd0e0c98e8541c2b43a87e5c3479e2, type: 3}
       propertyPath: tips.Array.data[4]
-      value: "Dica: Quanto mais pr\xE9dios, mais atrativo \xE9 a universidade, logo
+      value: "Dica: Quanto mais pr\xE9dios, mais atrativa \xE9 a universidade, logo
         chegar\xE3o mais alunos."
       objectReference: {fileID: 0}
     - target: {fileID: 4030181293863596404, guid: fcbd0e0c98e8541c2b43a87e5c3479e2, type: 3}
