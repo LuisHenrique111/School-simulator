@@ -1301,6 +1301,8 @@ MonoBehaviour:
   VoltaJogo: {fileID: 309962169}
   IsMenu: 1
   fileExists: 0
+  tutorial: {fileID: 11400000, guid: 7ee52e0c160b1c54cb25e2f24df8d688, type: 2}
+  screenTutorial: {fileID: 1160860120}
 --- !u!4 &305981453
 Transform:
   m_ObjectHideFlags: 0
@@ -1427,6 +1429,18 @@ MonoBehaviour:
       - m_Target: {fileID: 309962168}
         m_TargetAssemblyTypeName: botaoIniciar, Assembly-CSharp
         m_MethodName: BtnContinuar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 305981452}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: FechaTutorial
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1857,7 +1871,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1160860121}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -3411,6 +3425,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 305981452}
+        m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+        m_MethodName: FechaTutorial
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &568927479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3555,7 +3581,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1160860121}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -4000,7 +4026,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1160860121}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -6562,13 +6588,13 @@ RectTransform:
   - {fileID: 1639479512}
   - {fileID: 266103937}
   - {fileID: 506891725}
+  - {fileID: 1609964786}
   - {fileID: 681860773}
   - {fileID: 1224793956}
   - {fileID: 346465357}
   - {fileID: 1543171039}
   - {fileID: 1471375195}
   - {fileID: 583973786}
-  - {fileID: 1609964786}
   - {fileID: 568927476}
   - {fileID: 309962167}
   m_Father: {fileID: 1344269161}
@@ -6722,7 +6748,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1160860121}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -7747,7 +7773,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1160860121}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -8697,7 +8723,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1160860121}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -9299,7 +9325,7 @@ Transform:
   m_LocalScale: {x: 2.6966293, y: 2.6966293, z: 2.6966293}
   m_Children: []
   m_Father: {fileID: 1160860121}
-  m_RootOrder: 10
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1609964787
 MonoBehaviour:

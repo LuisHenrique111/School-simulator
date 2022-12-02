@@ -23,6 +23,9 @@ public class GameManager : MonoBehaviour
     public bool IsMenu;
     public bool fileExists;
 
+    public BoolVariable tutorial;
+    public GameObject screenTutorial;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,7 +46,9 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         if(IsMenu){
-
+            if(tutorial.Value == true){
+                screenTutorial.SetActive(true);
+            }
             if(save.Value == true ){
                 Continue.interactable = true;
                 VoltaJogo.interactable = true;
@@ -90,5 +95,9 @@ public class GameManager : MonoBehaviour
 
     public void SetFelicidade(int valor){
         happiness.Value = valor;
+    }
+
+    public void FechaTutorial(){
+        tutorial.Value = false;
     }
 }

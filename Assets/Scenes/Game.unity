@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1472,6 +1472,7 @@ MonoBehaviour:
   isSalaDiretor: 0
   collegeName: {fileID: 11400000, guid: cbaee8d196666b0458154550889a5068, type: 2}
   nameCollege: {fileID: 1094313497}
+  tutorialActive: {fileID: 11400000, guid: 7ee52e0c160b1c54cb25e2f24df8d688, type: 2}
 --- !u!4 &33835134
 Transform:
   m_ObjectHideFlags: 0
@@ -51332,7 +51333,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1375887548}
   m_HandleRect: {fileID: 1375887547}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -58673,8 +58674,11 @@ MonoBehaviour:
   newGame: {fileID: 11400000, guid: b59a3f375b4cf7d4da5c7a10f264904c, type: 2}
   save: {fileID: 11400000, guid: 94b9e8b0426558042b045013a8d6fc2a, type: 2}
   Continue: {fileID: 0}
+  VoltaJogo: {fileID: 0}
   IsMenu: 0
   fileExists: 0
+  tutorial: {fileID: 0}
+  screenTutorial: {fileID: 0}
 --- !u!4 &2003998323
 Transform:
   m_ObjectHideFlags: 0

@@ -71,6 +71,8 @@ namespace UI{
         public TMP_Text nameCollege;
         int minutesAux;
 
+        public BoolVariable tutorialActive;
+
         
 
         // Start is called before the first frame update
@@ -274,7 +276,8 @@ namespace UI{
 
         public void TutorialGame(){
             SaveControler.Save();
-            SceneManager.LoadScene("Tutorial");
+            tutorialActive.Value = true;
+            SceneManager.LoadScene("Menu");
         }
         public void Game(){
             SceneManager.LoadScene("Game");
