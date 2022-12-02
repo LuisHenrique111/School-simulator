@@ -38,6 +38,5 @@ public class Tutorial : MonoBehaviour
         screen[currentScreen].SetActive(false);
         currentScreen--;
         screen[currentScreen].SetActive(true);
-        
     }
 }
